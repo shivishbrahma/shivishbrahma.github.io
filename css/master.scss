@@ -1,0 +1,91 @@
+// Sticky Footer
+html,
+body {
+  height: 100vh;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1 0 auto;
+}
+header,
+footer {
+  flex-shrink: 0;
+}
+
+// Search Bar
+.search_bar {
+  button {
+    height: 3rem;
+    width: 3rem;
+    i {
+      margin-left: -0.6rem;
+      font-size: 1.3rem;
+    }
+  }
+}
+.main_navbar {
+  height: 5rem;
+}
+
+.hero_slider {
+  img {
+    width: 100%;
+    opacity: 1;
+  }
+  .overlay_div {
+    width: 100%;
+    position: absolute;
+    top: 5rem;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+  }
+  .overlay_text {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    height: 0.3rem;
+    top: 6rem;
+    h1,
+    h3,
+    p {
+      color: #ffffff;
+      text-transform: initial;
+    }
+    h3 {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.typewriter h3 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}

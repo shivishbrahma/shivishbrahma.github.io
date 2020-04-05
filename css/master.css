@@ -1,0 +1,126 @@
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+header,
+footer {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.search_bar button {
+  height: 3rem;
+  width: 3rem;
+}
+
+.search_bar button i {
+  margin-left: -0.6rem;
+  font-size: 1.3rem;
+}
+
+.main_navbar {
+  height: 5rem;
+}
+
+.hero_slider img {
+  width: 100%;
+  opacity: 1;
+}
+
+.hero_slider .overlay_div {
+  width: 100%;
+  position: absolute;
+  top: 5rem;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.hero_slider .overlay_text {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  height: 0.3rem;
+  top: 6rem;
+}
+
+.hero_slider .overlay_text h1,
+.hero_slider .overlay_text h3,
+.hero_slider .overlay_text p {
+  color: #ffffff;
+  text-transform: initial;
+}
+
+.hero_slider .overlay_text h3 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.typewriter h3 {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em;
+  /* Adjust as needed */
+  -webkit-animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+          animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@-webkit-keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+/*# sourceMappingURL=master.css.map */
