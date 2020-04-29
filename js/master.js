@@ -41,8 +41,9 @@ TxtType.prototype.tick = function () {
   }, delta);
 };
 
-$(window).on('load reload resize', function () {
-  $('.overlay_div').height($('.hero_slider').height());
+$(window).on('load reload resize', function () {});
+(($) => {
+  // $('.overlay_div').height($('.hero_slider').height());
 
   const elements = document.getElementsByClassName('typewrite');
   for (var i = 0; i < elements.length; i++) {
@@ -58,5 +59,4 @@ $(window).on('load reload resize', function () {
   css.type = 'text/css';
   css.innerHTML = '.typewrite > .wrap { border-right: 0.08em solid #fff}';
   document.body.appendChild(css);
-});
-(($) => {})(jQuery);
+})(jQuery);

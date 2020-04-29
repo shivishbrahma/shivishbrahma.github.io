@@ -36,7 +36,13 @@ footer {
 }
 
 .main_navbar {
-  height: 5rem;
+  z-index: 3;
+}
+
+.hero_slider {
+  background: url("../images/hero1.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 60vh;
 }
 
 .hero_slider img {
@@ -46,17 +52,18 @@ footer {
 
 .hero_slider .overlay_div {
   width: 100%;
+  height: 60vh;
   position: absolute;
-  top: 5rem;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .hero_slider .overlay_text {
   text-align: center;
+  vertical-align: middle;
   width: 100%;
   position: absolute;
   height: 0.3rem;
-  top: 6rem;
+  top: 25%;
 }
 
 .hero_slider .overlay_text h1,
@@ -122,5 +129,29 @@ footer {
   50% {
     border-color: orange;
   }
+}
+
+.profile-pic {
+  width: 250px;
+}
+
+.bg-eee {
+  background-color: #eee;
+}
+
+.media-card {
+  max-width: 900px;
+}
+
+.media-card .media-card-title {
+  font-weight: 700;
+  color: #4578ef;
+  border-left: 8px solid #4578ef;
+  padding-left: 8px;
+}
+
+.sm-icon {
+  width: 80px;
+  height: 80px;
 }
 /*# sourceMappingURL=master.css.map */
