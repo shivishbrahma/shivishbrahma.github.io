@@ -154,4 +154,39 @@ footer {
   width: 80px;
   height: 80px;
 }
+
+/**
+* Resume
+**/
+.circle-icon {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.circle-icon img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.resume .title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0033ee;
+  border-left: 0.65rem solid #0033ee;
+  padding-left: 0.5rem;
+  text-transform: uppercase;
+}
+
+.sm-field i.fa {
+  position: relative;
+  top: 1px;
+  min-width: 25px;
+  font-size: larger;
+}
+
+.table-bordered {
+  border: none;
+}
 /*# sourceMappingURL=master.css.map */
