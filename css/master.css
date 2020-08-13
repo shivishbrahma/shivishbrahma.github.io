@@ -143,11 +143,24 @@ footer {
   max-width: 900px;
 }
 
+.media-card .col-sm-6 {
+  margin-bottom: 0.5rem;
+}
+
 .media-card .media-card-title {
   font-weight: 700;
   color: #4578ef;
   border-left: 8px solid #4578ef;
   padding-left: 8px;
+}
+
+.media-card .card-img-top {
+  height: 20vh;
+  min-height: 100px;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .sm-icon {
