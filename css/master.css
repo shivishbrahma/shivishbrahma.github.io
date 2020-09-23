@@ -81,7 +81,7 @@ footer {
 .typewriter h3 {
   overflow: hidden;
   /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid orange;
+  border-right: 0.15em solid var(--orange);
   /* The typwriter cursor */
   white-space: nowrap;
   /* Keeps the content on a single line */
@@ -118,7 +118,7 @@ footer {
     border-color: transparent;
   }
   50% {
-    border-color: orange;
+    border-color: var(--orange);
   }
 }
 @keyframes blink-caret {
@@ -127,7 +127,7 @@ footer {
     border-color: transparent;
   }
   50% {
-    border-color: orange;
+    border-color: var(--orange);
   }
 }
 
@@ -169,7 +169,7 @@ footer {
 }
 
 /**
-* Resume
+** Resume 
 **/
 .circle-icon {
   width: 200px;
@@ -201,5 +201,12 @@ footer {
 
 .table-bordered {
   border: none;
+}
+
+/**
+** NetStats 
+**/
+#netstats {
+  background: #94eed3;
 }
 /*# sourceMappingURL=master.css.map */

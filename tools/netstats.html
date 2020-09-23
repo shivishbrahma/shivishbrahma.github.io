@@ -2,15 +2,21 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="description" content="Portfolio of Purbayan Chowdhury" />
+		<meta
+			name="keywords"
+			content="Portfolio, Web Developer, Machine Learning Enthusiast"
+		/>
+		<meta name="author" content="Purbayan Chowdhury" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>{{page.title}} - {{site.title}}</title>
-		<link rel="stylesheet" href="css/all.css" />
-
-		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<title>NetStats | Shivishbrahma</title>
 		<link
 			rel="stylesheet"
-			href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
+			href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
 		/>
+
+		<link rel="stylesheet" href="/css/bootstrap.min.css" />
+
 		<link rel="stylesheet" href="/css/master.css" />
 	</head>
 	<body>
@@ -30,31 +36,46 @@
 				</button>
 				<div class="collapse navbar-collapse" id="collapsibleNavId">
 					<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-						<li class="nav-item">
-							<a href="index.html" class="nav-link">Home </a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link active" href="about.html"
-								>About<span class="sr-only">(current)</span></a
+						<li class="nav-item active">
+							<a class="nav-link"
+								>Home <span class="sr-only">(current)</span></a
 							>
 						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="about.html">About</a>
+						</li>
+						<!-- <li class="nav-item">
+              <a class="nav-link" href="contact">Contact</a>
+            </li> -->
 					</ul>
 				</div>
 			</nav>
 		</header>
 
-		<main>{{content}}</main>
+		<main id="netstats">
+			<div class="container">
+				<h1>Netstats</h1>
+				<div id="netstat-container"></div>
+				<h2>Location</h2>
+				<button class="btn btn-info" id="locateme">
+					<i class="fa fa-location-arrow" aria-hidden="true"></i> Locate Me !
+				</button>
+				<div id="locationinfo"></div>
+			</div>
+		</main>
 
 		<footer>
 			<div class="text-light bg-dark footer-copyright text-center py-3">
-				Designed with ❤ by
+				Designed with
+				<i class="fa fa-heart text-danger" aria-hidden="true"></i> by
 				<a class="text-success" href="">Purbayan Chowdhury</a>
 			</div>
 		</footer>
+
 		<script src="/js/jquery-3.5.1.slim.min.js"></script>
 		<script src="/js/popper.min.js"></script>
 		<script src="/js/bootstrap.min.js"></script>
-
 		<script src="/js/master.js"></script>
+		<script src="/js/tools/netstats.js"></script>
 	</body>
 </html>
