@@ -131,6 +131,19 @@ footer {
 }
 
 /**
+** Index 
+**/
+.section {
+	.section-header {
+		font-weight: bold;
+		width: 100%;
+		color: var(--primary);
+		border-bottom: 0.25rem solid var(--primary);
+		padding-left: 0.75rem;
+	}
+}
+
+/**
 ** Resume 
 **/
 .circle-icon {
@@ -173,6 +186,4 @@ footer {
 **/
 #netstats {
 	background: lighten(#20c997, 30%);
-	.container {
-	}
 }
