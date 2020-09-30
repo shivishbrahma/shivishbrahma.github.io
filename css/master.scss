@@ -143,6 +143,18 @@ footer {
 	}
 }
 
+.card {
+	.card-icon {
+		padding: 0.5rem;
+		font-size: 5rem;
+		text-align: center;
+		img {
+			max-width: 100%;
+			width: 200px;
+		}
+	}
+}
+
 /**
 ** Resume 
 **/

@@ -179,6 +179,17 @@ footer {
   padding-left: 0.75rem;
 }
 
+.card .card-icon {
+  padding: 0.5rem;
+  font-size: 5rem;
+  text-align: center;
+}
+
+.card .card-icon img {
+  max-width: 100%;
+  width: 200px;
+}
+
 /**
 ** Resume 
 **/
