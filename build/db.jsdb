@@ -1,0 +1,36 @@
+{
+  "tools": [
+    {
+      "title": "Netstats",
+      "text": "Tools for network, window and browser statistics",
+      "img": "netstats.png",
+      "url": "/tools/netstats",
+      "id": "2e9dab8e8fc7d55ecd1c5d6a1a6768c9"
+    }
+  ],
+  "projects": [
+    {
+      "title": "E - Commerce",
+      "text": "<b>DIY Baazar</b> a unique platform designed to unite handicraft makers to customers.",
+      "img": "ecomm.jpg",
+      "url": "https://diybaazar.com",
+      "id": "d894b96c202de4a8a9055bac84c6d3e9"
+    },
+    {
+      "title": "Library Management",
+      "text": "<b>Paradise Bibliothecca</b> an e-library that reads you books to sleep.",
+      "img": "libman.jpg",
+      "url": "/",
+      "id": "95f0e67678c71e16ecdaa6e625364492"
+    },
+    {
+      "title": "Music Player",
+      "text": "<b>Geetishroban</b> a music player that plays your favorite songs.",
+      "img": "musicplay.jpg",
+      "url": "/",
+      "id": "e72a21b7c3c43d3984da7cfcc1611ccd"
+    }
+  ],
+  "skills": [],
+  "posts": []
+}

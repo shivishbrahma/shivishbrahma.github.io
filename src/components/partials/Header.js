@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Navigator from '../../routes/Navigator';
+
 export default function Header() {
 	return (
 		<header>
@@ -16,21 +18,10 @@ export default function Header() {
 					aria-expanded="false"
 					aria-label="Toggle navigation"
 				>
-					<i class="fa fa-bars" aria-hidden="true"></i>
+					<i className="fa fa-bars" aria-hidden="true"></i>
 				</button>
-				<div class="collapse navbar-collapse" id="collapsibleNavId">
-					<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-						<li class="nav-item active">
-							<a className="nav-link" href="/">
-								Home
-							</a>
-						</li>
-						<li class="nav-item">
-							<a className="nav-link" href="/about">
-								About
-							</a>
-						</li>
-					</ul>
+				<div className="collapse navbar-collapse" id="collapsibleNavId">
+					<Navigator />
 				</div>
 			</nav>
 		</header>

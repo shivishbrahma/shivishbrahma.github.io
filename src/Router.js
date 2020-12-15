@@ -2,21 +2,28 @@ import React from 'react';
 
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
 
-// import About from './Components/About';
 import Home from './routes/Home';
-// import Dashboard from './Components/Dashboard';
+import About from './routes/About';
+import Error from './routes/Error';
+import Resume from './routes/Resume';
+import Blog from './routes/Blog';
+
+import Header from './components/partials/Header';
 
 function App() {
 	return (
-		<main>
+		<>
 			<BrowserRouter>
+				<Header />
 				<Switch>
-					<Route path="/" component={Home} />
-					{/* <Route path="/dashboard" component={Dashboard}/>
-            <Route path="/about" component={About}></Route> */}
+					<Route path="/" exact component={Home} />
+					<Route path="/about" component={About} />
+					<Route path="/resume" component={Resume} />
+					<Route path="/blog" component={Blog} />
+					<Route component={Error} />
 				</Switch>
 			</BrowserRouter>
-		</main>
+		</>
 	);
 }
 
