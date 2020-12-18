@@ -15,13 +15,13 @@ import Header from './components/partials/Header';
 function App() {
 	return (
 		<>
-			<BrowserRouter>
+			<BrowserRouter basename={process.env.PUBLIC_URL}>
 				<Header />
 				<Switch>
 					<Route path="/" exact component={Home} />
-					<Route path="/about" component={About} />
-					<Route path="/resume" component={Resume} />
-					<Route path="/blog" component={Blog} />
+					<Route path="/about" exact component={About} />
+					<Route path="/resume" exact component={Resume} />
+					<Route path="/blog" exact component={Blog} />
 					<Route path="/tools" exact component={Tools} />
 					<Route path="/tools/:tool_slug" component={ToolSelector} />
 					<Route component={Error} />
