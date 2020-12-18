@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Route, BrowserRouter, Switch } from 'react-router-dom';
+import { Route, HashRouter, BrowserRouter, Switch } from 'react-router-dom';
 
 import Home from './routes/Home';
 import About from './routes/About';
@@ -17,15 +17,19 @@ function App() {
 		<>
 			<BrowserRouter basename={process.env.PUBLIC_URL}>
 				<Header />
-				<Switch>
-					<Route path="/" exact component={Home} />
-					<Route path="/about" exact component={About} />
-					<Route path="/resume" exact component={Resume} />
-					<Route path="/blog" exact component={Blog} />
-					<Route path="/tools" exact component={Tools} />
-					<Route path="/tools/:tool_slug" component={ToolSelector} />
-					<Route component={Error} />
-				</Switch>
+				<Route
+					render={({ location }) => (
+						<Switch location={location}>
+							<Route path="/" exact component={Home} />
+							<Route path="/about" exact component={About} />
+							<Route path="/resume" exact component={Resume} />
+							<Route path="/blog" exact component={Blog} />
+							<Route path="/tools" exact component={Tools} />
+							<Route path="/tools/:tool_slug" component={ToolSelector} />
+							<Route component={Error} />
+						</Switch>
+					)}
+				/>
 			</BrowserRouter>
 		</>
 	);
