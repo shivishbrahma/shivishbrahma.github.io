@@ -79,7 +79,7 @@ export default function Home() {
 										></p>
 									</div>
 									<div className="card-footer">
-										<a href={ele.url}>CLICK HERE</a>
+										<Link href={ele.url}>CLICK HERE</Link>
 									</div>
 								</div>
 							</div>

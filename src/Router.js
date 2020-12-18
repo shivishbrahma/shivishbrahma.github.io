@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Route, HashRouter, BrowserRouter, Switch } from 'react-router-dom';
+import { Route, BrowserRouter, Switch } from 'react-router-dom';
 
 import Home from './routes/Home';
 import About from './routes/About';
@@ -30,7 +30,7 @@ function App() {
 						</Switch>
 					)}
 				/>
-			</BrowserRouter>
+			</BrowserRouter>{' '}
 		</>
 	);
 }
