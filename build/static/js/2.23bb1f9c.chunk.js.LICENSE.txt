@@ -11,10 +11,50 @@ object-assign
 */
 
 /*!
+   * Sizzle CSS Selector Engine v2.3.5
+   * https://sizzlejs.com/
+   *
+   * Copyright JS Foundation and other contributors
+   * Released under the MIT license
+   * https://js.foundation/
+   *
+   * Date: 2020-03-14
+   */
+
+/*!
  * days <https://github.com/jonschlinkert/days>
  *
  * Copyright (c) 2014-2017, Jon Schlinkert.
  * Released under the MIT License.
+ */
+
+/*!
+ * jQuery Browser Plugin 0.1.0
+ * https://github.com/gabceb/jquery-browser-plugin
+ *
+ * Original jquery-browser code Copyright 2005, 2015 jQuery Foundation, Inc. and other contributors
+ * http://jquery.org/license
+ *
+ * Modifications Copyright 2015 Gabriel Cebrian
+ * https://github.com/gabceb
+ *
+ * Released under the MIT license
+ *
+ * Date: 05-07-2015
+ */
+
+/*!
+ * jQuery JavaScript Library v3.5.1
+ * https://jquery.com/
+ *
+ * Includes Sizzle.js
+ * https://sizzlejs.com/
+ *
+ * Copyright JS Foundation and other contributors
+ * Released under the MIT license
+ * https://jquery.org/license
+ *
+ * Date: 2020-05-04T22:49Z
  */
 
 /*!
