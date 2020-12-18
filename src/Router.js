@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Route, BrowserRouter, Switch } from 'react-router-dom';
+import { Route, HashRouter, Switch } from 'react-router-dom';
 
 import Home from './routes/Home';
 import About from './routes/About';
@@ -15,7 +15,7 @@ import Header from './components/partials/Header';
 function App() {
 	return (
 		<>
-			<BrowserRouter basename={process.env.PUBLIC_URL}>
+			<HashRouter basename={process.env.PUBLIC_URL}>
 				<Header />
 				<Route
 					render={({ location }) => (
@@ -30,7 +30,7 @@ function App() {
 						</Switch>
 					)}
 				/>
-			</BrowserRouter>{' '}
+			</HashRouter>{' '}
 		</>
 	);
 }
