@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+
 import HeroSection from '../components/home/HeroSection';
 import store from '../redux/store';
 
@@ -47,7 +49,7 @@ export default function Home() {
 										<p className="card-text">{ele.text}</p>
 									</div>
 									<div className="card-footer">
-										<a href={ele.url}>CLICK HERE</a>
+										<Link to={ele.url}>CLICK HERE</Link>
 									</div>
 								</div>
 							</div>

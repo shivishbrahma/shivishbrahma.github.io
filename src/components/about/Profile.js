@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import profileImage from '../../images/profile1.jpg';
 
 export default function Profile({ dark }) {
@@ -28,16 +29,16 @@ export default function Profile({ dark }) {
 									scalable web apps that solves day-to-day problems. I write
 									about website designing, software development in my blog.
 								</p>
-								<a className="btn btn-primary mx-1" href="/blog" role="button">
+								<Link className="btn btn-primary mx-1" to="/blog" role="button">
 									<i
 										className="fa fa-arrow-circle-right"
 										aria-hidden="true"
 									></i>
 									&nbsp; Visit My Blog
-								</a>
-								<a className="btn btn-info mx-1" href="/resume" role="button">
+								</Link>
+								<Link className="btn btn-info mx-1" to="/resume" role="button">
 									<i className="fas fa-file-alt"></i> &nbsp; View My Resume
-								</a>
+								</Link>
 							</div>
 						</div>
 					</div>
