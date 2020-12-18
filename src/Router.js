@@ -7,6 +7,8 @@ import About from './routes/About';
 import Error from './routes/Error';
 import Resume from './routes/Resume';
 import Blog from './routes/Blog';
+import Tools from './routes/Tools';
+import ToolSelector from './routes/ToolSelector';
 
 import Header from './components/partials/Header';
 
@@ -20,6 +22,8 @@ function App() {
 					<Route path="/about" component={About} />
 					<Route path="/resume" component={Resume} />
 					<Route path="/blog" component={Blog} />
+					<Route path="/tools" exact component={Tools} />
+					<Route path="/tools/:tool_slug" component={ToolSelector} />
 					<Route component={Error} />
 				</Switch>
 			</BrowserRouter>

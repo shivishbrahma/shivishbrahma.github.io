@@ -1,11 +1,14 @@
 import React from 'react';
 import Profile from '../components/about/Profile';
 import ReactGithubCalendar from '../components/all/ReactGithubCalendar';
+import store from '../redux/store';
 
 export default function About() {
+	const { app } = store.getState();
+
 	return (
-		<main>
-			<Profile />
+		<main className={app.dark ? 'dark bg-dark' : ''}>
+			<Profile dark={app.dark} />
 			<div className="section">
 				<div className="container-fluid my-4">
 					<div className="row justify-content-center">

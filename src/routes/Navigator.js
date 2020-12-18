@@ -14,6 +14,11 @@ export default function Navigator() {
 					About
 				</NavLink>
 			</li>
+			<li className="nav-item">
+				<NavLink className="nav-link" activeClassName="active" to="/tools">
+					Tools
+				</NavLink>
+			</li>
 		</ul>
 	);
 }

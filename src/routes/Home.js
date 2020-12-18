@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import HeroSection from '../components/home/HeroSection';
+import store from '../redux/store';
 
 export default function Home() {
+	const { app } = store.getState();
 	const [tools, setTools] = useState([]);
 	const [projects, setProjects] = useState([]);
 
@@ -20,7 +22,7 @@ export default function Home() {
 		getData();
 	}, []);
 	return (
-		<main>
+		<main className={app.dark ? 'dark bg-dark' : ''}>
 			<HeroSection />
 			<section className="section tools">
 				<div className="container-fluid my-4">

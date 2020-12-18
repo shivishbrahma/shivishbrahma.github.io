@@ -23,13 +23,21 @@ footer {
 	background-color: lighten($gray-500, 10%);
 }
 
+.bg-light-gray {
+	background-color: invert($sh-black, 95%);
+}
+
+.bg-dark-gray {
+	background-color: invert($sh-black, 25%);
+}
+
 .section {
 	.section-header {
 		font-weight: bold;
 		width: 100%;
-		color: var(--primary);
-		border-left: 0.65rem solid var(--primary);
 		padding-left: 0.75rem;
+		color: $blue;
+		border-left: 0.65rem solid $blue;
 	}
 }
 
@@ -101,7 +109,33 @@ footer {
 // Profile section
 .bg-eee {
 	background-color: $bg-card;
-	.profile-pic {
-		width: 250px;
+}
+.profile-pic {
+	width: 250px;
+}
+
+// Dark Styles
+.dark {
+	div,
+	span {
+		color: $white;
+	}
+	.card,
+	.card-body {
+		background-color: $sh-black !important;
+	}
+
+	.card-header,
+	.card-footer {
+		background-color: lighten($sh-black, 5%);
+	}
+	.card-icon {
+		background-color: $sh-white !important;
+	}
+	.section {
+		.section-header {
+			color: lighten($blue, 15%);
+			border-left: 0.65rem solid lighten($blue, 15%);
+		}
 	}
 }

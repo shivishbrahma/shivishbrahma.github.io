@@ -26,3 +26,57 @@ $cyan: #0dcaf0 !default;
 $bg-card: #eee;
 $card-title: #4578ef;
 $resume-title: #0033ee;
+
+// Colors
+
+$sh-blue: #054a91 !default;
+$sh-indigo: #6610f2 !default;
+$sh-purple: #540d6e !default;
+$sh-pink: #ee4266 !default;
+$sh-red: #ff3f00 !default;
+$sh-orange: #f17300 !default;
+$sh-yellow: #fff94f !default;
+$sh-amber: #ff7f11 !default;
+$sh-green: #679436 !default;
+$sh-teal: #3bceac !default;
+$sh-cyan: #5db7de !default;
+$sh-black: #000411 !default;
+$sh-white: #fefefe !default;
+$sh-gray-600: #6c757d !default;
+$sh-gray-800: #343a40 !default;
+
+$sh-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$sh-colors: map-merge(
+	(
+		'blue': $sh-blue,
+		'indigo': $sh-indigo,
+		'purple': $sh-purple,
+		'pink': $sh-pink,
+		'red': $sh-red,
+		'orange': $sh-orange,
+		'yellow': $sh-yellow,
+		'green': $sh-green,
+		'teal': $sh-teal,
+		'cyan': $sh-cyan,
+		'white': $sh-white,
+		'gray': $sh-gray-600,
+		'gray-dark': $sh-gray-800,
+	),
+	$sh-colors
+);
+
+@each $color, $value in $sh-colors {
+	.bg-light-#{$color} {
+		background-color: lighten($value, 15%);
+	}
+	.bg-dark-#{$color} {
+		background-color: darken($value, 15%);
+	}
+	.text-light-#{$color} {
+		color: lighten($value, 15%);
+	}
+	.text-dark-#{$color} {
+		color: darken($value, 15%);
+	}
+}

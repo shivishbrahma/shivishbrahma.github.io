@@ -1,11 +1,21 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
+import store from '../../redux/store';
 
 import Navigator from '../../routes/Navigator';
 
-export default function Header() {
+function Header() {
+	const { app } = store.getState();
 	return (
 		<header>
-			<nav className="navbar navbar-expand-sm navbar-dark bg-dark main_navbar">
+			<nav
+				className={
+					'navbar navbar-expand-sm navbar-dark ' +
+					(app.dark ? 'bg-dark-blue' : 'bg-light-blue') +
+					' main_navbar'
+				}
+			>
 				<a className="navbar-brand" href="/">
 					Shivishbrahma
 				</a>
@@ -27,3 +37,13 @@ export default function Header() {
 		</header>
 	);
 }
+
+Header.propTypes = {
+	darkMode: PropTypes.bool,
+};
+
+Header.defaultProps = {
+	darkMode: false,
+};
+
+export default Header;

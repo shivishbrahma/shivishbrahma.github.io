@@ -19,12 +19,10 @@ export default class ReactGithubCalendar extends Component {
 		tooltips: false,
 		global_stats: true,
 		cache: 20,
-		summary_text:
-			'Summary of pull requests, issues opened, and commits made by <username>',
 		proxy: (username) => {
 			return fetch(
-				`https://cors-anywhere.herokuapp.com/github?user=${username}`
-			);
+				`https://api.bloggify.net/gh-calendar/?username=${username}`
+			).then((r) => r.text());
 		},
 	};
 
@@ -38,15 +36,17 @@ export default class ReactGithubCalendar extends Component {
 			summary_text,
 			proxy,
 		} = this.props;
-		let opt = {
-			summary_text,
+		let options = {
 			proxy,
 			global_stats,
 			responsive,
 			tooltips,
 			cache,
 		};
-		GithubCalendar(this.refs.container, username, opt);
+		options.summary_text =
+			summary_text ||
+			`Summary of pull requests, issues opened, and commits made by <a href="https://github.com/${username}" target="blank">@${username}</a>`;
+		GithubCalendar(this.refs.container, username, options);
 	}
 
 	render() {
@@ -69,7 +69,7 @@ export default class ReactGithubCalendar extends Component {
 				ref="container"
 			>
 				{/* Loading stuff */}
-				Loading the data just for you.
+				Loading the data just for you...
 			</div>
 		);
 	}

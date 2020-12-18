@@ -1,10 +1,12 @@
 import React from 'react';
 import profileImage from '../../images/profile1.jpg';
 
-export default function Profile() {
+export default function Profile({ dark }) {
 	return (
-		<section className="about_me bg-eee">
-			<div className="container-fluid">
+		<section
+			className={'about_me ' + (dark ? 'bg-dark-gray' : 'bg-light-gray')}
+		>
+			<div className={'container-fluid ' + (dark ? 'text-white' : '')}>
 				<div className="row justify-content-center">
 					<div className="col-12 media-card">
 						<div className="row justify-content-md-center p-4">
@@ -18,7 +20,9 @@ export default function Profile() {
 								<h1 className="mb-1 mt-1 font-weight-bold">
 									Purbayan Chowdhury
 								</h1>
-								<h3 className="text-secondary">Web Developer & ML Engineer</h3>
+								<h3 className={dark ? 'text-light' : 'text-secondary'}>
+									Web Developer & ML Engineer
+								</h3>
 								<p style={{ fontSize: '1.2rem' }}>
 									I am a web developer and ml engineer with specialisation in
 									scalable web apps that solves day-to-day problems. I write
