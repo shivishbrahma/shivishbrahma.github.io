@@ -1,9 +1,11 @@
 import React from 'react';
 
 import store from '../../redux/store';
+import { FaHeart, FaMoon, FaSun } from 'react-icons/fa';
 
 function Footer() {
 	const { app } = store.getState();
+
 	return (
 		<footer
 			className={`${
@@ -23,7 +25,9 @@ function Footer() {
 									store.dispatch({ type: 'toggleDarkMode' });
 								}}
 							>
-								<i className="fas fa-adjust"></i>
+								<span style={{ display: 'inline-block', marginTop: '-0.5rem' }}>
+									{app.dark ? <FaSun /> : <FaMoon />}
+								</span>
 								<span className="pl-2">{app.dark ? 'Light' : 'Dark'}</span>
 							</button>
 						</div>
@@ -33,7 +37,7 @@ function Footer() {
 			<div className="text-center">
 				Designed with{' '}
 				<span className={app.dark ? 'text-light-red' : 'text-dark-red'}>
-					<i className="fa fa-heart " aria-hidden="true"></i>
+					<FaHeart />
 				</span>{' '}
 				by{' '}
 				<a

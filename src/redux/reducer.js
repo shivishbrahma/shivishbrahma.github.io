@@ -1,10 +1,21 @@
-const initialState = {
-	app: {
-		dark: false,
-	},
+const getInitialState = () => {
+	const defaultState = {
+		app: {
+			name: 'Shivishbrahma',
+			dark: false,
+		},
+	};
+
+	return localStorage.shivishbrahma
+		? JSON.parse(localStorage.shivishbrahma)
+		: defaultState;
 };
 
-export default function rootReducer(state = initialState, action) {
+const setInitialState = (initialState) => {
+	localStorage.shivishbrahma = JSON.stringify(initialState);
+};
+
+export default function rootReducer(state = getInitialState(), action) {
 	switch (action.type) {
 		case 'toggleDarkMode':
 			const app = state.app;
@@ -15,6 +26,7 @@ export default function rootReducer(state = initialState, action) {
 				},
 				...state,
 			};
+			setInitialState(newState);
 			return newState;
 		default:
 			return state;

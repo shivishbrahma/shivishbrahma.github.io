@@ -12,9 +12,7 @@ export default class App extends Component {
 	componentDidMount() {
 		store.subscribe(this.forceUpdate.bind(this));
 	}
-	componentWillUnmount() {
-		this.unsubscribe();
-	}
+	componentWillUnmount() {}
 	render() {
 		return (
 			<Provider store={store}>

@@ -33,7 +33,7 @@ export default function Home() {
 							<h2 className="section-header">Featured Tools</h2>
 						</div>
 						{tools.map((ele) => (
-							<div className="col-12 col-md-4 col-lg-3" key={ele.id}>
+							<div className="col-12 col-md-4 col-lg-3 my-2" key={ele.id}>
 								<div className="card text-left">
 									<div className="card-header bg-white">
 										<div className="card-icon">
@@ -64,7 +64,7 @@ export default function Home() {
 							<h2 className="section-header">Featured Projects</h2>
 						</div>
 						{projects.map((ele) => (
-							<div className="col-12 col-md-4 col-lg-3" key={ele.id}>
+							<div className="col-12 col-md-4 col-lg-3 my-2" key={ele.id}>
 								<div className="card text-left">
 									<div className="card-header p-0 bg-white">
 										<div className="card-icon">
@@ -79,7 +79,7 @@ export default function Home() {
 										></p>
 									</div>
 									<div className="card-footer">
-										<Link href={ele.url}>CLICK HERE</Link>
+										<a href={ele.url}>CLICK HERE</a>
 									</div>
 								</div>
 							</div>

@@ -1,5 +1,5 @@
 import React from 'react';
 
 export default function Tools() {
-	return <main></main>;
+	return <main className=""></main>;
 }

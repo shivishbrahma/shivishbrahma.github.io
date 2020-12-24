@@ -1,4 +1,13 @@
 import React from 'react';
+import {
+	FaEnvelope,
+	FaGithub,
+	FaGlobe,
+	FaLinkedin,
+	FaMapMarked,
+	FaPhone,
+	FaTwitter,
+} from 'react-icons/fa';
 import profileImage from '../images/profile1.jpg';
 import '../styles/Resume.scss';
 import '../styles/ResumePrint.scss';
@@ -16,19 +25,16 @@ export default function Resume() {
 										Purbayan Chowdhury
 									</h1>
 									<h6 className="sm-field">
-										<i className="fas fa-phone" aria-hidden="true"></i> +91
-										9123801180
+										<FaPhone /> +91 9123801180
 									</h6>
 									<h6 className="sm-field">
-										<i className="fas fa-envelope" aria-hidden="true"></i>{' '}
-										pur.cho.99@gmail.com
+										<FaEnvelope /> pur.cho.99@gmail.com
 									</h6>
 									<h6 className="sm-field">
-										<i className="fas fa-map-marker" aria-hidden="true"></i>{' '}
-										Ghusuri, Howrah, West Bengal, India
+										<FaMapMarked /> Ghusuri, Howrah, West Bengal, India
 									</h6>
 									<h6 className="sm-field">
-										<i className="fa fa-globe" aria-hidden="true"></i>{' '}
+										<FaGlobe />{' '}
 										<a href="https://shivishbrahma.github.io/">
 											https://shivishbrahma.github.io/
 										</a>
@@ -256,7 +262,7 @@ export default function Resume() {
 
 								<div className="col-md-4">
 									<h6 className="sm-field text-center">
-										<i className="fab fa-github mr-1" aria-hidden="true"></i>{' '}
+										<FaGithub className="mr-1" />{' '}
 										<a href="https://github.com/shivishbrahma">
 											github.com/shivishbrahma
 										</a>
@@ -264,7 +270,7 @@ export default function Resume() {
 								</div>
 								<div className="col-md-4">
 									<h6 className="sm-field text-center">
-										<i className="fab fa-twitter mr-1" aria-hidden="true"></i>{' '}
+										<FaTwitter className="mr-1" />{' '}
 										<a href="https://twitter.com/shivishbrahma">
 											@shivishbrahma
 										</a>
@@ -272,7 +278,7 @@ export default function Resume() {
 								</div>
 								<div className="col-md-4">
 									<h6 className="sm-field text-center">
-										<i className="fab fa-linkedin mr-1" aria-hidden="true"></i>{' '}
+										<FaLinkedin className="mr-1" />{' '}
 										<a href="https://www.linkedin.com/in/purbayan-chowdhury/">
 											linkedin.com/in/purbayan-chowdhury/
 										</a>

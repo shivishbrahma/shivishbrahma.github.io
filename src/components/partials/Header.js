@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import store from '../../redux/store';
-
+import logo from '../../images/logo.png';
 import Navigator from '../../routes/Navigator';
 
 function Header() {
@@ -17,6 +17,12 @@ function Header() {
 				}
 			>
 				<a className="navbar-brand" href="/">
+					<img
+						className="d-inline-block mr-2"
+						src={logo}
+						style={{ width: '32px' }}
+						alt="logo"
+					/>
 					Shivishbrahma
 				</a>
 				<button

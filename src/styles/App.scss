@@ -86,6 +86,7 @@ footer {
 
 .card {
 	height: 100%;
+	background-color: $bg-card !important;
 	.card-icon {
 		padding: 0;
 		font-size: 1rem;
@@ -99,6 +100,11 @@ footer {
 		img.icon {
 			object-fit: fill;
 		}
+	}
+	.calendar,
+	.card-header,
+	.card-footer {
+		background-color: lighten($bg-card, 7%);
 	}
 }
 
@@ -124,7 +130,7 @@ footer {
 	.card-body {
 		background-color: $sh-black !important;
 	}
-
+	.calendar,
 	.card-header,
 	.card-footer {
 		background-color: lighten($sh-black, 5%);

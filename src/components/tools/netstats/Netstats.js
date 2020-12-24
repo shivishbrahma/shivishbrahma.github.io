@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import netstatsHelper from './netstatsHelper';
 
 import '../../../styles/Netstats.scss';
+import { FaCircle, FaLocationArrow } from 'react-icons/fa';
 
 export default function NetworkTool() {
 	const [location, setLocation] = useState(null);
@@ -54,11 +55,12 @@ export default function NetworkTool() {
 									Is Online?:{' '}
 									{netstatsHelper.getOnline ? (
 										<span>
-											<i className="text-success fa fa-circle"></i> Live
+											<FaCircle className="text-success mr-1" />
+											Live
 										</span>
 									) : (
 										<span>
-											<i className="text-gray fa fa-circle"></i> Offline
+											<FaCircle className="text-gray mr-1" /> Offline
 										</span>
 									)}
 								</li>
@@ -107,7 +109,7 @@ export default function NetworkTool() {
 									locateMe();
 								}}
 							>
-								<i className="fas fa-location-arrow"></i> Locate Me!
+								<FaLocationArrow /> Locate Me!
 							</button>
 							{location ? (
 								location.error ? (

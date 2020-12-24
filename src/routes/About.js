@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { FaGithub, FaTachometerAlt } from 'react-icons/fa';
 import Profile from '../components/about/Profile';
 import ReactGithubCalendar from '../components/all/ReactGithubCalendar';
 import store from '../redux/store';
 
 export default function About() {
 	const { app } = store.getState();
+
+	useEffect(() => {
+		document.title = `${app.name} | About`;
+	}, [app.name]);
 
 	return (
 		<main className={app.dark ? 'dark bg-dark' : ''}>
@@ -14,7 +19,7 @@ export default function About() {
 					<div className="row justify-content-center">
 						<div className="col-12">
 							<h2 className="section-header">
-								My WakaTime Dashboard <i className="fas fa-tachometer-alt"></i>
+								My WakaTime Dashboard <FaTachometerAlt />
 							</h2>
 						</div>
 						<div className="col-12">
@@ -55,7 +60,7 @@ export default function About() {
 					<div className="row justify-content-center">
 						<div className="col-12">
 							<h2 className="section-header">
-								My Github <i className="fab fa-github" aria-hidden="true"></i>
+								My Github <FaGithub />
 							</h2>
 						</div>
 						<div className="col-12">

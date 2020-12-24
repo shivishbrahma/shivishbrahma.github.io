@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaArrowCircleRight, FaFileAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import profileImage from '../../images/profile1.jpg';
 
@@ -30,14 +31,11 @@ export default function Profile({ dark }) {
 									about website designing, software development in my blog.
 								</p>
 								<Link className="btn btn-primary mx-1" to="/blog" role="button">
-									<i
-										className="fa fa-arrow-circle-right"
-										aria-hidden="true"
-									></i>
+									<FaArrowCircleRight />
 									&nbsp; Visit My Blog
 								</Link>
 								<Link className="btn btn-info mx-1" to="/resume" role="button">
-									<i className="fas fa-file-alt"></i> &nbsp; View My Resume
+									<FaFileAlt /> &nbsp; View My Resume
 								</Link>
 							</div>
 						</div>
