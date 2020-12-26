@@ -13,19 +13,19 @@ export default function Profile({ dark }) {
 					<div className="col-12 media-card">
 						<div className="row justify-content-md-center p-4">
 							<div
-								className="col-6 col-md-4 mt-2"
+								className="col-12 col-md-4 mt-2"
 								style={{ maxWidth: '300px' }}
 							>
 								<img src={profileImage} className="profile-pic" alt="Profile" />
 							</div>
-							<div className="col-6 col-md-8">
+							<div className="col-12 col-md-8">
 								<h1 className="mb-1 mt-1 font-weight-bold">
 									Purbayan Chowdhury
 								</h1>
 								<h3 className={dark ? 'text-light' : 'text-secondary'}>
 									Web Developer & ML Engineer
 								</h3>
-								<p style={{ fontSize: '1.2rem' }}>
+								<p className="text-justify" style={{ fontSize: '1.2rem' }}>
 									I am a web developer and ml engineer with specialisation in
 									scalable web apps that solves day-to-day problems. I write
 									about website designing, software development in my blog.

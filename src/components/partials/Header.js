@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 import store from '../../redux/store';
 import logo from '../../images/logo.png';
@@ -7,8 +8,17 @@ import Navigator from '../../routes/Navigator';
 
 function Header() {
 	const { app } = store.getState();
+
+	const [navbarIcon, setNavbarIcon] = useState(false);
+
+	useEffect(() => {
+		setNavbarIcon(
+			document.getElementById('collapsibleNavId').classList.contains('show')
+		);
+	}, []);
+
 	return (
-		<header>
+		<header className="sticky-top">
 			<nav
 				className={
 					'navbar navbar-expand-sm navbar-dark ' +
@@ -33,8 +43,11 @@ function Header() {
 					aria-controls="collapsibleNavId"
 					aria-expanded="false"
 					aria-label="Toggle navigation"
+					onClick={() => {
+						setNavbarIcon(!navbarIcon);
+					}}
 				>
-					<i className="fa fa-bars" aria-hidden="true"></i>
+					{navbarIcon ? <FaTimes /> : <FaBars />}
 				</button>
 				<div className="collapse navbar-collapse" id="collapsibleNavId">
 					<Navigator />

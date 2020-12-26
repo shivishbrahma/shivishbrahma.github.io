@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
 	FaEnvelope,
 	FaGithub,
@@ -9,12 +9,21 @@ import {
 	FaTwitter,
 } from 'react-icons/fa';
 import profileImage from '../images/profile1.jpg';
+import store from '../redux/store';
 import '../styles/Resume.scss';
 import '../styles/ResumePrint.scss';
 
 export default function Resume() {
+	const { app } = store.getState();
+
+	useEffect(() => {
+		document.title = `${app.name} | Resume`;
+	}, [app.name]);
+
 	return (
-		<main className="resume_section bg-gray">
+		<main
+			className={'resume_section ' + (app.dark ? 'dark bg-dark' : 'bg-gray')}
+		>
 			<div className="container-fluid">
 				<div className="col-12 my-5">
 					<div className="resume-wrapper">

@@ -9,7 +9,7 @@ export default function Blog() {
 	}, [app.name]);
 
 	return (
-		<main>
+		<main className={app.dark ? 'dark bg-dark' : ''}>
 			<section className="blog_section"></section>
 		</main>
 	);

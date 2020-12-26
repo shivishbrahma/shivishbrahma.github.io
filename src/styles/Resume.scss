@@ -1,5 +1,12 @@
 @import './variables';
 
+.resume_section {
+	div,
+	span {
+		color: $black !important;
+	}
+}
+
 .circle-icon {
 	width: 200px;
 	height: 200px;
