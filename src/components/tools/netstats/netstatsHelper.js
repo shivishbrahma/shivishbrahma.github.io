@@ -19,13 +19,22 @@ const getAddress = (lat, lon) => {
 			response.json()
 		);
 	},
-	getIPAddress = () => {
-		fetch('http://ip-api.com/json').then((res) => {
-			console.log(res.json());
+	getIPAddress = async () => {
+		const res1 = await fetch('http://ip-api.com/json', {
+			credentials: 'omit',
+			method: 'GET',
+			mode: 'cors',
 		});
-		return fetch(`${proxy}https://ipapi.co/json/`).then((response) =>
-			response.json()
-		);
+		console.log(res1.json());
+
+		// const res2 = await fetch(`${proxy}https://ipapi.co/json/`);
+		const res2 = await fetch('https://ipapi.co/json/', {
+			credentials: 'include',
+			method: 'GET',
+			mode: 'cors',
+		});
+		console.log(res2.json());
+		return res2.json();
 	};
 
 const netstatsHelper = {
