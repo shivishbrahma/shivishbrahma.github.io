@@ -20,12 +20,12 @@ const getAddress = (lat, lon) => {
 		);
 	},
 	getIPAddress = async () => {
-		const res1 = await fetch('http://ip-api.com/json', {
-			credentials: 'omit',
-			method: 'GET',
-			mode: 'cors',
-		});
-		console.log(res1.json());
+		// const res1 = await fetch('http://ip-api.com/json', {
+		// 	credentials: 'omit',
+		// 	method: 'GET',
+		// 	mode: 'cors',
+		// });
+		// console.log(res1.json());
 
 		// const res2 = await fetch(`${proxy}https://ipapi.co/json/`);
 		const res2 = await fetch('https://ipapi.co/json/', {
