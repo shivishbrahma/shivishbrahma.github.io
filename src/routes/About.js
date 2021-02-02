@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import { FaGithub, FaTachometerAlt } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
+import { PubWakaTime } from '../components/pub-icons';
 import Profile from '../components/about/Profile';
 import ReactGithubCalendar from '../components/all/ReactGithubCalendar';
 import store from '../redux/store';
@@ -19,7 +20,7 @@ export default function About() {
 					<div className="row justify-content-center">
 						<div className="col-12">
 							<h2 className="section-header">
-								My WakaTime Dashboard <FaTachometerAlt />
+								My WakaTime Dashboard <PubWakaTime />
 							</h2>
 						</div>
 						<div className="col-12">

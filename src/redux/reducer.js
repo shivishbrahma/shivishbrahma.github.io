@@ -2,7 +2,7 @@ const getInitialState = () => {
 	const defaultState = {
 		app: {
 			name: 'Shivishbrahma',
-			dark: false,
+			dark: true,
 		},
 	};
 
