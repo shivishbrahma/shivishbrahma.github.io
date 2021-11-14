@@ -1,0 +1,38 @@
+name: React app deployement
+
+on:
+  push:
+    branches: [ 'reactify' ]
+  pull_request:
+    branches: [ 'reactify' ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm ci
+      shell: bash
+    - run: npm run build --if-present
+      shell: bash
+    
+    - run : git config user.name github-actions
+      shell: bash
+    - run : git config user.email github-actions@github.com
+      shell: bash
+    - run : git --work-tree build add --all
+      shell: bash
+    - run : git commit -m "Automatic Deploy action run by github-actions"
+      shell: bash
+    - run : git push origin HEAD:gp-react --force
+      shell: bash

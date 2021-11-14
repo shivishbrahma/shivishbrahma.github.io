@@ -1,0 +1,16 @@
+@import 'scss/helper.scss';
+
+.Typewriter__cursor {
+	@include animation($name:blink, $duration:1s, $timing_function:ease-in-out, $iteration_count:infinite, $direction:alternate);
+    display: inline-block;
+	color: currentColor;
+}
+
+@include keyframes(blink) {
+    from{
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
