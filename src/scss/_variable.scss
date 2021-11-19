@@ -1,5 +1,3 @@
-@import '../../scss/variable';
-
 /*
 * ====================================================================
 *                           THEMES - LIGHT
@@ -21,24 +19,6 @@
 * 6. Primary Background Color: #00171f;
 */
 
-.App {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    position: relative;
-    color: map-get($map: $theme, $key: 'base');
-    background-color: map-get($map: $theme, $key: 'base-bg');
-}
-
-.App-header {
-    flex: 0 1 auto;
-}
-
-.App-main {
-    flex: 1;
-}
-
-.App-footer{
-    flex: 0 1 auto;
-}
-
+$light-theme: ("base": #302b27, "primary": #00374d, "secondary": #a50d12, "tertiary": #02642c, "base-bg":#f3ffe9, "primary-bg": #e6f9ff);
+$dark-theme: ("base": #f4f2f1, "primary": #00a8e8, "secondary": #f15156, "tertiary": #04f06a, "base-bg": #00171f);
+$theme: $light-theme;

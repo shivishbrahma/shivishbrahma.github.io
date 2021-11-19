@@ -2,6 +2,19 @@
 
 ## Components
 
+### Organisms
+
+- [ ] Home
+- [ ] Resume
+- [ ] Tools
+- [ ] Blog
+
+### Molecules
+
+- [ ] Navbar
+- [ ] Hero Section
+- [ ] Language Globe
+
 ### Atoms
 
-- [ ] Typewriter
+- [x] Typewriter (jsx, scss, test)

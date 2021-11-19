@@ -1,0 +1,34 @@
+@import '../../scss/variable';
+
+.HeroSection {
+    padding: 0.5rem 0.25rem;
+
+    background-image: linear-gradient(rgba(map-get($theme, 'base-bg'), 0.45),
+            rgba(map-get($theme, 'base-bg'), 0.6)), url(../../images/hero.jpg);
+    background-size: cover;
+    height: calc(100vh - 3rem);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .HeroSection__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        h1{
+            color:map-get($theme, 'primary');
+        }
+        .Typewriter__text {
+            color: map-get($theme, 'secondary');
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .HeroSection {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}

@@ -1,0 +1,94 @@
+@import '../../scss/variable';
+
+.Navbar {
+    padding: 0.5rem 0.75rem;
+    display: flex;
+    gap: 0.5rem;
+    background: map-get($theme, "primary-bg");
+    height: 3rem;
+
+    .Navbar-brand {
+        display: flex;
+        gap: 0.75rem;
+        margin-left: auto;
+
+        .Navbar-brand-logo {
+            display: inline-block;
+            width: 2rem;
+            height: 2rem;
+        }
+
+        .Navbar-brand-text {
+            display: inline-block;
+            font-size: 1.25rem;
+            // line-height: 2;
+        }
+    }
+
+    .Navbar-list {
+        display: flex;
+        gap: 1.5rem;
+        list-style: none;
+
+        .Navbar-item a {
+            text-decoration: none;
+
+            &.active,
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .Navbar-toggler {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Navbar {
+        .Navbar-brand {
+            .Navbar-brand-text {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 428px) {
+    .Navbar {
+        .Navbar-list {
+            display: none;
+            transition: transform ease-in-out 1s;
+            transform: translate(100%, 100%);
+        }
+
+        .Navbar-toggler {
+            display: block;
+        }
+    }
+
+    .Navbar.active {
+        .Navbar-list {
+            transform: translate(0, 0);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: map-get($theme, "primary-bg");
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .Navbar-toggler {
+            top: 0.5rem;
+            left: 0.5rem;
+            position: absolute;
+            z-index: 2;
+        }
+    }
+}

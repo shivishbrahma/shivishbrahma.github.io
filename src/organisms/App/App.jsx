@@ -2,21 +2,25 @@ import React from 'react';
 // import logo from '../../logo.svg';
 import './App.scss';
 
-// Atomic Components
-import Typewriter from '../../atoms/Typewriter/Typewriter';
+// Molecular Components
+import Navbar from '../../molecules/Navbar/Navbar';
+import HeroSection from '../../molecules/HeroSection/HeroSection';
 
 function App() {
+	const [isDark, setIsDark] = React.useState(false);
+
 	return (
-		<React.Fragment>
-			{/* <header className="App-header">
-				<img src={logo} className="App-logo" alt="logo" />
-			</header> */}
+		<div className={'App ' + (isDark ? 'App-dark' : '')}>
+			<header className="App-header">
+				{/* <img src={logo} className="App-logo" alt="logo" /> */}
+				<Navbar />
+				<HeroSection />
+			</header>
 			<main className="App-main">
-				<Typewriter text={['Hello World!', 'Typewriter']} />
-				{/* <Typewriter text={['Hello World!']} /> */}
+				<div></div>
 			</main>
-			<footer className="App-footer"></footer>
-		</React.Fragment>
+			<footer className="App-footer">Footer Element</footer>
+		</div>
 	);
 }
 

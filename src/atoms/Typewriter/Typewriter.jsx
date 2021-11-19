@@ -1,30 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Typewriter.scss';
-
-function Cursor(props) {
-	const { cursor, cursorRenderer, className } = props;
-
-	return (
-		<React.Fragment>
-			<span className={className + ' Typewriter__cursor'}>
-				{cursorRenderer ? cursorRenderer(cursor) : cursor}
-			</span>
-		</React.Fragment>
-	);
-}
-
-Cursor.propTypes = {
-	cursor: PropTypes.string,
-	className: PropTypes.string,
-	cursorRenderer: PropTypes.func,
-};
-
-Cursor.defaultProps = {
-	cursor: '|',
-	className: '',
-	cursorRenderer: null,
-};
+import Cursor from './Cursor';
 
 function Typewriter({
 	text,
@@ -118,12 +95,12 @@ function Typewriter({
 	}
 
 	return (
-		<React.Fragment>
-			<div className="Typewriter__text" {...otherProps}>
-				<span>{displayTextRenderer ? displayTextRenderer(currentText, currentIndex) : currentText}</span>
-				<Cursor cursor={cursor} cursorRenderer={cursorRenderer} cursorClassName={cursorClassName} />
-			</div>
-		</React.Fragment>
+		<div className="Typewriter" {...otherProps}>
+			<span className="Typewriter__text">
+				{displayTextRenderer ? displayTextRenderer(currentText, currentIndex) : currentText}
+			</span>
+			<Cursor cursor={cursor} cursorRenderer={cursorRenderer} cursorClassName={cursorClassName} />
+		</div>
 	);
 }
 
