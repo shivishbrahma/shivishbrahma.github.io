@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Raleway:wght@200;400;500&display=swap');
+
+// Color Definitions
+$color-date: #666;
+$color-primary: #2b2b2b;
+$color-headings: #6a6a6a;
+$color-subheadings: #333;
+
+@media print {
+    html {
+        font-size: 82.5%;
+    }
+}
+
+.Resume-content {
+    background-color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: $color-primary;
+
+    a:link,
+    a:visited {
+        text-decoration: none;
+        color: inherit;
+        padding: 0.125rem;
+        border: 0.035rem solid #00a8e8;
+    }
+
+    // Date Section
+    .Resume-date {
+        font-size: 0.75rem;
+        color: $color-date;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 200;
+    }
+
+    // Name Command
+    header {
+        text-align: center;
+
+        .Resume-title {
+            font-size: 3.5rem;
+            font-family: 'Lato', sans-serif;
+            color: $color-headings;
+
+            .shade-1 {
+                font-weight: 100;
+            }
+
+            .shade-2 {
+                font-weight: 300;
+            }
+        }
+
+        .Resume-title-content {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 500;
+            font-size: 1.125rem;
+            line-height: 2;
+
+            span:after {
+                content: ' | ';
+            }
+
+            span:last-child:after {
+                content: '';
+            }
+        }
+
+        padding-bottom: 0.75rem;
+        border-bottom: 0.04rem solid $color-primary;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 8fr 17fr;
+        column-gap: 1.5rem;
+        padding: 1.25rem 2.5rem;
+    }
+
+    aside {
+        .Resume-section-skill::after {
+            content: ' • ';
+        }
+
+        .Resume-section-skill:last-child::after {
+            content: '';
+        }
+    }
+
+    .experience,
+    .links {
+        .Resume-section-subtitle {
+            display: inline-block;
+
+            &::after {
+                content: '|';
+                padding: 0.5rem 0.25rem 1rem 0.5rem;
+            }
+        }
+
+        .Resume-section-description {
+            display: inline-block;
+        }
+    }
+
+    .links {
+        .Resume-section-subtitle {
+            &::after {
+                content: ':// ';
+                padding-left: 0;
+            }
+        }
+
+        .twitter::before {
+            content: '@';
+        }
+    }
+
+    .Resume-section {
+
+        // Section Heading
+        .Resume-section-title {
+            font-weight: 300;
+            font-size: 1.75rem;
+            text-transform: uppercase;
+            color: $color-headings;
+            padding-bottom: 0.25rem;
+        }
+
+        ul.Resume-section-list {
+            list-style: none;
+
+            li {
+                padding-bottom: 1rem;
+            }
+
+            // Section Subheading
+            .Resume-section-subtitle {
+                font-weight: 700;
+                font-size: 1.1rem;
+                text-transform: uppercase;
+                color: $color-subheadings;
+            }
+
+            // Section Descripton
+            .Resume-section-description {
+                font-family: 'Raleway', sans-serif;
+                font-weight: 500;
+                font-size: 1.125rem;
+                color: $color-subheadings;
+            }
+
+            .Resume-section-location {
+                font-family: 'Raleway', sans-serif;
+                font-weight: 500;
+                font-size: 0.975rem;
+                color: $color-headings;
+            }
+        }
+
+        padding-bottom: 0.75rem;
+    }
+}

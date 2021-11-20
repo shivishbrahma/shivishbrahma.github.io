@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { FaBars, FaTimes } from 'react-icons/fa';
-import {GiWorld} from 'react-icons/gi';
+import { GiWorld } from 'react-icons/gi';
+import { NavLink } from "react-router-dom";
 import './Navbar.scss';
 
 function Navbar(props) {
@@ -18,14 +19,19 @@ function Navbar(props) {
 			>
 				{isNavbarOpen ? <FaTimes /> : <FaBars />}
 			</div>
-			<ul className="Navbar-list" onClick={()=>{
-                setIsNavbarOpen(false);
-            }}>
+			<ul
+				className="Navbar-list"
+				onClick={() => {
+					setIsNavbarOpen(false);
+				}}
+			>
 				<li className="Navbar-item">
-					<a href="#home">Home</a>
+					{/* <a href="#home">Home</a> */}
+                    <NavLink to="/">Home</NavLink>
 				</li>
 				<li className="Navbar-item">
-					<a href="#about">About</a>
+					{/* <a href="#about">About</a> */}
+                    <NavLink to="/resume">Resume</NavLink>
 				</li>
 				<li className="Navbar-item">
 					<a href="#projects">Projects</a>

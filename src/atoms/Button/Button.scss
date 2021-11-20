@@ -1,0 +1,96 @@
+@import '../../scss/variable';
+
+.Button {
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.1);
+
+    &.Button__default {
+        border: 1px solid map-get($theme, 'base');
+        background-color: map-get($theme, 'primary-bg');
+    }
+
+    &.Button__primary {
+        background-color: map-get($theme, 'primary');
+        border-color: map-get($theme, 'primary');
+        color: map-get($theme, 'base-bg');
+
+        &:hover {
+            background-color: map-get($theme, 'base-bg');
+            border-color: map-get($theme, 'base-bg');
+            color: map-get($theme, 'primary');
+        }
+    }
+
+    &.Button__secondary,
+    &.Button__error {
+        background-color: map-get($theme, 'secondary');
+        border-color: map-get($theme, 'secondary');
+        color: map-get($theme, 'base-bg');
+
+        &:hover {
+            background-color: map-get($theme, 'base-bg');
+            border-color: map-get($theme, 'base-bg');
+            color: map-get($theme, 'secondary');
+        }
+    }
+
+    &.Button__tertiary,
+    &.Button__success {
+        background-color: map-get($theme, 'tertiary');
+        border-color: map-get($theme, 'tertiary');
+        color: map-get($theme, 'base-bg');
+
+        &:hover {
+            background-color: map-get($theme, 'base-bg');
+            border-color: map-get($theme, 'base-bg');
+            color: map-get($theme, 'tertiary');
+        }
+    }
+
+    &.Button__floating {
+        position: fixed;
+
+        &.Button__floating__top {
+            top: 0.5rem;
+        }
+
+        &.Button__floating__left {
+            left: 0.5rem;
+        }
+
+        &.Button__floating__right {
+            right: 0.5rem;
+        }
+
+        &.Button__floating__bottom {
+            bottom: 0.5rem;
+        }
+
+        &.Button__floating__top_left {
+            top: 0.5rem;
+            left: 0.5rem;
+        }
+
+        &.Button__floating__top_right {
+            top: 0.5rem;
+            right: 0.5rem;
+        }
+
+        &.Button__floating__bottom_left {
+            bottom: 0.5rem;
+            left: 0.5rem;
+        }
+
+        &.Button__floating__bottom_right {
+            bottom: 0.5rem;
+            right: 0.5rem;
+        }
+
+    }
+
+    &:hover {
+        box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.1);
+    }
+}

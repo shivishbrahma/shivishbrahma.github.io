@@ -12,6 +12,7 @@
         "react-icons": "^4.3.1",
         "react-router-dom": "^6.0.2",
         "react-scripts": "^4.0.3",
+        "react-to-print": "^2.14.0",
         "web-vitals": "^1.1.2"
     },
     "scripts": {
@@ -38,7 +39,7 @@
             "last 1 safari version"
         ]
     },
-    "homepage": "https://shivishbrahma.github.io",
+    "homepage": "https://shivishbrahma.github.io/portfolio",
     "description": "Portfolio of Purbayan Chowdhury",
     "keywords": [
         "portfolio"

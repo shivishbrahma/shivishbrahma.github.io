@@ -1,0 +1,452 @@
+{
+    "basics": {
+        "name": "Purbayan Chowdhury",
+        "label": "System Engineer @ TCS, Hyderabad",
+        "image": "https://avatars.githubusercontent.com/u/20686433?v=4",
+        "email": "pur.cho.99@gmail.com",
+        "phone": "+91 9123801180",
+        "url": "https://shivishbrahma.github.io",
+        "summary": "A computer science and engineering student passionate about open source software development and interested in problem solving.",
+        "profiles": [
+            {
+                "network": "gitconnected",
+                "username": "shivishbrahma",
+                "url": "https://gitconnected.com/shivishbrahma"
+            },
+            {
+                "network": "GitHub",
+                "username": "shivishbrahma",
+                "url": "https://github.com/shivishbrahma"
+            },
+            {
+                "network": "LinkedIn",
+                "url": "https://www.linkedin.com/in/shivishbrahma",
+                "username": "shivishbrahma"
+            },
+            {
+                "network": "Twitter",
+                "url": "https://twitter.com/shivishbrahma",
+                "username": "shivishbrahma"
+            }
+        ],
+        "headline": " A web dev, coding geek, data analyst, number cruncher in his own habitat\r\n",
+        "blog": null,
+        "yearsOfExperience": null,
+        "username": "shivishbrahma",
+        "locationAsString": "Howrah, WB",
+        "region": "Howrah, WB",
+        "karma": 15,
+        "id": "0e96e5ea-87d1-4d7c-922d-98af0c133993",
+        "followers": 12,
+        "following": 37,
+        "picture": "https://avatars.githubusercontent.com/u/20686433?v=4",
+        "website": "https://shivishbrahma.github.io"
+    },
+    "skills": [
+        {
+            "name": "JavaScript",
+            "level": "Advanced",
+            "keywords": [],
+            "rating": 4,
+            "yearsOfExperience": 3
+        },
+        {
+            "name": "MySQL",
+            "level": "Intermediate",
+            "keywords": [],
+            "rating": 3,
+            "yearsOfExperience": 4
+        },
+        {
+            "name": "Java",
+            "level": "Intermediate",
+            "keywords": [],
+            "rating": 3,
+            "yearsOfExperience": 5
+        },
+        {
+            "name": "Python",
+            "level": "Intermediate",
+            "keywords": [],
+            "rating": 3,
+            "yearsOfExperience": 3
+        },
+        {
+            "name": "SQL",
+            "level": "Beginner",
+            "keywords": [
+                "Oracle"
+            ],
+            "rating": 2,
+            "yearsOfExperience": 3
+        },
+        {
+            "name": "HTML CSS",
+            "level": "Beginner",
+            "keywords": [],
+            "rating": 2,
+            "yearsOfExperience": 4
+        }
+    ],
+    "projects": [
+        {
+            "name": "krishi-mitra",
+            "description": "",
+            "url": "",
+            "highlights": [],
+            "keywords": [],
+            "roles": [],
+            "startDate": "",
+            "endDate": "",
+            "entity": "",
+            "type": "",
+            "displayName": "krishi-mitra",
+            "website": "",
+            "summary": "A Laravel Ecommerce Portal for Agro Goods",
+            "primaryLanguage": "PHP",
+            "languages": [
+                "PHP",
+                "Blade",
+                "Vue",
+                "HTML",
+                "Shell"
+            ],
+            "libraries": [],
+            "githubUrl": "https://github.com/indic-amigo-akademi/krishi-mitra",
+            "repositoryUrl": "https://github.com/indic-amigo-akademi/krishi-mitra",
+            "start": {
+                "year": null,
+                "month": null,
+                "day": null
+            },
+            "end": {
+                "year": null,
+                "month": null,
+                "day": null
+            },
+            "images": [],
+            "videos": []
+        },
+        {
+            "name": "swork",
+            "description": "",
+            "url": "",
+            "highlights": [],
+            "keywords": [],
+            "roles": [],
+            "startDate": "",
+            "endDate": "",
+            "entity": "",
+            "type": "",
+            "displayName": "swork",
+            "website": "",
+            "summary": "Official Website of Swork",
+            "primaryLanguage": "PHP",
+            "languages": [
+                "HTML",
+                "JavaScript",
+                "SCSS",
+                "PHP",
+                "CSS"
+            ],
+            "libraries": [],
+            "githubUrl": "https://github.com/Indic-Web-Dev/swork",
+            "repositoryUrl": "https://github.com/Indic-Web-Dev/swork",
+            "start": {
+                "year": null,
+                "month": null,
+                "day": null
+            },
+            "end": {
+                "year": null,
+                "month": null,
+                "day": null
+            },
+            "images": [],
+            "videos": []
+        },
+        {
+            "name": "pokedex",
+            "description": "",
+            "url": "https://shivishbrahma.github.io/Pokedex/",
+            "highlights": [],
+            "keywords": [],
+            "roles": [],
+            "startDate": "",
+            "endDate": "",
+            "entity": "",
+            "type": "",
+            "displayName": "Pokedex",
+            "website": "https://shivishbrahma.github.io/Pokedex/",
+            "summary": "React Frontend for Pokedex API",
+            "primaryLanguage": "JavaScript",
+            "languages": [
+                "JavaScript",
+                "SCSS",
+                "HTML"
+            ],
+            "libraries": [],
+            "githubUrl": "https://github.com/shivishbrahma/Pokedex",
+            "repositoryUrl": "https://github.com/shivishbrahma/Pokedex",
+            "start": {
+                "year": null,
+                "month": null,
+                "day": null
+            },
+            "end": {
+                "year": null,
+                "month": null,
+                "day": null
+            },
+            "images": [],
+            "videos": []
+        },
+        {
+            "name": "tilottama",
+            "description": "",
+            "url": "",
+            "highlights": [],
+            "keywords": [],
+            "roles": [],
+            "startDate": "",
+            "endDate": "",
+            "entity": "",
+            "type": "",
+            "displayName": "tilottama",
+            "website": "",
+            "summary": "A Java based multi-tasking command line interface bot.",
+            "primaryLanguage": "Java",
+            "languages": [
+                "Java"
+            ],
+            "libraries": [],
+            "githubUrl": "https://github.com/shivishbrahma/tilottama",
+            "repositoryUrl": "https://github.com/shivishbrahma/tilottama",
+            "start": {
+                "year": null,
+                "month": null,
+                "day": null
+            },
+            "end": {
+                "year": null,
+                "month": null,
+                "day": null
+            },
+            "images": [],
+            "videos": []
+        },
+        {
+            "name": "travelmap",
+            "description": "",
+            "url": "https://travelmap-ecru.vercel.app/",
+            "highlights": [],
+            "keywords": [],
+            "roles": [],
+            "startDate": "",
+            "endDate": "",
+            "entity": "",
+            "type": "",
+            "displayName": "travelmap",
+            "website": "https://travelmap-ecru.vercel.app/",
+            "summary": "A MERN Stack App for saving travel map log",
+            "primaryLanguage": "JavaScript",
+            "languages": [
+                "HTML",
+                "JavaScript",
+                "CSS"
+            ],
+            "libraries": [],
+            "githubUrl": "https://github.com/shivishbrahma/travelmap",
+            "repositoryUrl": "https://github.com/shivishbrahma/travelmap",
+            "start": {
+                "year": null,
+                "month": null,
+                "day": null
+            },
+            "end": {
+                "year": null,
+                "month": null,
+                "day": null
+            },
+            "images": [],
+            "videos": []
+        },
+        {
+            "name": "node-primer",
+            "description": "",
+            "url": "",
+            "highlights": [],
+            "keywords": [],
+            "roles": [],
+            "startDate": "",
+            "endDate": "",
+            "entity": "",
+            "type": "",
+            "displayName": "node-primer",
+            "website": "",
+            "summary": "Basic Node Js Projects for starters",
+            "primaryLanguage": "Handlebars",
+            "languages": [
+                "JavaScript",
+                "HTML",
+                "Handlebars",
+                "SCSS"
+            ],
+            "libraries": [],
+            "githubUrl": "https://github.com/shivishbrahma/node-primer",
+            "repositoryUrl": "https://github.com/shivishbrahma/node-primer",
+            "start": {
+                "year": null,
+                "month": null,
+                "day": null
+            },
+            "end": {
+                "year": null,
+                "month": null,
+                "day": null
+            },
+            "images": [],
+            "videos": []
+        }
+    ],
+    "work": [
+        {
+            "name": "DIY Baazar Pvt Ltd",
+            "location": "Kolkata, WB, India",
+            "description": "",
+            "position": "Frontend Developer",
+            "url": "http://diybaazar.com/",
+            "startDate": "2020-07-01",
+            "endDate": "2020-12-01",
+            "summary": "Worked on the frontend design of the whole website especially component building using Bootstrap and native JS and CSS and also helped in Laravel Backend for view handling.",
+            "highlights": [],
+            "isCurrentRole": false,
+            "start": {
+                "year": 2020,
+                "month": 7
+            },
+            "end": {
+                "year": 2020,
+                "month": 12
+            },
+            "company": "DIY Baazar Pvt Ltd",
+            "website": "http://diybaazar.com/"
+        },
+        {
+            "name": "Filium Enterprises Private Limited",
+            "location": "Dehradun, Uttarakhand, India (Remote)",
+            "description": "",
+            "position": "PHP and JS Web Dev Intern",
+            "url": "https://www.filiumenter.com",
+            "startDate": "2020-04-01",
+            "endDate": "2020-07-01",
+            "summary": "Worked on a website designer application built on PHP and JS using MySQL as database.",
+            "highlights": [],
+            "isCurrentRole": false,
+            "start": {
+                "year": 2020,
+                "month": 4
+            },
+            "end": {
+                "year": 2020,
+                "month": 7
+            },
+            "company": "Filium Enterprises Private Limited",
+            "website": "https://www.filiumenter.com"
+        }
+    ],
+    "publications": [],
+    "education": [
+        {
+            "institution": "Institute of Engineering and Management",
+            "url": "https://iem.edu.in/",
+            "area": "Computer Science and Engineering",
+            "studyType": "Bachelor of Technology",
+            "startDate": "2017-08-01",
+            "endDate": "2021-06-01",
+            "score": "9.42",
+            "courses": [],
+            "description": "",
+            "activities": "",
+            "start": {
+                "year": 2017,
+                "month": 8
+            },
+            "end": {
+                "year": 2021,
+                "month": 6
+            },
+            "website": "https://iem.edu.in/",
+            "gpa": "9.42"
+        },
+        {
+            "institution": "Sunrise English Medium School",
+            "url": "https://sunriseeducation.org/",
+            "area": "Science Stream",
+            "studyType": "ISC(12th)",
+            "startDate": "2015-04-01",
+            "endDate": "2017-03-01",
+            "score": "94%",
+            "courses": [],
+            "description": "",
+            "activities": "",
+            "start": {
+                "year": 2015,
+                "month": 4
+            },
+            "end": {
+                "year": 2017,
+                "month": 3
+            },
+            "website": "https://sunriseeducation.org/",
+            "gpa": "94%"
+        },
+        {
+            "institution": "Sunrise English Medium School",
+            "url": "https://sunriseeducation.org/",
+            "area": "Science and Humanities",
+            "studyType": "ICSE (10th)",
+            "startDate": "2014-04-01",
+            "endDate": "2015-03-01",
+            "score": "92%",
+            "courses": [],
+            "description": "",
+            "activities": "",
+            "start": {
+                "year": 2014,
+                "month": 4
+            },
+            "end": {
+                "year": 2015,
+                "month": 3
+            },
+            "website": "https://sunriseeducation.org/",
+            "gpa": "92%"
+        }
+    ],
+    "volunteer": [],
+    "awards": [],
+    "languages": [
+        {
+            "language": "English",
+            "fluency": "Fluent"
+        },
+        {
+            "language": "Bengali",
+            "fluency": "Native"
+        },
+        {
+            "language": "Hindi",
+            "fluency": "Fluent"
+        }
+    ],
+    "interests": [],
+    "references": [],
+    "certificates": [],
+    "meta": {
+        "note": "This is a combined version of the old and new JSON Resume API to provide maximum compatibility. You will notice duplicated values in different fields.",
+        "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
+        "version": "v1.0.0",
+        "lastModified": "2020-12-29T15:53:00"
+    }
+}
