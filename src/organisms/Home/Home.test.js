@@ -5,7 +5,7 @@ import Home from './Home';
 
 test('checks for rendering Home', () => {
 	const { container } = render(<Home/>);
-	const homeElement = container.querySelector('div.Home')
+	const homeElement = container.querySelector('section.Home')
 	expect(homeElement).toBeInTheDocument();
 });
 	

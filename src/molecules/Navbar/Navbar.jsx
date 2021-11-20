@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { GiWorld } from 'react-icons/gi';

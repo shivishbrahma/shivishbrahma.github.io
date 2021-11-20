@@ -5,7 +5,7 @@ import Resume from './Resume';
 
 test('checks for rendering Resume', () => {
 	const { container } = render(<Resume/>);
-	const resumeElement = container.querySelector('div.Resume')
+	const resumeElement = container.querySelector('section.Resume')
 	expect(resumeElement).toBeInTheDocument();
 });
 	

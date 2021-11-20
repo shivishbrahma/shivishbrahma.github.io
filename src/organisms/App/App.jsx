@@ -4,6 +4,7 @@ import './App.scss';
 
 // Molecular Components
 import Navbar from '../../molecules/Navbar/Navbar';
+import Footer from '../../molecules/Footer/Footer';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import Home from '../Home/Home';
 import Resume from '../Resume/Resume';
@@ -29,7 +30,9 @@ function App() {
 								<Route component={Error} /> */}
 					</Routes>
 				</main>
-				<footer className="App-footer">Footer Element</footer>
+				<footer className="App-footer">
+					<Footer darkModeToggler={setIsDark} />
+				</footer>
 			</div>
 		</HashRouter>
 	);

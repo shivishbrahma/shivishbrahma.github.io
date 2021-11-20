@@ -58,7 +58,7 @@ test('checks if text array is typing & erasing', () => {
 		eraseSpeed = 2,
 		eraseDelay = 30,
 		typingDelay = 10;
-	const iterations_count = 3;
+	const iterations_count = 2;
 	const { container } = render(
 		<Typewriter
 			text={textArray}

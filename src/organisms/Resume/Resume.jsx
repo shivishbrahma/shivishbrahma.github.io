@@ -1,6 +1,6 @@
 import React from 'react';
 import { useReactToPrint } from 'react-to-print';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 import Button from '../../atoms/Button/Button';
 import ResumeContent from './ResumeContent';

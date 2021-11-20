@@ -26,6 +26,8 @@ function Typewriter({
 		return () => {
 			__timeout && clearTimeout(__timeout);
 		};
+
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	React.useEffect(() => {
@@ -51,6 +53,8 @@ function Typewriter({
 				set__Timeout(setTimeout(erase, eraseSpeed));
 			}
 		}
+
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [currentText]);
 
 	React.useEffect(() => {
@@ -58,6 +62,8 @@ function Typewriter({
 			setIsTyping(true);
 			startTyping();
 		}
+
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [currentIndex]);
 
 	function getRawText() {
