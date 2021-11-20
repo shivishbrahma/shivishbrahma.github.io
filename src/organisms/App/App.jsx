@@ -5,7 +5,7 @@ import './App.scss';
 // Molecular Components
 import Navbar from '../../molecules/Navbar/Navbar';
 import Footer from '../../molecules/Footer/Footer';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Home from '../Home/Home';
 import Resume from '../Resume/Resume';
 
@@ -13,7 +13,7 @@ function App() {
 	const [isDark, setIsDark] = React.useState(false);
 
 	return (
-		<HashRouter basename={process.env.PUBLIC_URL}>
+		<BrowserRouter basename={process.env.PUBLIC_URL}>
 			<div className={'App ' + (isDark ? 'App-dark' : '')}>
 				<header className="App-header">
 					{/* <img src={logo} className="App-logo" alt="logo" /> */}
@@ -34,7 +34,7 @@ function App() {
 					<Footer darkModeToggler={setIsDark} />
 				</footer>
 			</div>
-		</HashRouter>
+		</BrowserRouter>
 	);
 }
 
