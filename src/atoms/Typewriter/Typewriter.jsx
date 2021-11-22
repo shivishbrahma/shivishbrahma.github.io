@@ -90,7 +90,7 @@ function Typewriter({
 	function erase() {
 		let index = currentIndex;
 		if (currentText.length === 0) {
-			console.log('Start Typing');
+			// console.log('Start Typing');
 			const textArray = getRawText();
 			index = index + 1 === textArray.length ? 0 : index + 1;
 			setCurrentIndex(index);

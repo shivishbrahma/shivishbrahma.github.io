@@ -23,7 +23,7 @@ const ResumeContent = React.forwardRef((props, ref) => {
 							);
 						})}
 					</h1>
-					<p className="Resume-title-content">
+					<div className="Resume-title-content">
 						<div>
 							<span>
 								<a href={MyResume.basics.website}>{MyResume.basics.website}</a>
@@ -37,7 +37,7 @@ const ResumeContent = React.forwardRef((props, ref) => {
 								<a href={'mailto:' + MyResume.basics.email}>{MyResume.basics.email}</a>
 							</span>
 						</div>
-					</p>
+					</div>
 				</header>
 				<main>
 					<aside>
@@ -94,7 +94,7 @@ const ResumeContent = React.forwardRef((props, ref) => {
 								<h2 className="Resume-section-title">Skills</h2>
 								<ul className="Resume-section-list">
 									{[5, 4, 3, 2, 1].map((i, index) => (
-										<>
+										<React.Fragment key={index}>
 											{MyResume.skills.filter((item) => item.rating === i).length === 0 ? (
 												''
 											) : (
@@ -111,7 +111,7 @@ const ResumeContent = React.forwardRef((props, ref) => {
 														))}
 												</li>
 											)}
-										</>
+										</React.Fragment>
 									))}
 								</ul>
 							</section>
