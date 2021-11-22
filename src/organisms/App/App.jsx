@@ -8,6 +8,7 @@ import Footer from '../../molecules/Footer/Footer';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Home from '../Home/Home';
 import Resume from '../Resume/Resume';
+import Error from '../Error/Error';
 
 function App() {
 	const [isDark, setIsDark] = React.useState(false);
@@ -26,8 +27,8 @@ function App() {
 						<Route path="resume" exact element={<Resume />} />
 						{/* <Route path="/blog" exact component={Blog} />
 								<Route path="/tools" exact component={Tools} />
-								<Route path="/tools/:tool_slug" component={ToolSelector} />
-								<Route component={Error} /> */}
+								<Route path="/tools/:tool_slug" component={ToolSelector} /> */}
+						<Route path="*" element={<Error />} />
 					</Routes>
 				</main>
 				<footer className="App-footer">
