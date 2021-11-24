@@ -27,16 +27,17 @@
 
     .Navbar-list {
         display: flex;
-        gap: 1.5rem;
+        gap: 0.25rem;
         list-style: none;
+        align-items: center;
 
         .Navbar-item a {
             text-decoration: none;
 
-            &.active,
-            &:hover {
-                text-decoration: underline;
-            }
+            // &.active,
+            // &:hover {
+            //     text-decoration: underline;
+            // }
         }
     }
 
@@ -70,6 +71,7 @@
 
     .Navbar.active {
         .Navbar-list {
+            gap: 1rem;
             transform: translate(0, 0);
             width: 100%;
             height: 100%;
@@ -82,6 +84,11 @@
             align-items: center;
             position: absolute;
             z-index: 1;
+
+            .Navbar-item {
+                width: 100%;
+                max-width: 200px;
+            }
         }
 
         .Navbar-toggler {

@@ -53,6 +53,9 @@ function Typewriter({
 				set__Timeout(setTimeout(erase, eraseSpeed));
 			}
 		}
+		return () => {
+			__timeout && clearTimeout(__timeout);
+		};
 
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [currentText]);
@@ -62,6 +65,9 @@ function Typewriter({
 			setIsTyping(true);
 			startTyping();
 		}
+		return () => {
+			__timeout && clearTimeout(__timeout);
+		};
 
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [currentIndex]);

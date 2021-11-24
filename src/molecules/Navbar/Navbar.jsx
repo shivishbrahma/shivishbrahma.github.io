@@ -2,8 +2,10 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 
 import { FaBars, FaTimes } from 'react-icons/fa';
-import { GiWorld } from 'react-icons/gi';
-import { NavLink } from "react-router-dom";
+import logo from './logo.svg';
+import logo_text from './logo_text.svg';
+// import { NavLink } from "react-router-dom";
+import Navlink from '../../atoms/Navlink/Navlink';
 import './Navbar.scss';
 
 function Navbar(props) {
@@ -27,25 +29,26 @@ function Navbar(props) {
 			>
 				<li className="Navbar-item">
 					{/* <a href="#home">Home</a> */}
-                    <NavLink to="/">Home</NavLink>
+					<Navlink to="/">Home</Navlink>
 				</li>
 				<li className="Navbar-item">
 					{/* <a href="#about">About</a> */}
-                    <NavLink to="/resume">Resume</NavLink>
+					<Navlink to="/resume">Resume</Navlink>
 				</li>
 				<li className="Navbar-item">
-					<a href="#projects">Projects</a>
+					<Navlink to="/projects">Projects</Navlink>
 				</li>
 				<li className="Navbar-item">
-					<a href="#tools">Tools</a>
+					<Navlink to="/tools">Tools</Navlink>
 				</li>
 				<li className="Navbar-item">
-					<a href="#blogs">Blogs</a>
+					<Navlink to="/blogs">Blogs</Navlink>
 				</li>
 			</ul>
 			<div className="Navbar-brand">
-				<GiWorld alt="Shivishbrahma Icon" className="Navbar-brand-logo" />
-				<span className="Navbar-brand-text">Shivishbrahma</span>
+				<img src={logo} alt="Brand Icon" className="Navbar-brand-logo" />
+				{/* <span className="Navbar-brand-text">Shivishbrahma</span> */}
+				<img src={logo_text} alt="Brand Text" className="Navbar-brand-text" />
 			</div>
 		</nav>
 	);

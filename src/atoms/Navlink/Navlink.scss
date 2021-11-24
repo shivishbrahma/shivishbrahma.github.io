@@ -1,0 +1,20 @@
+@import '../../scss/variable';
+
+.Navlink {
+    padding: 0.5rem 0.75rem;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    text-align: center;
+
+    &:link {
+        color: map-get($theme, "primary");
+    }
+
+    &:hover,
+    &.Navbar__active {
+        background: map-get($light-theme, "primary");
+        color: map-get($light-theme, "primary-bg");
+        text-decoration: none;
+    }
+}
