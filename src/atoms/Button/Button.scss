@@ -6,9 +6,21 @@
     border-radius: 0.25rem;
     box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.1);
 
+    &:link {
+        text-decoration: none;
+        text-align: center;
+    }
+
     &.Button__default {
         border: 1px solid map-get($theme, 'base');
         background-color: map-get($theme, 'primary-bg');
+        color: map-get($theme, 'base');
+
+        &:hover {
+            background-color: map-get($theme, 'base-bg');
+            border-color: map-get($theme, 'primary-bg');
+            color: map-get($theme, 'primary');
+        }
     }
 
     &.Button__primary {

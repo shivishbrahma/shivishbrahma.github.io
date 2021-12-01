@@ -5,7 +5,7 @@ import Navlink from './Navlink';
 
 test('checks for rendering Navlink', () => {
 	const { container } = render(<Navlink/>);
-	const navlinkElement = container.querySelector('div.Navlink')
+	const navlinkElement = container.querySelector('a.Navlink')
 	expect(navlinkElement).toBeInTheDocument();
 });
 	

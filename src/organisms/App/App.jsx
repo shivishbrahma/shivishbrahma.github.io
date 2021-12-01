@@ -31,7 +31,7 @@ function App() {
 						<Route path="*" element={<Error />} />
 					</Routes>
 				</main>
-				<footer className="App-footer">
+				<footer className="App-footer" style={{ display: 'none' }}>
 					<Footer darkModeToggler={setIsDark} />
 				</footer>
 			</div>

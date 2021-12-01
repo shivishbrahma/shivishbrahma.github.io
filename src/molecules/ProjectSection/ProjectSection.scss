@@ -1,0 +1,60 @@
+@import '../../scss/variable';
+
+.Project__languages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+
+    .Project__languages__tag {
+        display: block;
+        padding: 0.125rem 0.75rem;
+        border-radius: 2.5rem;
+        background-color: map-get($theme, 'base');
+        color: white;
+
+
+        &.Project__languages__tag__primary {
+            background-color: map-get($theme, 'primary');
+            color: white;
+        }
+
+        // &:nth-child(4n+2) {
+        //     background-color: map-get($theme, 'secondary');
+        //     color: white;
+        // }
+
+        // &:nth-child(4n+3) {
+        //     background-color: map-get($theme, 'tertiary');
+        //     color: white;
+        // }
+        // &:nth-child(4n) {
+        //     background-color: map-get($theme, 'quaternary');
+        //     color: black;
+        // }
+    }
+}
+
+.Card__hover__content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.Project_hover__content {
+    flex: 1 auto;
+}
+
+.Project__hover__header {
+    flex: 0 1;
+}
+
+.Project__hover__footer {
+    flex: 0 1;
+}
+
+.Project__buttons {
+    flex: 0 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}

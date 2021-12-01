@@ -1,0 +1,36 @@
+@import '../../scss/variable';
+
+.PageSection {
+    padding: 0.5rem 0;
+
+    .PageSection__heading{
+        margin-left: 0.5rem;
+        padding-left: 0.5rem;
+        text-transform: uppercase;
+    }
+
+    &.PageSection__primary {
+        .PageSection__heading {
+            border-left: 0.5rem solid map-get($theme, 'primary');
+            color: map-get($theme, 'primary');
+        }
+    }
+    &.PageSection__secondary {
+        .PageSection__heading {
+            border-left: 0.5rem solid map-get($theme, 'secondary');
+            color: map-get($theme, 'secondary');
+        }
+    }
+    &.PageSection__tertiary {
+        .PageSection__heading {
+            border-left: 0.5rem solid map-get($theme, 'tertiary');
+            color: map-get($theme, 'tertiary');
+        }
+    }
+    &.PageSection__quaternary {
+        .PageSection__heading {
+            border-left: 0.5rem solid map-get($theme, 'quaternary');
+            color: map-get($theme, 'quaternary');
+        }
+    }
+}

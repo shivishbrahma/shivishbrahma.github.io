@@ -1,0 +1,82 @@
+{
+    "projects": [
+        {
+            "name": "Krishi Mitra",
+            "cover": "images/projects/krishi-mitra.jpeg",
+            "description": "A Laravel Ecommerce Portal for Agro Goods",
+            "url": "",
+            "highlights": [],
+            "keywords": [],
+            "roles": [],
+            "startDate": "",
+            "endDate": "",
+            "entity": "",
+            "type": "",
+            "displayName": "krishi-mitra",
+            "website": "https://github.com/indic-amigo-akademi/krishi-mitra",
+            "summary": "A Laravel Ecommerce Portal for Agro Goods",
+            "primaryLanguage": "PHP",
+            "languages": [
+                "PHP",
+                "Blade",
+                "Vue",
+                "HTML",
+                "Shell"
+            ],
+            "libraries": [],
+            "githubUrl": "https://github.com/indic-amigo-akademi/krishi-mitra",
+            "repositoryUrl": "https://github.com/indic-amigo-akademi/krishi-mitra",
+            "start": {
+                "year": null,
+                "month": null,
+                "day": null
+            },
+            "end": {
+                "year": null,
+                "month": null,
+                "day": null
+            },
+            "images": [],
+            "videos": []
+        },
+        {
+            "name": "Travel Map",
+            "cover": "images/projects/travelmap.jpg",
+            "description": "",
+            "url": "",
+            "highlights": [],
+            "keywords": [],
+            "roles": [],
+            "startDate": "",
+            "endDate": "",
+            "entity": "",
+            "type": "",
+            "displayName": "travel-map",
+            "website": "",
+            "summary": "A Laravel Ecommerce Portal for Agro Goods",
+            "primaryLanguage": "PHP",
+            "languages": [
+                "PHP",
+                "Blade",
+                "Vue",
+                "HTML",
+                "Shell"
+            ],
+            "libraries": [],
+            "githubUrl": "https://github.com/indic-amigo-akademi/travelmap",
+            "repositoryUrl": "https://github.com/indic-amigo-akademi/travelmap",
+            "start": {
+                "year": null,
+                "month": null,
+                "day": null
+            },
+            "end": {
+                "year": null,
+                "month": null,
+                "day": null
+            },
+            "images": [],
+            "videos": []
+        }
+    ]
+}
