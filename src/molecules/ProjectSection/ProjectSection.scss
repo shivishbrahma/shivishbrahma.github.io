@@ -1,5 +1,17 @@
 @import '../../scss/variable';
 
+h3.Project__display_name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+h3.Project__title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .Project__languages {
     display: flex;
     flex-wrap: wrap;
@@ -34,6 +46,10 @@
     }
 }
 
+.Card__hover {
+    height: fit-content;
+}
+
 .Card__hover__content {
     display: flex;
     flex-direction: column;
@@ -53,8 +69,15 @@
 }
 
 .Project__buttons {
-    flex: 0 1;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    display: flex;
+    justify-content: space-around;
+    gap: 0.5rem;
+    flex: 1 1 0px;
+    flex-wrap: wrap;
+    height: fit-content;
+    .Button {
+        font-size: 0.95rem !important;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
 }

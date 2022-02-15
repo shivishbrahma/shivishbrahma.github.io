@@ -4,19 +4,23 @@
     overflow: hidden;
     box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
     position: relative;
+    height: max-content;
 
     .Card_content {
-        .Card__header{
+        .Card__header {
             overflow: hidden;
         }
+
         .Card__img {
             display: flex;
             justify-content: center;
+            align-items: center;
+            height: calc(25vw - 4.5rem);
 
             img {
                 display: block;
-                // width: 100%;
-                height: 20rem;
+                height: 100%;
+                width: 100%;
                 object-position: center;
                 object-fit: cover;
             }
@@ -69,7 +73,7 @@
 @media screen and (max-width: 956px) {
     .Card_content {
         .Card__img {
-            height: 16rem;
+            height: calc(34vw - 3rem) !important;
         }
     }
 
@@ -82,7 +86,7 @@
 @media screen and (max-width: 480px) {
     .Card_content {
         .Card__img {
-            height: 10rem;
+            height: calc(50vw - 1.5rem) !important;
         }
     }
 
@@ -95,7 +99,7 @@
 @media screen and (max-width: 320px) {
     .Card_content {
         .Card__img {
-            height: 20rem;
+            height: calc(75vw - 1rem) !important;
         }
     }
 

@@ -8,7 +8,7 @@ function Home(props) {
 	return (
 		<section className="Home">
 			<HeroSection />
-            <ProjectSection />
+			<ProjectSection />
 		</section>
 	);
 }
