@@ -29,8 +29,8 @@ function GithubCalendar({ username, year, theme, showTooltip, ...calendarProps }
 			.finally(() => setLoading(false));
 	}, [username]);
 
-	React.useEffect(fetchData, []); // on mount
-	React.useEffect(fetchData, [username]); // on username change
+	React.useEffect(fetchData, [fetchData]); // on mount
+	React.useEffect(fetchData, [fetchData]); // on username change
 
 	if (error) {
 		return <p>Error :(</p>;
