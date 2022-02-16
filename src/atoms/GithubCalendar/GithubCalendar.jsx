@@ -2,7 +2,6 @@ import React from 'react';
 import ReactTooltip from 'react-tooltip';
 import Calendar, { Skeleton as CalendarSkeleton } from './ActivityCalendar';
 import { getContributionData } from './contribution';
-import format from 'date-fns/format';
 // import PropTypes from 'prop-types';
 import './GithubCalendar.scss';
 
@@ -23,7 +22,7 @@ function GithubCalendar({ username, year, theme, showTooltip, ...calendarProps }
 		setLoading(true);
 		setError(null);
 
-		getContributionData(username, format(new Date(), 'yyyy-MM-dd'))
+		getContributionData(username)
 			.then((data) => setData(data))
 			.catch(setError)
 			.finally(() => setLoading(false));

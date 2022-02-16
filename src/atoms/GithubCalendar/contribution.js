@@ -21,10 +21,10 @@ function createCalendarData(graphqlData) {
 	return data;
 }
 
-export async function getContributionData(username, to) {
-	try {
-		const body = {
-			query: `query {
+export async function getContributionData(username) {
+	console.log(process.env.REACT_APP_GITHUB_TOKEN);
+	const body = {
+		query: `query {
                 user(login: "${username}") {
                   name
                   contributionsCollection {
@@ -44,17 +44,14 @@ export async function getContributionData(username, to) {
                   }
                 }
               }`,
-		};
+	};
 
-		const response = await window.fetch('https://api.github.com/graphql', {
-			method: 'POST',
-			body: JSON.stringify(body),
-			headers: headers,
-		});
-		const data = await response.json();
-		// console.log(data.data.user);
-		return createCalendarData(data.data.user);
-	} catch (error) {
-		console.error(error);
-	}
+	const response = await window.fetch('https://api.github.com/graphql', {
+		method: 'POST',
+		body: JSON.stringify(body),
+		headers: headers,
+	});
+	const data = await response.json();
+	if (data.message) throw new Error(data.message);
+	return createCalendarData(data.data.user);
 }
