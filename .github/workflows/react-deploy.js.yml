@@ -6,10 +6,6 @@ on:
   pull_request:
     branches: [ 'reactify' ]
 
-
-env:
-  REACT_APP_GITHUB_TOKEN: '${{ secrets.REACT_APP_GITHUB_TOKEN }}'
-
 jobs:
   build:
 
