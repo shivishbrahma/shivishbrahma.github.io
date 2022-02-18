@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
 import Calendar, { Skeleton as CalendarSkeleton } from './ActivityCalendar';
-import { getContributionData } from './contribution';
+import { getContributionData } from '../../services/fetchService';
 // import PropTypes from 'prop-types';
 import './GithubCalendar.scss';
 

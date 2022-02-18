@@ -12,7 +12,7 @@ function HeroSection(props) {
 					Hi! ✋ <br /> I am Purbayan Chowdhury
 				</h1>
 				<Typewriter
-					text={['A Web Developer', 'A Data Scientist', 'A Coding Geek', 'A Number Cruncher']}
+					text={['A Web Developer', 'A Data Science Enthusiast', 'A Coding Geek', 'A Number Cruncher']}
 					displayTextRenderer={(text) => <h4>{text}</h4>}
 					cursorRenderer={(cursor) => <h4>|</h4>}
 				/>
