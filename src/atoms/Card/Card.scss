@@ -52,7 +52,7 @@
         }
     }
 
-    &:hover {
+    &.Card__hoverable:hover {
         .Card__hover {
             display: initial;
         }

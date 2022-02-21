@@ -1,0 +1,56 @@
+{
+    "blog_websites": [
+        {
+            "title": "DEV Community",
+            "website": "https://dev.to/",
+            "icon": "https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png"
+        },
+        {
+            "title": "Medium",
+            "website": "https://medium.com/",
+            "icon": "https://miro.medium.com/fit/c/152/152/1*sHhtYhaCe2Uc3IU0IgKwIQ.png"
+        }
+    ],
+    "blogs": [
+        {
+            "blog_website": 0,
+            "img_url": "https://res.cloudinary.com/practicaldev/image/fetch/s--KwT_0VoI--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/xhunqq5o76vi3gwxesvh.png",
+            "title": "Designing a Typewriter React Component",
+            "url": "https://dev.to/shivishbrahma/designing-a-typewriter-react-component-3kea",
+            "description": "We are pretty much familiar with the Typewriter effect, although we might not be acquainted with a Typewriter. In words, the typewriter effect is the gradual revealing of the words as if it is being typed infront of our eyes with sound of a typewriter key",
+            "tags": [
+                "react",
+                "javascript",
+                "component"
+            ],
+            "date": "2022-02-18T19:30:57Z"
+        },
+        {
+            "blog_website": 1,
+            "img_url": "https://miro.medium.com/max/1400/1*mG57HRlv4Blc_17T_LZmww.jpeg",
+            "title": "Fine hyperparameter tuning of my ML learning",
+            "url": "https://shivishbrahma.medium.com/fine-hyperparameter-tuning-of-my-ml-learning-7b2c032bc586",
+            "description": "Being an ML enthusiast, it was a great fun to impart some ideas and views from the little I learned in this aspect. On 7th and 8th of March, 2020, the third and fourth workshop of ML Summit Workshop",
+            "tags": [
+                "machine learning",
+                "data science",
+                "ml summit workshop"
+            ],
+            "date": "2020-03-27T13:46:09.802Z"
+        },
+        {
+            "blog_website": 1,
+            "img_url": "https://miro.medium.com/max/1400/0*CHfX79Mk9J1PmqKp",
+            "title": "Image Translation of Renaissance Figures To Digital Photographs",
+            "url": "https://shivishbrahma.medium.com/image-translation-of-renaissance-figures-to-digital-photographs-14909169a891",
+            "description": "It has always been a fascinating idea, how someone like Newton or Gauss could have looked like in real life. We have built something very similar for our final year project. Our AI model tries to",
+            "tags": [
+                "computer vision",
+                "StyleGAN",
+                "image translation",
+                "pSp encoder"
+            ],
+            "date": "2021-07-29T10:16:59.142Z"
+        }
+    ]
+}

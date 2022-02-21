@@ -26,7 +26,7 @@ function ProjectSection({ ...otherProps }) {
 									cardHoverContent={
 										<>
 											<div className="Project__hover__header">
-												<h3 className="Project__title">{project.displayName}</h3>
+												<h4 className="Project__title">{project.displayName}</h4>
 												{project.languages && project.languages.length > 0 && (
 													<div className="Project__languages">
 														{project.languages.map((language, index) => {
@@ -68,7 +68,7 @@ function ProjectSection({ ...otherProps }) {
 										</>
 									}
 								>
-									<h3 className="Project__display_name">{project.name}</h3>
+									<h4 className="Project__display_name">{project.name}</h4>
 									<p className="Project__summary">{project.summary}</p>
 								</Card>
 							);

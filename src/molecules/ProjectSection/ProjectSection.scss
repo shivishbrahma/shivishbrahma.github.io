@@ -1,12 +1,12 @@
 @import '../../scss/variable';
 
-h3.Project__display_name {
+h4.Project__display_name {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-h3.Project__title {
+h4.Project__title {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
