@@ -12,20 +12,25 @@
 ### Molecules
 
 - [x] Navbar
-- [ ] Hero Section
+- [x] Hero Section
 - [ ] Language Globe
 - [ ] Github Calendar
-- [ ] Featured Projects
+- [x] Featured Projects
 - [ ] Featured Tools
-- [ ] Featured Blogs
-- [ ] Footer
+- [x] Featured Blogs
+- [x] Footer
 
 ### Atoms
 
 - [x] Typewriter (jsx, scss, test)
-- [ ] Button (jsx, scss, test)
+- [x] Button (jsx, scss, test)
 - [x] Navlink (jsx, scss, test)
 - [ ] Icon (jsx, scss, test)
 - [ ] Image (jsx, scss, test)
-- [ ] Card (jsx, scss, test)
+- [x] Card (jsx, scss, test)
 - [ ] Tag (jsx, scss, test)
+
+### Tools
+
+- [ ] Netstats
+- [ ] WeatherReport
