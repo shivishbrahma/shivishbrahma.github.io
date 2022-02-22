@@ -6,8 +6,8 @@ import Button from '../../atoms/Button/Button';
 
 function Footer({ darkModeToggler, isDark, ...otherProps }) {
 	return (
-		<div className="Footer">
-			<section>
+		<section className="Footer">
+			<div className="Footer__buttons">
 				<Button
 					className=""
 					onClick={() => {
@@ -16,11 +16,11 @@ function Footer({ darkModeToggler, isDark, ...otherProps }) {
 				>
 					{isDark ? <FaMoon /> : <FaSun />}
 				</Button>
-			</section>
-			<section className="Copyright">
+			</div>
+			<div className="Copyright">
 				Made with <FaHeart className="red-heart" /> and <FaCoffee className="green-tea" /> by Purbayan Chowdhury
-			</section>
-		</div>
+			</div>
+		</section>
 	);
 }
 

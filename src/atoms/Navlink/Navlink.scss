@@ -1,5 +1,3 @@
-@import '../../scss/variable';
-
 .Navlink {
     padding: 0.5rem 0.75rem;
     text-decoration: none;
@@ -7,14 +5,15 @@
     display: block;
     text-align: center;
 
-    &:link {
-        color: map-get($theme, "primary");
+    &:link,
+    &:visited {
+        color: var(--primary);
     }
 
     &:hover,
     &.Navbar__active {
-        background: map-get($light-theme, "primary");
-        color: map-get($light-theme, "primary-bg");
+        background: var(--primary);
+        color: var(--primaryBg);
         text-decoration: none;
     }
 }

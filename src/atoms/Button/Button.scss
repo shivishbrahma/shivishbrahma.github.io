@@ -1,63 +1,62 @@
-@import '../../scss/variable';
-
 .Button {
     padding: 0.75rem 1.5rem;
     cursor: pointer;
     border-radius: 0.25rem;
-    box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.125rem 0.25rem 0 rgba(var(--base), 0.1);
 
-    &:link {
+    &:link,
+    &:visited {
         text-decoration: none;
         text-align: center;
     }
 
     &.Button__default {
-        border: 1px solid map-get($theme, 'base');
-        background-color: map-get($theme, 'primary-bg');
-        color: map-get($theme, 'base');
+        border: 1px solid var(--base);
+        background-color: var(--primaryBg);
+        color: var(--base);
 
         &:hover {
-            background-color: map-get($theme, 'base-bg');
-            border-color: map-get($theme, 'primary-bg');
-            color: map-get($theme, 'primary');
+            background-color: var(--baseBg);
+            border-color: var(--primaryBg);
+            color: var(--primary);
         }
     }
 
     &.Button__primary {
-        background-color: map-get($theme, 'primary');
-        border-color: map-get($theme, 'primary');
-        color: map-get($theme, 'base-bg');
+        background-color: var(--primary);
+        border-color: var(--primary);
+        color: var(--baseBg);
 
         &:hover {
-            background-color: map-get($theme, 'base-bg');
-            border-color: map-get($theme, 'base-bg');
-            color: map-get($theme, 'primary');
+            background-color: var(--baseBg);
+            border-color: var(--baseBg);
+            color: var(--primary);
         }
     }
 
     &.Button__secondary,
     &.Button__error {
-        background-color: map-get($theme, 'secondary');
-        border-color: map-get($theme, 'secondary');
-        color: map-get($theme, 'base-bg');
+        background-color: var(--secondary);
+        border-color: var(--secondary);
+        color: var(--baseBg);
 
         &:hover {
-            background-color: map-get($theme, 'base-bg');
-            border-color: map-get($theme, 'base-bg');
-            color: map-get($theme, 'secondary');
+            background-color: var(--baseBg);
+            border-color: var(--baseBg);
+            color: var(--secondary);
         }
     }
 
     &.Button__tertiary,
     &.Button__success {
-        background-color: map-get($theme, 'tertiary');
-        border-color: map-get($theme, 'tertiary');
-        color: map-get($theme, 'base-bg');
+        background-color: var(--tertiary);
+        border-color: var(--tertiary);
+        color: var(--baseBg);
 
         &:hover {
-            background-color: map-get($theme, 'base-bg');
-            border-color: map-get($theme, 'base-bg');
-            color: map-get($theme, 'tertiary');
+            background-color: var(--baseBg);
+            border-color: var(--baseBg);
+            color: var(--tertiary);
         }
     }
 
@@ -103,6 +102,6 @@
     }
 
     &:hover {
-        box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0.125rem 0.25rem 0 rgba(var(--base), 0.1);
     }
 }

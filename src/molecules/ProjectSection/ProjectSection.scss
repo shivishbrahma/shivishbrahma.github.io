@@ -1,5 +1,3 @@
-@import '../../scss/variable';
-
 h4.Project__display_name {
     white-space: nowrap;
     overflow: hidden;
@@ -21,27 +19,27 @@ h4.Project__title {
         display: block;
         padding: 0.125rem 0.75rem;
         border-radius: 2.5rem;
-        background-color: map-get($theme, 'base');
-        color: white;
+        background-color: var(--base);
+        color: var(--baseBg);
 
 
         &.Project__languages__tag__primary {
-            background-color: map-get($theme, 'primary');
-            color: white;
+            background-color: var(--primary);
+            color: var(--baseBg);
         }
 
         // &:nth-child(4n+2) {
-        //     background-color: map-get($theme, 'secondary');
-        //     color: white;
+        //     background-color: var(--secondary);
+        //     color: var(--baseBg);
         // }
 
         // &:nth-child(4n+3) {
-        //     background-color: map-get($theme, 'tertiary');
-        //     color: white;
+        //     background-color: var(--tertiary);
+        //     color: var(--baseBg);
         // }
         // &:nth-child(4n) {
-        //     background-color: map-get($theme, 'quaternary');
-        //     color: black;
+        //     background-color: var(--quaternary);
+        //     color: var(--base);
         // }
     }
 }
@@ -75,6 +73,7 @@ h4.Project__title {
     flex: 1 1 0px;
     flex-wrap: wrap;
     height: fit-content;
+
     .Button {
         font-size: 0.95rem !important;
         white-space: nowrap;

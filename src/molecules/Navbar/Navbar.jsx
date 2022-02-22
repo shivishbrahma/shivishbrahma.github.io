@@ -2,7 +2,7 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 
 import { FaBars, FaTimes } from 'react-icons/fa';
-import logo from './logo.svg';
+import logo from './logo.png';
 import logo_text from './logo_text.svg';
 // import { NavLink } from "react-router-dom";
 import Navlink from '../../atoms/Navlink/Navlink';

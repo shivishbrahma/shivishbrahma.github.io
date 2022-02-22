@@ -1,4 +1,17 @@
 .Footer {
+    background-color: var(--primaryBg);
+
+    .Footer__buttons {
+        display: flex;
+
+        .Button {
+            border: none;
+            &:hover{
+                background-color: transparent;
+            }
+        }
+    }
+
     .Copyright {
         padding: 0.5rem 0;
         font-size: 1em;

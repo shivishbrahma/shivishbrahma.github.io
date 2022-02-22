@@ -1,5 +1,3 @@
-@import '../../scss/variable';
-
 /*
 * ====================================================================
 *                           THEMES - LIGHT
@@ -26,13 +24,13 @@
     flex-direction: column;
     height: 100vh;
     position: relative;
-    color: map-get($map: $theme, $key: 'base');
-    background-color: map-get($map: $theme, $key: 'base-bg');
+    color: var(--base);
+    background-color: var(--baseBg);
 
-    &.App-dark {
-        color: map-get($map: $dark-theme, $key: 'base');
-        background-color: map-get($map: $dark-theme, $key: 'base-bg');
-    }
+    // &.App-dark {
+    //     color: var(--base);
+    //     background-color: var(--baseBg);
+    // }
 }
 
 
