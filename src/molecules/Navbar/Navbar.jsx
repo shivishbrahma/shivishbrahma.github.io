@@ -32,14 +32,13 @@ function Navbar(props) {
 					<Navlink to="/">Home</Navlink>
 				</li>
 				<li className="Navbar-item">
-					{/* <a href="#about">About</a> */}
 					<Navlink to="/resume">Resume</Navlink>
-				</li>
-				{/* <li className="Navbar-item">
-					<Navlink to="/projects">Projects</Navlink>
 				</li>
 				<li className="Navbar-item">
 					<Navlink to="/tools">Tools</Navlink>
+				</li>
+				{/* <li className="Navbar-item">
+					<Navlink to="/projects">Projects</Navlink>
 				</li>
 				<li className="Navbar-item">
 					<Navlink to="/blogs">Blogs</Navlink>

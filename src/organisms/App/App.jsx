@@ -5,20 +5,19 @@ import './App.scss';
 import { themes, setCSSVariables, ThemeSelectorContext } from './theme';
 import Navbar from '../../molecules/Navbar/Navbar';
 import Footer from '../../molecules/Footer/Footer';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, HashRouter as Router } from 'react-router-dom';
 import Home from '../Home/Home';
 import Resume from '../Resume/Resume';
 import Error from '../Error/Error';
+import Tools from '../Tools/Tools';
 
 function App() {
-	const [theme, setTheme] = React.useState('light');
+	const [theme, setTheme] = React.useState(window.localStorage.getItem('shivishbrahma-portfolio-theme') || 'light');
 
 	function toggleTheme() {
-		if (theme === 'light') {
-			setTheme('dark');
-		} else {
-			setTheme('light');
-		}
+		const newTheme = theme === 'light' ? 'dark' : 'light';
+		setTheme(newTheme);
+		window.localStorage.setItem('shivishbrahma-portfolio-theme', newTheme);
 	}
 
 	React.useEffect(() => {
@@ -27,7 +26,7 @@ function App() {
 
 	return (
 		<ThemeSelectorContext.Provider value={{ theme: themes[theme] }}>
-			<BrowserRouter basename={process.env.PUBLIC_URL}>
+			<Router basename={process.env.PUBLIC_URL}>
 				<div className="App">
 					<header className="App-header">
 						{/* <img src={logo} className="App-logo" alt="logo" /> */}
@@ -36,11 +35,8 @@ function App() {
 					<main className="App-main">
 						<Routes>
 							<Route path="/" exact element={<Home />} />
-							{/* <Route path="/about" exact component={About} /> */}
-							<Route path="resume" exact element={<Resume />} />
-							{/* <Route path="/blog" exact component={Blog} />
-								<Route path="/tools" exact component={Tools} />
-                            <Route path="/tools/:tool_slug" component={ToolSelector} /> */}
+							<Route path="/resume" exact element={<Resume />} />
+							<Route path="/tools/*" element={<Tools />} />
 							<Route path="*" element={<Error />} />
 						</Routes>
 					</main>
@@ -48,7 +44,7 @@ function App() {
 						<Footer darkModeToggler={toggleTheme} isDark={theme === 'dark'} />
 					</footer>
 				</div>
-			</BrowserRouter>
+			</Router>
 		</ThemeSelectorContext.Provider>
 	);
 }
