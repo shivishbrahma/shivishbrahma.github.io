@@ -1,0 +1,10 @@
+{
+    "tools": [
+        {
+            "name": "Netstats",
+            "url": "/#/tools/netstats",
+            "img_url": "",
+            "description": "Netstats is a tool for monitoring and tracking the status of a network"
+        }
+    ]
+}
