@@ -98,6 +98,18 @@ export function getOs() {
 	};
 }
 
+export function getAndroidVersion() {
+	let ua = navigator.userAgent;
+	let match = ua.match(/Android\s([0-9.]*)/);
+	return match ? match[1] : false;
+}
+
+export function getIosVersion() {
+    let ua = navigator.userAgent;
+    let match = ua.match(/OS\s([0-9_]*)/);
+    return match ? match[1] : false;
+}
+
 function calculateRatio(num_1, num_2) {
 	for (let num = num_2; num > 1; num--) {
 		if (num_1 % num === 0 && num_2 % num === 0) {
@@ -110,17 +122,36 @@ function calculateRatio(num_1, num_2) {
 }
 
 export function getDeviceInfo() {
-	let dimensions = {
-			width: window.innerWidth,
-			height: window.innerHeight,
-		},
-		screenDimensions = {
-			width: window.screen.width,
-			height: window.screen.height,
-		};
+	let winW = 630,
+		winH = 460;
+	if (document.body && document.body.offsetWidth) {
+		winW = document.body.offsetWidth;
+		winH = document.body.offsetHeight;
+	}
+	if (document.compatMode === 'CSS1Compat' && document.documentElement && document.documentElement.offsetWidth) {
+		winW = document.documentElement.offsetWidth;
+		winH = document.documentElement.offsetHeight;
+	}
+	if (window.innerWidth && window.innerHeight) {
+		winW = window.innerWidth;
+		winH = window.innerHeight;
+	}
+
+	let screenW = 640,
+		screenH = 480;
+	if (parseInt(navigator.appVersion) > 3) {
+		screenW = window.screen.width;
+		screenH = window.screen.height;
+	} else if (navigator.appName === 'Netscape' && parseInt(navigator.appVersion) === 3 && navigator.javaEnabled()) {
+		var jToolkit = window.java.awt.Toolkit.getDefaultToolkit();
+		var jScreenSize = jToolkit.getScreenSize();
+		screenW = jScreenSize.width;
+		screenH = jScreenSize.height;
+	}
+
 	return {
-		dimensions: `${dimensions.width}px x ${dimensions.height}px`,
-		screen: `${screenDimensions.width}px x ${screenDimensions.height}px`,
+		dimensions: `${winW}px x ${winH}px`,
+		screen: `${screenW}px x ${screenH}px`,
 		resolution: `${calculateRatio(window.screen.pixelDepth, window.screen.colorDepth)} (${
 			window.screen.colorDepth
 		}bit)`,
