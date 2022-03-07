@@ -1,10 +1,11 @@
-h5.Blog__title {
+.Blog__title {
+    color: var(--quaternary);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    a:link {
-        color: initial;
-        text-decoration: none;
+
+    &:hover {
+        color: var(--tertiary);
     }
 }
 

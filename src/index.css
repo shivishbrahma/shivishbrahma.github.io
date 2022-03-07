@@ -49,6 +49,10 @@ a:visited {
 	color: var(--quaternary);
 }
 
+a:hover {
+	color: var(--tertiary);
+}
+
 h1,
 h2,
 h3,

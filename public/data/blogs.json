@@ -13,44 +13,72 @@
     ],
     "blogs": [
         {
+            "blog_website": 1,
+            "img_url": "https://cdn-images-1.medium.com/max/759/0*09gSRVh0jzuksrtb.png",
+            "title": "Image Translation of Renaissance Figures To Digital Photographs",
+            "url": "https://shivishbrahma.medium.com/image-translation-of-renaissance-figures-to-digital-photographs-14909169a891?source=rss-98a5c8518070------2",
+            "description": "It has always been a fascinating idea, how someone like Newton or Gauss could have looked like in real life. We have built something very similar for our final year project. Our AI model tries to predict the real human digital face from the Renaissance painting.",
+            "tags": [
+                "renaissance",
+                "stylegan",
+                "pspencoder",
+                "image-translation"
+            ],
+            "date": "2021-06-21T20:29:30"
+        },
+        {
+            "blog_website": 1,
+            "img_url": "https://cdn-images-1.medium.com/max/1024/1*Rnmiq0-iXeAgZ3TeqOXlCw.jpeg",
+            "title": "Fine hyperparameter tuning of my ML learning",
+            "url": "https://shivishbrahma.medium.com/fine-hyperparameter-tuning-of-my-ml-learning-7b2c032bc586?source=rss-98a5c8518070------2",
+            "description": "Being an ML enthusiast, it was a great fun to impart some ideas and views from the little I learned in this aspect. On 7th and 8th of March, 2020, the third and fourth workshop of ML Summit Workshop series organized by IEM Innovaci\u00f3n, partnered with IEM Microsoft Student Partners(MSP) and IEM Google Explore ML was held at IEM Gurukul Campus, Salt Lake,\u00a0Kolkata.",
+            "tags": [
+                "workshop",
+                "data-science",
+                "iem",
+                "machine-learning"
+            ],
+            "date": "2020-03-27T13:46:09"
+        },
+        {
+            "blog_website": 0,
+            "img_url": "https://res.cloudinary.com/practicaldev/image/fetch/s--2eYhiWgR--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/sjzbzcmfnjwfohd2narj.png",
+            "title": "Deploying React App in GitHub Pages",
+            "url": "https://dev.to/shivishbrahma/deploying-react-app-in-github-pages-4jfd",
+            "description": "Developing a React App has always been a fascinating experience as a Frontend Developer. To build...",
+            "tags": [
+                "github",
+                "react",
+                "deployment"
+            ],
+            "date": "2022-03-06T07:33:46Z"
+        },
+        {
+            "blog_website": 0,
+            "img_url": "https://res.cloudinary.com/practicaldev/image/fetch/s--sZ0I69e6--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/vptsqyr0ivfbzur7375s.png",
+            "title": "Designing an Activity Calendar in React",
+            "url": "https://dev.to/shivishbrahma/designing-an-activity-calendar-in-react-47k2",
+            "description": "Activity Calendar has become popular after open-source platforms like Github, Kaggle starting used to...",
+            "tags": [
+                "javascript",
+                "react",
+                "component",
+                "github"
+            ],
+            "date": "2022-02-27T07:48:23Z"
+        },
+        {
             "blog_website": 0,
             "img_url": "https://res.cloudinary.com/practicaldev/image/fetch/s--KwT_0VoI--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/xhunqq5o76vi3gwxesvh.png",
             "title": "Designing a Typewriter React Component",
             "url": "https://dev.to/shivishbrahma/designing-a-typewriter-react-component-3kea",
-            "description": "We are pretty much familiar with the Typewriter effect, although we might not be acquainted with a Typewriter. In words, the typewriter effect is the gradual revealing of the words as if it is being typed infront of our eyes with sound of a typewriter key",
+            "description": "We are pretty much familiar with the Typewriter effect, although we might not be acquainted with a...",
             "tags": [
                 "react",
                 "javascript",
                 "component"
             ],
             "date": "2022-02-18T19:30:57Z"
-        },
-        {
-            "blog_website": 1,
-            "img_url": "https://miro.medium.com/max/1400/1*mG57HRlv4Blc_17T_LZmww.jpeg",
-            "title": "Fine hyperparameter tuning of my ML learning",
-            "url": "https://shivishbrahma.medium.com/fine-hyperparameter-tuning-of-my-ml-learning-7b2c032bc586",
-            "description": "Being an ML enthusiast, it was a great fun to impart some ideas and views from the little I learned in this aspect. On 7th and 8th of March, 2020, the third and fourth workshop of ML Summit Workshop",
-            "tags": [
-                "machine learning",
-                "data science",
-                "ml summit workshop"
-            ],
-            "date": "2020-03-27T13:46:09.802Z"
-        },
-        {
-            "blog_website": 1,
-            "img_url": "https://miro.medium.com/max/1400/0*CHfX79Mk9J1PmqKp",
-            "title": "Image Translation of Renaissance Figures To Digital Photographs",
-            "url": "https://shivishbrahma.medium.com/image-translation-of-renaissance-figures-to-digital-photographs-14909169a891",
-            "description": "It has always been a fascinating idea, how someone like Newton or Gauss could have looked like in real life. We have built something very similar for our final year project. Our AI model tries to",
-            "tags": [
-                "computer vision",
-                "StyleGAN",
-                "image translation",
-                "pSp encoder"
-            ],
-            "date": "2021-07-29T10:16:59.142Z"
         }
     ]
 }
