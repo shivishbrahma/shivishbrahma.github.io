@@ -1,4 +1,4 @@
-name: React app deployement
+name: React app deployment
 
 on:
   push:
@@ -8,7 +8,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -16,9 +15,9 @@ jobs:
         node-version: [14.x]
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
@@ -32,7 +31,7 @@ jobs:
       shell: bash
     - run : git --work-tree build add --all
       shell: bash
-    - run : git commit -m "Automatic Deploy action run by github-actions"
+    - run : git commit -m "React deployment run by github-actions"
       shell: bash
     - run : git push origin HEAD:gp-react --force
       shell: bash
