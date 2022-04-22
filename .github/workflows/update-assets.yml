@@ -23,11 +23,8 @@ jobs:
       shell: bash
     - run: python scripts/update_assets.py
       name: Update assets
-      env:
-        - name: PYTHON_VERSION
-          value: ${{ matrix.python-version }}
       shell: bash
-    
+
     - run : git config user.name github-actions
       shell: bash
     - run : git config user.email github-actions@github.com
