@@ -42,6 +42,48 @@
         },
         {
             "blog_website": 0,
+            "img_url": "https://res.cloudinary.com/practicaldev/image/fetch/s--Oqq-ofCi--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/g4vrvcah3t86ib1s8r2h.png",
+            "title": "Creating a DotEnv Loader in PHP",
+            "url": "https://dev.to/shivishbrahma/creating-a-dotenv-loader-in-php-jkl",
+            "description": "From the list of some of the most common libraries that are heavily used in a PHP framework project...",
+            "tags": [
+                "php",
+                "symfony",
+                "phpunit",
+                "backend"
+            ],
+            "date": "2022-04-10T06:46:27Z"
+        },
+        {
+            "blog_website": 0,
+            "img_url": "https://res.cloudinary.com/practicaldev/image/fetch/s--i0ViBxy6--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5kybkw3w9lqa1khc0a1p.png",
+            "title": "Building a ToDo App in React",
+            "url": "https://dev.to/shivishbrahma/building-a-todo-app-in-react-51c8",
+            "description": "A ToDo App is a very beginner level app for any frontend developer. A basic ToDo app has...",
+            "tags": [
+                "javascript",
+                "react",
+                "webdev",
+                "tutorial"
+            ],
+            "date": "2022-03-22T16:30:41Z"
+        },
+        {
+            "blog_website": 0,
+            "img_url": "https://res.cloudinary.com/practicaldev/image/fetch/s--5fJxFgxf--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/kt7jmjn0lxpbfp867imd.png",
+            "title": "Designing a Markdown Editor in React",
+            "url": "https://dev.to/shivishbrahma/designing-a-markdown-editor-in-react-7cb",
+            "description": "Ever since the popularity of open-source libraries, Markdown has always been the primary text format...",
+            "tags": [
+                "javascript",
+                "webdev",
+                "markdown",
+                "component"
+            ],
+            "date": "2022-03-14T18:36:08Z"
+        },
+        {
+            "blog_website": 0,
             "img_url": "https://res.cloudinary.com/practicaldev/image/fetch/s--2eYhiWgR--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/sjzbzcmfnjwfohd2narj.png",
             "title": "Deploying React App in GitHub Pages",
             "url": "https://dev.to/shivishbrahma/deploying-react-app-in-github-pages-4jfd",
