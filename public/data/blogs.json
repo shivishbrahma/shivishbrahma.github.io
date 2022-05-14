@@ -3,20 +3,12 @@
         {
             "title": "DEV Community",
             "website": "https://dev.to/",
-            "url": "https://dev.to/shivishbrahma",
             "icon": "https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png"
         },
         {
             "title": "Medium",
             "website": "https://medium.com/",
-            "url": "https://shivishbrahma.medium.com/",
             "icon": "https://miro.medium.com/fit/c/152/152/1*sHhtYhaCe2Uc3IU0IgKwIQ.png"
-        },
-        {
-            "title": "Github",
-            "website": "https://github.io/",
-            "url": "https://shivishbrahma.github.io/publog/",
-            "icon": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
         }
     ],
     "blogs": [
