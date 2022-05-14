@@ -10,6 +10,7 @@ import Home from '../Home/Home';
 import Resume from '../Resume/Resume';
 import Error from '../Error/Error';
 import Tools from '../Tools/Tools';
+import Blogs from '../Blogs/Blogs';
 
 function App() {
 	const [theme, setTheme] = React.useState(window.localStorage.getItem('shivishbrahma-portfolio-theme') || 'light');
@@ -36,6 +37,7 @@ function App() {
 						<Routes>
 							<Route path="/" exact element={<Home />} />
 							<Route path="/resume" exact element={<Resume />} />
+							<Route path="/blogs" exact element={<Blogs />} />
 							<Route path="/tools/*" element={<Tools />} />
 							<Route path="*" element={<Error />} />
 						</Routes>

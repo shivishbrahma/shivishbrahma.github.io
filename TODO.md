@@ -14,7 +14,7 @@
 - [x] Navbar
 - [x] Hero Section
 - [ ] Language Globe
-- [ ] Github Calendar
+- [x] Github Calendar
 - [x] Featured Projects
 - [ ] Featured Tools
 - [x] Featured Blogs

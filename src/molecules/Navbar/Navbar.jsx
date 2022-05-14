@@ -39,10 +39,10 @@ function Navbar(props) {
 				</li>
 				{/* <li className="Navbar-item">
 					<Navlink to="/projects">Projects</Navlink>
-				</li>
+				</li> */}
 				<li className="Navbar-item">
 					<Navlink to="/blogs">Blogs</Navlink>
-				</li> */}
+				</li>
 			</ul>
 			<div className="Navbar-brand">
 				<img src={logo} alt="Brand Icon" className="Navbar-brand-logo" />
