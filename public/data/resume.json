@@ -1,12 +1,12 @@
 {
     "basics": {
         "name": "Purbayan Chowdhury",
-        "label": "System Engineer @ TCS, Hyderabad",
+        "label": "Developer @ TCS, Hyderabad",
         "image": "https://avatars.githubusercontent.com/u/20686433?v=4",
         "email": "pur.cho.99@gmail.com",
         "phone": "+91 9123801180",
         "url": "https://shivishbrahma.github.io",
-        "summary": "A computer science and engineering student passionate about open source software development and interested in problem solving.",
+        "summary": "I'm a full stack developer who is passionate about open source development and building applications for better life. I have worked in two startups before joining TCS as a developer.",
         "profiles": [
             {
                 "network": "gitconnected",
@@ -96,8 +96,6 @@
             "highlights": [],
             "keywords": [],
             "roles": [],
-            "startDate": "",
-            "endDate": "",
             "entity": "",
             "type": "",
             "displayName": "krishi-mitra",

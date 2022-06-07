@@ -7,6 +7,36 @@
             "url": "",
             "highlights": [],
             "keywords": [],
+            "roles": [ "Team Lead", "Full Stack Developer"],
+            "startDate": "",
+            "endDate": "",
+            "entity": "",
+            "type": "",
+            "displayName": "krishi-mitra",
+            "website": "https://github.com/indic-amigo-akademi/krishi-mitra",
+            "summary": "A Laravel Ecommerce Portal for Agro Goods",
+            "primaryLanguage": "PHP",
+            "languages": [
+                "PHP",
+                "Blade",
+                "Vue",
+                "HTML",
+                "Shell"
+            ],
+            "libraries": [
+                "Laravel"
+            ],
+            "repositoryUrl": "https://github.com/indic-amigo-akademi/krishi-mitra",
+            "images": [],
+            "videos": []
+        },
+        {
+            "name": "Swork",
+            "cover": "images/projects/krishi-mitra.jpeg",
+            "description": "A Laravel Ecommerce Portal for Agro Goods",
+            "url": "",
+            "highlights": [],
+            "keywords": [],
             "roles": [],
             "startDate": "",
             "endDate": "",
@@ -24,18 +54,7 @@
                 "Shell"
             ],
             "libraries": [],
-            "githubUrl": "https://github.com/indic-amigo-akademi/krishi-mitra",
-            "repositoryUrl": "https://github.com/indic-amigo-akademi/krishi-mitra",
-            "start": {
-                "year": null,
-                "month": null,
-                "day": null
-            },
-            "end": {
-                "year": null,
-                "month": null,
-                "day": null
-            },
+            "repositoryUrl": "https://github.com/indic-amigo-akademi/swork",
             "images": [],
             "videos": []
         },
@@ -63,18 +82,7 @@
                 "Shell"
             ],
             "libraries": [],
-            "githubUrl": "https://github.com/indic-amigo-akademi/travelmap",
             "repositoryUrl": "https://github.com/indic-amigo-akademi/travelmap",
-            "start": {
-                "year": null,
-                "month": null,
-                "day": null
-            },
-            "end": {
-                "year": null,
-                "month": null,
-                "day": null
-            },
             "images": [],
             "videos": []
         }
