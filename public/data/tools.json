@@ -3,7 +3,7 @@
         {
             "name": "Netstats",
             "url": "/#/tools/netstats",
-            "img_url": "",
+            "img_url": "images/tools/netstats.webp",
             "description": "Netstats is a tool for monitoring and tracking the status of a network"
         }
     ]

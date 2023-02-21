@@ -32,7 +32,7 @@
         },
         {
             "name": "Swork",
-            "cover": "images/projects/krishi-mitra.jpeg",
+            "cover": "images/projects/krishi-mitra.webp",
             "description": "A Laravel Ecommerce Portal for Agro Goods",
             "url": "",
             "highlights": [],
@@ -60,7 +60,7 @@
         },
         {
             "name": "Travel Map",
-            "cover": "images/projects/travelmap.jpg",
+            "cover": "images/projects/travelmap.webp",
             "description": "",
             "url": "",
             "highlights": [],
