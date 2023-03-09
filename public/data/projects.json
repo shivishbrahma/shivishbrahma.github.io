@@ -2,12 +2,14 @@
     "projects": [
         {
             "name": "Krishi Mitra",
-            "cover": "images/projects/krishi-mitra.jpeg",
+            "cover": "images/projects/krishi-mitra.webp",
             "description": "A Laravel Ecommerce Portal for Agro Goods",
             "url": "",
             "highlights": [],
             "keywords": [],
-            "roles": [ "Team Lead", "Full Stack Developer"],
+            "roles": [
+                "Team Lead"
+            ],
             "startDate": "",
             "endDate": "",
             "entity": "",
@@ -32,24 +34,27 @@
         },
         {
             "name": "Swork",
-            "cover": "images/projects/krishi-mitra.webp",
-            "description": "A Laravel Ecommerce Portal for Agro Goods",
+            "cover": "images/projects/swork.webp",
+            "description": "A planning Kanban board built in Vue and PHP",
             "url": "",
             "highlights": [],
             "keywords": [],
-            "roles": [],
+            "roles": [
+                "Full Stack Developer"
+            ],
             "startDate": "",
             "endDate": "",
             "entity": "",
             "type": "",
-            "displayName": "krishi-mitra",
-            "website": "https://github.com/indic-amigo-akademi/krishi-mitra",
-            "summary": "A Laravel Ecommerce Portal for Agro Goods",
+            "displayName": "swork",
+            "website": "https://github.com/indic-amigo-akademi/swork",
+            "summary": "A planning Kanban board built in Vue and PHP",
             "primaryLanguage": "PHP",
             "languages": [
                 "PHP",
-                "Blade",
-                "Vue",
+                "SCSS",
+                "JavaScript",
+                "CSS",
                 "HTML",
                 "Shell"
             ],
@@ -65,7 +70,9 @@
             "url": "",
             "highlights": [],
             "keywords": [],
-            "roles": [],
+            "roles": [
+                "Full Stack Developer"
+            ],
             "startDate": "",
             "endDate": "",
             "entity": "",
