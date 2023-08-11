@@ -1,7 +1,7 @@
 {
     "basics": {
         "name": "Purbayan Chowdhury",
-        "label": "Developer @ TCS, Hyderabad",
+        "label": "Data Engineer @ TCS, Hyderabad",
         "image": "https://avatars.githubusercontent.com/u/20686433?v=4",
         "email": "pur.cho.99@gmail.com",
         "phone": "+91 9123801180",
@@ -30,12 +30,12 @@
             }
         ],
         "headline": " A web dev, coding geek, data analyst, number cruncher in his own habitat\r\n",
-        "blog": null,
-        "yearsOfExperience": null,
+        "blog": "https://dev.to/shivishbrahma/",
+        "yearsOfExperience": 2,
         "username": "shivishbrahma",
-        "locationAsString": "Howrah, WB",
-        "region": "Howrah, WB",
-        "karma": 15,
+        "locationAsString": "Howrah, WB, India",
+        "region": "Howrah, WB, India",
+        "karma": 20,
         "id": "0e96e5ea-87d1-4d7c-922d-98af0c133993",
         "followers": 12,
         "following": 37,
@@ -48,44 +48,49 @@
             "level": "Advanced",
             "keywords": [],
             "rating": 4,
-            "yearsOfExperience": 3
+            "yearsOfExperience": 5
         },
         {
             "name": "MySQL",
             "level": "Intermediate",
             "keywords": [],
             "rating": 3,
-            "yearsOfExperience": 4
+            "yearsOfExperience": 6
         },
         {
             "name": "Java",
             "level": "Intermediate",
             "keywords": [],
             "rating": 3,
-            "yearsOfExperience": 5
+            "yearsOfExperience": 7
         },
         {
             "name": "Python",
             "level": "Intermediate",
             "keywords": [],
             "rating": 3,
-            "yearsOfExperience": 3
+            "yearsOfExperience": 5
         },
         {
             "name": "SQL",
             "level": "Beginner",
-            "keywords": [
-                "Oracle"
-            ],
+            "keywords": ["Oracle"],
             "rating": 2,
-            "yearsOfExperience": 3
+            "yearsOfExperience": 5
         },
         {
-            "name": "HTML CSS",
+            "name": "HTML",
             "level": "Beginner",
             "keywords": [],
             "rating": 2,
             "yearsOfExperience": 4
+        },
+        {
+            "name": "SCSS",
+            "level": "Beginner",
+            "keywords": [],
+            "rating": 2,
+            "yearsOfExperience": 3
         }
     ],
     "projects": [
@@ -96,19 +101,15 @@
             "highlights": [],
             "keywords": [],
             "roles": [],
+            "startDate": "",
+            "endDate": "",
             "entity": "",
             "type": "",
             "displayName": "krishi-mitra",
             "website": "",
             "summary": "A Laravel Ecommerce Portal for Agro Goods",
             "primaryLanguage": "PHP",
-            "languages": [
-                "PHP",
-                "Blade",
-                "Vue",
-                "HTML",
-                "Shell"
-            ],
+            "languages": ["HTML", "Vue", "Shell", "PHP", "Blade"],
             "libraries": [],
             "githubUrl": "https://github.com/indic-amigo-akademi/krishi-mitra",
             "repositoryUrl": "https://github.com/indic-amigo-akademi/krishi-mitra",
@@ -138,161 +139,12 @@
             "type": "",
             "displayName": "swork",
             "website": "",
-            "summary": "Official Website of Swork",
+            "summary": "A planning Kanban board built in Vue and PHP",
             "primaryLanguage": "PHP",
-            "languages": [
-                "HTML",
-                "JavaScript",
-                "SCSS",
-                "PHP",
-                "CSS"
-            ],
+            "languages": ["PHP", "SCSS", "JavaScript", "CSS", "HTML", "Shell"],
             "libraries": [],
-            "githubUrl": "https://github.com/Indic-Web-Dev/swork",
-            "repositoryUrl": "https://github.com/Indic-Web-Dev/swork",
-            "start": {
-                "year": null,
-                "month": null,
-                "day": null
-            },
-            "end": {
-                "year": null,
-                "month": null,
-                "day": null
-            },
-            "images": [],
-            "videos": []
-        },
-        {
-            "name": "pokedex",
-            "description": "",
-            "url": "https://shivishbrahma.github.io/Pokedex/",
-            "highlights": [],
-            "keywords": [],
-            "roles": [],
-            "startDate": "",
-            "endDate": "",
-            "entity": "",
-            "type": "",
-            "displayName": "Pokedex",
-            "website": "https://shivishbrahma.github.io/Pokedex/",
-            "summary": "React Frontend for Pokedex API",
-            "primaryLanguage": "JavaScript",
-            "languages": [
-                "JavaScript",
-                "SCSS",
-                "HTML"
-            ],
-            "libraries": [],
-            "githubUrl": "https://github.com/shivishbrahma/Pokedex",
-            "repositoryUrl": "https://github.com/shivishbrahma/Pokedex",
-            "start": {
-                "year": null,
-                "month": null,
-                "day": null
-            },
-            "end": {
-                "year": null,
-                "month": null,
-                "day": null
-            },
-            "images": [],
-            "videos": []
-        },
-        {
-            "name": "tilottama",
-            "description": "",
-            "url": "",
-            "highlights": [],
-            "keywords": [],
-            "roles": [],
-            "startDate": "",
-            "endDate": "",
-            "entity": "",
-            "type": "",
-            "displayName": "tilottama",
-            "website": "",
-            "summary": "A Java based multi-tasking command line interface bot.",
-            "primaryLanguage": "Java",
-            "languages": [
-                "Java"
-            ],
-            "libraries": [],
-            "githubUrl": "https://github.com/shivishbrahma/tilottama",
-            "repositoryUrl": "https://github.com/shivishbrahma/tilottama",
-            "start": {
-                "year": null,
-                "month": null,
-                "day": null
-            },
-            "end": {
-                "year": null,
-                "month": null,
-                "day": null
-            },
-            "images": [],
-            "videos": []
-        },
-        {
-            "name": "travelmap",
-            "description": "",
-            "url": "https://travelmap-ecru.vercel.app/",
-            "highlights": [],
-            "keywords": [],
-            "roles": [],
-            "startDate": "",
-            "endDate": "",
-            "entity": "",
-            "type": "",
-            "displayName": "travelmap",
-            "website": "https://travelmap-ecru.vercel.app/",
-            "summary": "A MERN Stack App for saving travel map log",
-            "primaryLanguage": "JavaScript",
-            "languages": [
-                "HTML",
-                "JavaScript",
-                "CSS"
-            ],
-            "libraries": [],
-            "githubUrl": "https://github.com/shivishbrahma/travelmap",
-            "repositoryUrl": "https://github.com/shivishbrahma/travelmap",
-            "start": {
-                "year": null,
-                "month": null,
-                "day": null
-            },
-            "end": {
-                "year": null,
-                "month": null,
-                "day": null
-            },
-            "images": [],
-            "videos": []
-        },
-        {
-            "name": "node-primer",
-            "description": "",
-            "url": "",
-            "highlights": [],
-            "keywords": [],
-            "roles": [],
-            "startDate": "",
-            "endDate": "",
-            "entity": "",
-            "type": "",
-            "displayName": "node-primer",
-            "website": "",
-            "summary": "Basic Node Js Projects for starters",
-            "primaryLanguage": "Handlebars",
-            "languages": [
-                "JavaScript",
-                "HTML",
-                "Handlebars",
-                "SCSS"
-            ],
-            "libraries": [],
-            "githubUrl": "https://github.com/shivishbrahma/node-primer",
-            "repositoryUrl": "https://github.com/shivishbrahma/node-primer",
+            "githubUrl": "https://github.com/indic-amigo-akademi/swork",
+            "repositoryUrl": "https://github.com/indic-amigo-akademi/swork",
             "start": {
                 "year": null,
                 "month": null,
@@ -309,14 +161,33 @@
     ],
     "work": [
         {
+            "name": "Tata Consultancy Services Pvt Ltd",
+            "location": "Bhubaneswar, Odisha, India",
+            "description": "",
+            "position": "Database Engineer",
+            "url": "https://www.tcs.com/",
+            "startDate": "2021-08-01",
+            "endDate": "",
+            "summary": "Developed and maintained code for data integration pipelines with database objects creations for viewing quotes of upcoming products releases",
+            "highlights": [],
+            "isCurrentRole": true,
+            "start": {
+                "year": 2021,
+                "month": 8
+            },
+            "end": {},
+            "company": "Tata Consultancy Services Pvt Ltd",
+            "website": "https://www.tcs.com/"
+        },
+        {
             "name": "DIY Baazar Pvt Ltd",
             "location": "Kolkata, WB, India",
             "description": "",
-            "position": "Frontend Developer",
+            "position": "Full Stack Developer",
             "url": "http://diybaazar.com/",
             "startDate": "2020-07-01",
             "endDate": "2020-12-01",
-            "summary": "Worked on the frontend design of the whole website especially component building using Bootstrap and native JS and CSS and also helped in Laravel Backend for view handling.",
+            "summary": "Built the front in Bootstrap, SCSS, Blade and Vue JS and backend in Laravel. ",
             "highlights": [],
             "isCurrentRole": false,
             "start": {
