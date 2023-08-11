@@ -1,37 +1,35 @@
 name: React app deployment
 
 on:
-  push:
-    branches: [ 'reactify' ]
-  pull_request:
-    branches: [ 'reactify' ]
+    push:
+        branches: ["reactify"]
+    pull_request:
+        branches: ["reactify"]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+    build:
+        runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [14.x]
+        strategy:
+            matrix:
+                node-version: [16.x]
 
-    steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm ci
-      shell: bash
-    - run: npm run build --if-present
-      shell: bash
-    
-    - run : git config user.name github-actions
-      shell: bash
-    - run : git config user.email github-actions@github.com
-      shell: bash
-    - run : git --work-tree build add --all
-      shell: bash
-    - run : git commit -m "React deployment run by github-actions"
-      shell: bash
-    - run : git push origin HEAD:gp-react --force
-      shell: bash
+        steps:
+            - uses: actions/checkout@v3
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v2
+              with:
+                  node-version: ${{ matrix.node-version }}
+            - name: Build the build dir
+              run: |
+                  npm ci
+                  npm run build --if-present
+              shell: bash
+            - name: Commit build to gp-react
+              run: |
+                  git config user.name github-actions
+                  git config user.email github-actions@github.com
+                  git --work-tree build add --all
+                  git commit -m "React deployment run by github-actions"
+                  git push origin HEAD:gp-react --force
+              shell: bash
