@@ -13,6 +13,7 @@ function Footer({ darkModeToggler, isDark, ...otherProps }) {
 					onClick={() => {
 						darkModeToggler();
 					}}
+                    title="Dark Mode Toggler"
 				>
 					{isDark ? <FaMoon /> : <FaSun />}
 				</Button>
