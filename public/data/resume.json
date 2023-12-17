@@ -1,18 +1,13 @@
 {
     "basics": {
         "name": "Purbayan Chowdhury",
-        "label": "Data Engineer @ TCS, Hyderabad",
+        "label": "Data Engineer",
         "image": "https://avatars.githubusercontent.com/u/20686433?v=4",
         "email": "pur.cho.99@gmail.com",
         "phone": "+91 9123801180",
         "url": "https://shivishbrahma.github.io",
         "summary": "I'm a full stack developer who is passionate about open source development and building applications for better life. I have worked in two startups before joining TCS as a developer.",
         "profiles": [
-            {
-                "network": "gitconnected",
-                "username": "shivishbrahma",
-                "url": "https://gitconnected.com/shivishbrahma"
-            },
             {
                 "network": "GitHub",
                 "username": "shivishbrahma",
@@ -22,14 +17,9 @@
                 "network": "LinkedIn",
                 "url": "https://www.linkedin.com/in/shivishbrahma",
                 "username": "shivishbrahma"
-            },
-            {
-                "network": "Twitter",
-                "url": "https://twitter.com/shivishbrahma",
-                "username": "shivishbrahma"
             }
         ],
-        "headline": " A web dev, coding geek, data analyst, number cruncher in his own habitat\r\n",
+        "headline": " A web dev, coding geek, data analyst, number cruncher in his own habitat.",
         "blog": "https://dev.to/shivishbrahma/",
         "yearsOfExperience": 2,
         "username": "shivishbrahma",
@@ -44,53 +34,85 @@
     },
     "skills": [
         {
-            "name": "JavaScript",
+            "name": "Programming Languages",
             "level": "Advanced",
-            "keywords": [],
+            "keywords": [
+                "C/C++",
+                "Java",
+                "Python"
+            ],
+            "rating": 4,
+            "yearsOfExperience": 6
+        },
+        {
+            "name": "Frameworks",
+            "level": "Intermediate",
+            "keywords": [
+                "Flask",
+                "Laravel",
+                "Blade"
+            ],
+            "rating": 3,
+            "yearsOfExperience": 4
+        },
+        {
+            "name": "SQL Database",
+            "level": "Intermediate",
+            "keywords": [
+                "MySQL",
+                "SingleStore",
+                "Snowflake"
+            ],
+            "rating": 3,
+            "yearsOfExperience": 5
+        },
+        {
+            "name": "Javascript",
+            "level": "Advanced",
+            "keywords": [
+                "Vanilla",
+                "Node.js",
+                "Vue",
+                "React"
+            ],
             "rating": 4,
             "yearsOfExperience": 5
         },
         {
-            "name": "MySQL",
-            "level": "Intermediate",
-            "keywords": [],
-            "rating": 3,
+            "name": "Web Development",
+            "level": "Advanced",
+            "keywords": [
+                "HTML/CSS",
+                "SCSS",
+                "REST",
+                "GraphQL",
+                "PHP"
+            ],
+            "rating": 4,
             "yearsOfExperience": 6
         },
         {
-            "name": "Java",
-            "level": "Intermediate",
-            "keywords": [],
-            "rating": 3,
-            "yearsOfExperience": 7
-        },
-        {
-            "name": "Python",
-            "level": "Intermediate",
-            "keywords": [],
-            "rating": 3,
+            "name": "Developer Tools",
+            "level": "Advanced",
+            "keywords": [
+                "Git",
+                "GitHub",
+                "VS Code"
+            ],
+            "rating": 4,
             "yearsOfExperience": 5
         },
         {
-            "name": "SQL",
-            "level": "Beginner",
-            "keywords": ["Oracle"],
-            "rating": 2,
+            "name": "Soft Skills",
+            "level": "Advanced",
+            "keywords": [
+                "Agile Scrum",
+                "Soft Communication",
+                "Team Player",
+                "Problem Solving"
+            ],
+            "rating": 4,
             "yearsOfExperience": 5
-        },
-        {
-            "name": "HTML",
-            "level": "Beginner",
-            "keywords": [],
-            "rating": 2,
-            "yearsOfExperience": 4
-        },
-        {
-            "name": "SCSS",
-            "level": "Beginner",
-            "keywords": [],
-            "rating": 2,
-            "yearsOfExperience": 3
         }
     ],
     "projects": [
@@ -98,8 +120,14 @@
             "name": "krishi-mitra",
             "description": "",
             "url": "",
-            "highlights": [],
-            "keywords": [],
+            "highlights": [
+                "Build a **Laravel** **Ecommerce** Portal for *Agro Goods*",
+                "Started as a part of coursework with proper **Agile** SDLC"
+            ],
+            "keywords": [
+                "Laravel",
+                "Ecommerce"
+            ],
             "roles": [],
             "startDate": "",
             "endDate": "",
@@ -109,18 +137,24 @@
             "website": "",
             "summary": "A Laravel Ecommerce Portal for Agro Goods",
             "primaryLanguage": "PHP",
-            "languages": ["HTML", "Vue", "Shell", "PHP", "Blade"],
+            "languages": [
+                "HTML",
+                "Vue",
+                "Shell",
+                "PHP",
+                "Blade"
+            ],
             "libraries": [],
             "githubUrl": "https://github.com/indic-amigo-akademi/krishi-mitra",
             "repositoryUrl": "https://github.com/indic-amigo-akademi/krishi-mitra",
             "start": {
-                "year": null,
-                "month": null,
+                "year": 2021,
+                "month": 4,
                 "day": null
             },
             "end": {
-                "year": null,
-                "month": null,
+                "year": 2022,
+                "month": 4,
                 "day": null
             },
             "images": [],
@@ -130,8 +164,16 @@
             "name": "swork",
             "description": "",
             "url": "",
-            "highlights": [],
-            "keywords": [],
+            "highlights": [
+                "Build a **Kanban** board for *Agile Sprint Management*.",
+                "Implemented *draggable cards*, *template parser*, **XML** to **HTML** rendering."
+            ],
+            "keywords": [
+                "PHP",
+                "Vue",
+                "XML",
+                "Kanban"
+            ],
             "roles": [],
             "startDate": "",
             "endDate": "",
@@ -141,18 +183,25 @@
             "website": "",
             "summary": "A planning Kanban board built in Vue and PHP",
             "primaryLanguage": "PHP",
-            "languages": ["PHP", "SCSS", "JavaScript", "CSS", "HTML", "Shell"],
+            "languages": [
+                "PHP",
+                "SCSS",
+                "JavaScript",
+                "CSS",
+                "HTML",
+                "Shell"
+            ],
             "libraries": [],
             "githubUrl": "https://github.com/indic-amigo-akademi/swork",
             "repositoryUrl": "https://github.com/indic-amigo-akademi/swork",
             "start": {
-                "year": null,
-                "month": null,
+                "year": 2021,
+                "month": 1,
                 "day": null
             },
             "end": {
-                "year": null,
-                "month": null,
+                "year": 2002,
+                "month": 8,
                 "day": null
             },
             "images": [],
@@ -162,18 +211,30 @@
     "work": [
         {
             "name": "Tata Consultancy Services Pvt Ltd",
-            "location": "Bhubaneswar, Odisha, India",
+            "location": "Bhubaneswar, Odisha",
             "description": "",
-            "position": "Database Engineer",
+            "position": "System Engineer",
             "url": "https://www.tcs.com/",
             "startDate": "2021-08-01",
             "endDate": "",
             "summary": "Developed and maintained code for data integration pipelines with database objects creations for viewing quotes of upcoming products releases",
-            "highlights": [],
+            "highlights": [
+                "Developed **ETL** pipelines for data processing and calculating metrics for *NPI Quote Management*.",
+                "Worked on **Teradata** to **Snowflake** Process Migration.",
+                "Implemented custom *SLA Alerting System* via email and incident.",
+                "Trained two assistant system engineers and won **Star of the Month Award**."
+            ],
+            "keywords": [
+                "Snowflake",
+                "Python",
+                "SingleStore",
+                "Java"
+            ],
             "isCurrentRole": true,
             "start": {
                 "year": 2021,
-                "month": 8
+                "month": 8,
+                "day": null
             },
             "end": {},
             "company": "Tata Consultancy Services Pvt Ltd",
@@ -181,47 +242,37 @@
         },
         {
             "name": "DIY Baazar Pvt Ltd",
-            "location": "Kolkata, WB, India",
+            "location": "Kolkata, WB (Hybrid)",
             "description": "",
-            "position": "Full Stack Developer",
+            "position": "Full Stack Developer Intern",
             "url": "http://diybaazar.com/",
             "startDate": "2020-07-01",
             "endDate": "2020-12-01",
             "summary": "Built the front in Bootstrap, SCSS, Blade and Vue JS and backend in Laravel. ",
-            "highlights": [],
+            "highlights": [
+                "Build an ecommerce platform frontend with modern UI components in **Vue** and **Laravel Blade**.",
+                "Designed the backend flow for *authentication via OTP*, *payment interface integration* and *cart & order management* in **Laravel**.",
+                "Bind UI with Backend with **GraphQL** and **REST API**."
+            ],
+            "keywords": [
+                "Laravel",
+                "Vue",
+                "GraphQL",
+                "Ecommerce"
+            ],
             "isCurrentRole": false,
             "start": {
                 "year": 2020,
-                "month": 7
+                "month": 5,
+                "day": null
             },
             "end": {
-                "year": 2020,
-                "month": 12
+                "year": 2021,
+                "month": 7,
+                "day": null
             },
             "company": "DIY Baazar Pvt Ltd",
             "website": "http://diybaazar.com/"
-        },
-        {
-            "name": "Filium Enterprises Private Limited",
-            "location": "Dehradun, Uttarakhand, India (Remote)",
-            "description": "",
-            "position": "PHP and JS Web Dev Intern",
-            "url": "https://www.filiumenter.com",
-            "startDate": "2020-04-01",
-            "endDate": "2020-07-01",
-            "summary": "Worked on a website designer application built on PHP and JS using MySQL as database.",
-            "highlights": [],
-            "isCurrentRole": false,
-            "start": {
-                "year": 2020,
-                "month": 4
-            },
-            "end": {
-                "year": 2020,
-                "month": 7
-            },
-            "company": "Filium Enterprises Private Limited",
-            "website": "https://www.filiumenter.com"
         }
     ],
     "publications": [],
@@ -230,67 +281,83 @@
             "institution": "Institute of Engineering and Management",
             "url": "https://iem.edu.in/",
             "area": "Computer Science and Engineering",
-            "studyType": "Bachelor of Technology",
+            "location": "Kolkata, WB",
+            "studyType": "BTech",
             "startDate": "2017-08-01",
             "endDate": "2021-06-01",
-            "score": "9.42",
-            "courses": [],
+            "score": 9.42,
+            "courses": [
+                "Database Management",
+                "Object Oriented Programming",
+                "Data Structure & Algorithm",
+                "Ecommerce"
+            ],
             "description": "",
-            "activities": "",
+            "activities": [
+                "Won *1st prize* in **2019 Innovacion Tech Fest**."
+            ],
             "start": {
                 "year": 2017,
-                "month": 8
+                "month": 8,
+                "day": null
             },
             "end": {
                 "year": 2021,
-                "month": 6
+                "month": 6,
+                "day": null
             },
             "website": "https://iem.edu.in/",
-            "gpa": "9.42"
+            "gpa": 9.42
         },
         {
             "institution": "Sunrise English Medium School",
             "url": "https://sunriseeducation.org/",
-            "area": "Science Stream",
+            "area": "Science",
+            "location": "Howrah, WB",
             "studyType": "ISC(12th)",
             "startDate": "2015-04-01",
             "endDate": "2017-03-01",
-            "score": "94%",
+            "score": 94,
             "courses": [],
             "description": "",
-            "activities": "",
+            "activities": [],
             "start": {
                 "year": 2015,
-                "month": 4
+                "month": 4,
+                "day": null
             },
             "end": {
                 "year": 2017,
-                "month": 3
+                "month": 3,
+                "day": null
             },
             "website": "https://sunriseeducation.org/",
-            "gpa": "94%"
+            "gpa": 94
         },
         {
             "institution": "Sunrise English Medium School",
             "url": "https://sunriseeducation.org/",
             "area": "Science and Humanities",
+            "location": "Howrah, WB",
             "studyType": "ICSE (10th)",
             "startDate": "2014-04-01",
             "endDate": "2015-03-01",
-            "score": "92%",
+            "score": 92,
             "courses": [],
             "description": "",
-            "activities": "",
+            "activities": [],
             "start": {
                 "year": 2014,
-                "month": 4
+                "month": 4,
+                "day": null
             },
             "end": {
                 "year": 2015,
-                "month": 3
+                "month": 3,
+                "day": null
             },
             "website": "https://sunriseeducation.org/",
-            "gpa": "92%"
+            "gpa": 92
         }
     ],
     "volunteer": [],
@@ -298,7 +365,7 @@
     "languages": [
         {
             "language": "English",
-            "fluency": "Fluent"
+            "fluency": "Professional"
         },
         {
             "language": "Bengali",
@@ -306,16 +373,26 @@
         },
         {
             "language": "Hindi",
-            "fluency": "Fluent"
+            "fluency": "Bilingual"
         }
     ],
     "interests": [],
     "references": [],
-    "certificates": [],
-    "meta": {
-        "note": "This is a combined version of the old and new JSON Resume API to provide maximum compatibility. You will notice duplicated values in different fields.",
-        "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
-        "version": "v1.0.0",
-        "lastModified": "2020-12-29T15:53:00"
-    }
+    "certificates": [
+        {
+            "id": "EG7DXPGQ9H9B",
+            "name": "Python for Everybody",
+            "issuer": "Coursera",
+            "date": "2020-09-01",
+            "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/EG7DXPGQ9H9B",
+            "summary": "",
+            "fullDate": {
+                "year": 2020,
+                "month": 9,
+                "day": null
+            },
+            "expiryDate": null,
+            "website": "https://www.coursera.org/account/accomplishments/specialization/certificate/EG7DXPGQ9H9B"
+        }
+    ]
 }

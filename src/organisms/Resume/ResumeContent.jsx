@@ -1,5 +1,6 @@
 import React from "react";
 // import PropTypes from 'prop-types';
+import { marked } from "marked";
 
 import { loadMockup } from "../../services/fetchService";
 import "./Resume.scss";
@@ -11,6 +12,20 @@ const ResumeContent = React.forwardRef((props, ref) => {
     });
     const [resume, setResume] = React.useState({});
     const [loading, setLoading] = React.useState(true);
+
+    const formatHighlights = (highlights) => {
+        if (Array.isArray(highlights)) {
+            return (
+                <ul>
+                    {highlights.map((ele, i) => (
+                        <li key={i} dangerouslySetInnerHTML={{ __html: marked.parseInline(ele) }} />
+                    ))}
+                </ul>
+            );
+        } else if (typeof highlights === "string") {
+            return <React.Fragment>{highlights}</React.Fragment>;
+        }
+    };
 
     React.useEffect(() => {
         loadMockup("resume").then(function (data) {
@@ -50,6 +65,7 @@ const ResumeContent = React.forwardRef((props, ref) => {
                         </div>
                     </header>
                     <main>
+                        {/* Sidebar */}
                         <aside>
                             {/* My Education */}
                             {resume.education ? (
@@ -62,15 +78,32 @@ const ResumeContent = React.forwardRef((props, ref) => {
                                                     <a href={item.url ? item.url : "#"}>{item.institution}</a>
                                                 </h3>
                                                 {item.studyType || item.area ? (
-                                                    <>
-                                                        <h4 className="Resume-section-description">
-                                                            {item.studyType} in {item.area}
-                                                        </h4>
-                                                    </>
+                                                    <h4 className="Resume-section-description">
+                                                        {item.studyType} in {item.area}
+                                                    </h4>
                                                 ) : (
                                                     <></>
                                                 )}
-                                                <p className="Resume-section-content"></p>
+                                                <div className="Resume-section-location">
+                                                    <span>
+                                                        {dateFormatter.format(new Date(item.startDate))} -{" "}
+                                                        {item.isCurrentRole
+                                                            ? "PRESENT"
+                                                            : dateFormatter.format(new Date(item.endDate))}
+                                                    </span>{" "}
+                                                    | {item.location}
+                                                </div>
+                                                <p className="Resume-section-content">
+                                                    {item.score ? (
+                                                        <p>
+                                                            {item.score < 10
+                                                                ? "GPA: " + item.score + "/10"
+                                                                : "Percentage: " + item.score + "%"}
+                                                        </p>
+                                                    ) : (
+                                                        <></>
+                                                    )}
+                                                </p>
                                             </li>
                                         ))}
                                     </ul>
@@ -82,18 +115,18 @@ const ResumeContent = React.forwardRef((props, ref) => {
                             {resume.basics.profiles ? (
                                 <section className="Resume-section links">
                                     <h2 className="Resume-section-title">Links</h2>
-                                    <ul className="Resume-section-list">
+                                    <div className="Resume-section-list">
                                         {resume.basics.profiles.map((item, index) => (
-                                            <li key={index}>
+                                            <p key={index}>
                                                 <h3 className="Resume-section-subtitle">{item.network}</h3>
                                                 <p className="Resume-section-description">
                                                     <a href={item.url} className={item.network.toLowerCase()}>
                                                         {item.username}
                                                     </a>
                                                 </p>
-                                            </li>
+                                            </p>
                                         ))}
-                                    </ul>
+                                    </div>
                                 </section>
                             ) : (
                                 <></>
@@ -103,24 +136,14 @@ const ResumeContent = React.forwardRef((props, ref) => {
                                 <section className="Resume-section skills">
                                     <h2 className="Resume-section-title">Skills</h2>
                                     <ul className="Resume-section-list">
-                                        {[5, 4, 3, 2, 1].map((i, index) => (
+                                        {resume.skills.map((item, index) => (
                                             <React.Fragment key={index}>
-                                                {resume.skills.filter((item) => item.rating === i).length === 0 ? (
-                                                    ""
-                                                ) : (
-                                                    <li className={"Resume-section-rating-" + i} key={index}>
-                                                        <h3 className="Resume-section-subtitle">
-                                                            {resume.skills.filter((item) => item.rating === i)[0].level}
-                                                        </h3>
-                                                        {resume.skills
-                                                            .filter((item) => item.rating === i)
-                                                            .map((item, index) => (
-                                                                <span className="Resume-section-skill" key={index}>
-                                                                    {item.name}
-                                                                </span>
-                                                            ))}
-                                                    </li>
-                                                )}
+                                                <h3 className="Resume-section-subtitle">{item.name}</h3>
+                                                {item.keywords.map((ele, index) => (
+                                                    <span className="Resume-section-skill" key={index}>
+                                                        {ele}
+                                                    </span>
+                                                ))}
                                             </React.Fragment>
                                         ))}
                                     </ul>
@@ -128,7 +151,25 @@ const ResumeContent = React.forwardRef((props, ref) => {
                             ) : (
                                 <></>
                             )}
+                            {/* My Languages */}
+                            {resume.languages ? (
+                                <section className="Resume-section languages">
+                                    <h2 className="Resume-section-title">Languages</h2>
+                                    <div className="Resume-section-list">
+                                        {resume.languages.map((language, index) => (
+                                            <p>
+                                                <span className="Resume-section-subtitle">{language.language}</span> -
+                                                <span className=""> {language.fluency}</span>
+                                            </p>
+                                        ))}
+                                    </div>
+                                </section>
+                            ) : (
+                                <></>
+                            )}
                         </aside>
+
+                        {/* Main */}
                         <article>
                             {/* My Experience */}
                             {resume.work ? (
@@ -138,7 +179,7 @@ const ResumeContent = React.forwardRef((props, ref) => {
                                         {resume.work.map((item, index) => (
                                             <li key={index}>
                                                 <h3 className="Resume-section-subtitle">
-                                                    <a href={item.url ? item.url : "#"}>{item.company}</a>
+                                                    <a href={item.url ?? "#"}>{item.company}</a>
                                                 </h3>
                                                 <h4 className="Resume-section-description">{item.position}</h4>
                                                 <div className="Resume-section-location">
@@ -150,7 +191,21 @@ const ResumeContent = React.forwardRef((props, ref) => {
                                                     </span>{" "}
                                                     | {item.location}
                                                 </div>
-                                                <p className="Resume-section-content">{item.summary}</p>
+                                                <p className="Resume-section-content">
+                                                    {item.highlights ? (
+                                                        <>{formatHighlights(item.highlights)}</>
+                                                    ) : (
+                                                        <>{item.summary}</>
+                                                    )}
+                                                </p>
+                                                {item.keywords ? (
+                                                    <div className="Resume-section-keywords">
+                                                        <strong>Keywords: </strong>
+                                                        <span>{item.keywords.join(", ")}</span>
+                                                    </div>
+                                                ) : (
+                                                    <></>
+                                                )}
                                             </li>
                                         ))}
                                     </ul>
@@ -185,7 +240,48 @@ const ResumeContent = React.forwardRef((props, ref) => {
                                                     <a href={item.repositoryUrl ? item.repositoryUrl : "#"}>
                                                         {item.repositoryUrl}
                                                     </a>
+                                                    <p>
+                                                        {item.highlights ? (
+                                                            <>{formatHighlights(item.highlights)}</>
+                                                        ) : (
+                                                            <>{item.summary}</>
+                                                        )}
+                                                    </p>
                                                 </p>
+                                                {item.keywords ? (
+                                                    <div className="Resume-section-keywords">
+                                                        <strong>Keywords: </strong>
+                                                        <span>{item.keywords.join(", ")}</span>
+                                                    </div>
+                                                ) : (
+                                                    <></>
+                                                )}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </section>
+                            ) : (
+                                <></>
+                            )}
+                            {/* My Certificates */}
+                            {resume.certificates ? (
+                                <section className="Resume-section certificates">
+                                    <h2 className="Resume-section-title">Certificates</h2>
+                                    <ul className="Resume-section-list">
+                                        {resume.certificates.map((certificate, index) => (
+                                            <li key={index}>
+                                                <h3 className="Resume-section-subtitle">
+                                                    <a href={certificate.url ?? "#"}>{certificate.name}</a>
+                                                </h3>
+                                                <h4 className="Resume-section-description">
+                                                    {certificate.issuer} | Credential ID: {certificate.id}
+                                                </h4>
+                                                <div className="Resume-section-location">
+                                                    Issued: {dateFormatter.format(new Date(certificate.date))} |{" "}
+                                                    {certificate.expiryDate
+                                                        ? dateFormatter.format(new Date(certificate.expiryDate))
+                                                        : "Never expires"}
+                                                </div>
                                             </li>
                                         ))}
                                     </ul>
