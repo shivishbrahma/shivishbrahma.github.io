@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Raleway:wght@200;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Raleway:wght@200;400;500&display=swap");
 
 // Color Definitions
 $color-date: #666;
@@ -8,7 +8,7 @@ $color-subheadings: #333;
 
 .Resume-content {
     background-color: #fff;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 300;
     font-size: 1vw;
     color: $color-primary;
@@ -17,20 +17,18 @@ $color-subheadings: #333;
     a:visited {
         text-decoration: none;
         color: inherit;
-        padding: 0.125vw;
-        border: 0.035vw solid #00a8e8;
     }
 
     // Date Section
     .Resume-date {
         font-size: 0.75vw;
         color: $color-date;
-        font-family: 'Raleway', sans-serif;
+        font-family: "Raleway", sans-serif;
         font-weight: 200;
     }
 
     .Resume-title-content {
-        font-size: 1.125rem;
+        font-size: 1.125vw;
     }
 
     // Name Command
@@ -39,7 +37,7 @@ $color-subheadings: #333;
 
         .Resume-title {
             font-size: 3.5vw;
-            font-family: 'Lato', sans-serif;
+            font-family: "Lato", sans-serif;
             color: $color-headings;
 
             .shade-1 {
@@ -52,17 +50,16 @@ $color-subheadings: #333;
         }
 
         .Resume-title-content {
-            font-family: 'Raleway', sans-serif;
+            font-family: "Raleway", sans-serif;
             font-weight: 500;
-            font-size: 1.125vw;
-            line-height: 2;
+            line-height: 1.2;
 
             span:after {
-                content: ' | ';
+                content: " | ";
             }
 
             span:last-child:after {
-                content: '';
+                content: "";
             }
         }
 
@@ -79,11 +76,11 @@ $color-subheadings: #333;
 
     aside {
         .Resume-section-skill::after {
-            content: ' • ';
+            content: " • ";
         }
 
         .Resume-section-skill:last-child::after {
-            content: '';
+            content: "";
         }
     }
 
@@ -93,7 +90,7 @@ $color-subheadings: #333;
             display: inline-block;
 
             &::after {
-                content: '|';
+                content: "|";
                 padding: 0.5vw 0.25vw 1vw 0.5vw;
             }
         }
@@ -106,20 +103,22 @@ $color-subheadings: #333;
     .links {
         .Resume-section-subtitle {
             &::after {
-                content: ':// ';
+                content: ":// ";
                 padding-left: 0;
             }
+            text-transform: unset !important;
+            font-weight: 300 !important;
         }
 
         .twitter::before {
-            content: '@';
+            content: "@";
         }
     }
 
     .Resume-section {
-
-        // Section Heading
+        // Headings command
         .Resume-section-title {
+            font-family: "Lato", sans-serif;
             font-weight: 300;
             font-size: 1.75vw;
             text-transform: uppercase;
@@ -127,34 +126,51 @@ $color-subheadings: #333;
             padding-bottom: 0.25vw;
         }
 
-        ul.Resume-section-list {
+        .Resume-section-list {
             list-style: none;
 
             li {
                 padding-bottom: 1vw;
             }
 
-            // Section Subheading
+            // Subheadings command
             .Resume-section-subtitle {
+                font-family: "Lato", sans-serif;
                 font-weight: 700;
                 font-size: 1.1vw;
                 text-transform: uppercase;
                 color: $color-subheadings;
             }
 
-            // Section Descripton
+            // Descriptors command
             .Resume-section-description {
-                font-family: 'Raleway', sans-serif;
+                font-family: "Raleway", sans-serif;
                 font-weight: 500;
                 font-size: 1.125vw;
                 color: $color-subheadings;
             }
 
+            // Location command
             .Resume-section-location {
-                font-family: 'Raleway', sans-serif;
+                font-family: "Raleway", sans-serif;
                 font-weight: 500;
                 font-size: 0.975vw;
                 color: $color-headings;
+            }
+
+            .Resume-section-content {
+                ul {
+                    list-style: disc;
+                    padding-left: 1.5rem;
+                    li {
+                        padding: 0.05rem;
+                    }
+                }
+            }
+
+            // Keywords
+            .Resume-section-keywords {
+                font-size: 0.975vw;
             }
         }
 
@@ -174,7 +190,6 @@ $color-subheadings: #333;
         a:link,
         a:visited {
             padding: 0.125rem;
-            border: 0.035rem solid #00a8e8;
         }
 
         .Resume-date {
@@ -186,12 +201,16 @@ $color-subheadings: #333;
                 font-size: 3.5rem;
             }
 
+            .Resume-title-content {
+                font-size: 1.125rem;
+            }
+
             padding-bottom: 0.75rem;
             border-bottom: 0.04rem solid $color-primary;
         }
 
         main {
-            column-gap: 1.5rem;
+            column-gap: 1rem;
             padding: 1.25rem 2.5rem;
         }
 
@@ -201,23 +220,20 @@ $color-subheadings: #333;
                 display: inline-block;
 
                 &::after {
-                    content: '|';
-                    padding: 0.5rem 0.25rem 1rem 0.5rem;
+                    content: "|";
+                    padding: 0.5rem 0.25rem 0.5rem 0.5rem;
                 }
             }
-
         }
 
         .Resume-section {
-
             // Section Heading
             .Resume-section-title {
                 font-size: 1.75rem;
                 padding-bottom: 0.25rem;
             }
 
-            ul.Resume-section-list {
-
+            .Resume-section-list {
                 li {
                     padding-bottom: 1rem;
                 }
@@ -233,6 +249,10 @@ $color-subheadings: #333;
                 }
 
                 .Resume-section-location {
+                    font-size: 0.975rem;
+                }
+
+                .Resume-section-keywords {
                     font-size: 0.975rem;
                 }
             }

@@ -281,7 +281,8 @@
             "institution": "Institute of Engineering and Management",
             "url": "https://iem.edu.in/",
             "area": "Computer Science and Engineering",
-            "studyType": "B Tech",
+            "location": "Kolkata, WB",
+            "studyType": "BTech",
             "startDate": "2017-08-01",
             "endDate": "2021-06-01",
             "score": 9.42,
@@ -312,6 +313,7 @@
             "institution": "Sunrise English Medium School",
             "url": "https://sunriseeducation.org/",
             "area": "Science",
+            "location": "Howrah, WB",
             "studyType": "ISC(12th)",
             "startDate": "2015-04-01",
             "endDate": "2017-03-01",
@@ -336,6 +338,7 @@
             "institution": "Sunrise English Medium School",
             "url": "https://sunriseeducation.org/",
             "area": "Science and Humanities",
+            "location": "Howrah, WB",
             "studyType": "ICSE (10th)",
             "startDate": "2014-04-01",
             "endDate": "2015-03-01",
@@ -388,7 +391,7 @@
                 "month": 9,
                 "day": null
             },
-            "expiryDate": {},
+            "expiryDate": null,
             "website": "https://www.coursera.org/account/accomplishments/specialization/certificate/EG7DXPGQ9H9B"
         }
     ]
