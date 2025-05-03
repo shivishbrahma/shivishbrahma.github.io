@@ -15,22 +15,12 @@ import { themes, setCSSVariables, toggleTheme } from "@/store/appSlice";
 import "./App.scss";
 
 function App() {
-    // const [theme, setTheme] = React.useState(window.localStorage.getItem("shivishbrahma-portfolio-theme") || "light");
-
-    // function toggleTheme() {
-    //     const newTheme = theme === "light" ? "dark" : "light";
-    //     setTheme(newTheme);
-    //     window.localStorage.setItem("shivishbrahma-portfolio-theme", newTheme);
-    // }
-
     const theme = useSelector((state) => state.app.theme);
     const dispatch = useDispatch();
 
     React.useEffect(() => {
         setCSSVariables(themes[theme]);
     });
-
-    // const themeValue = React.useMemo(() => ({ theme: themes[theme] }), [theme]);
 
     return (
         <Router basename={import.meta.env.BASE_URL}>

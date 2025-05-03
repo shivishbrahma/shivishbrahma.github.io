@@ -3,13 +3,21 @@ import { createSlice } from '@reduxjs/toolkit';
 export const appSlice = createSlice({
     name: 'app',
     initialState: {
-        theme: window.localStorage.getItem("shivishbrahma-portfolio-theme") || "dark"
+        theme: window.localStorage.getItem("shivishbrahma-portfolio-theme") || "dark",
+        blogs: [],
+        projects: [],
     },
     reducers: {
         toggleTheme: (state) => {
             const newTheme = state.theme === "light" ? "dark" : "light";
             state.theme = newTheme;
             window.localStorage.setItem("shivishbrahma-portfolio-theme", newTheme);
+        },
+        setBlogs: (state, action) => {
+            state.blogs = action.payload;
+        },
+        setProjects: (state, action) => {
+            state.projects = action.payload;
         }
     }
 });
@@ -41,6 +49,6 @@ export function setCSSVariables (theme) {
     }
 }
 
-export const { toggleTheme } = appSlice.actions;
+export const { toggleTheme, setBlogs, setProjects } = appSlice.actions;
 
 export default appSlice.reducer;
