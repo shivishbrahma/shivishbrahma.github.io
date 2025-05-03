@@ -32,10 +32,10 @@ function ProjectSection({ ...otherProps }) {
                 {projects
                     ? projects
                           .filter((project) => project.featured || false)
-                          .map((project, index) => {
+                          .map((project) => {
                               return (
                                   <Card
-                                      key={index}
+                                      key={project.name}
                                       cardImg={<img src={project.cover} alt={project.name + " Cover"} />}
                                       cardHoverContent={
                                           <>
@@ -43,7 +43,7 @@ function ProjectSection({ ...otherProps }) {
                                                   <h4 className="Project__title">{project.displayName}</h4>
                                                   {project.languages && project.languages.length > 0 && (
                                                       <div className="Project__languages">
-                                                          {project.languages.map((language, index) => {
+                                                          {project.languages.map((language) => {
                                                               return (
                                                                   <span
                                                                       className={

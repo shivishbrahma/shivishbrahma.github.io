@@ -205,8 +205,8 @@ const ResumeContent = React.forwardRef((props, ref) => {
                                 <section className="Resume-section projects">
                                     <h2 className="Resume-section-title">Projects</h2>
                                     <ul className="Resume-section-list">
-                                        {resume.projects.map((item, index) => (
-                                            <li key={index}>
+                                        {resume.projects.map((item) => (
+                                            <li key={item.name}>
                                                 <h3 className="Resume-section-subtitle">{item.name}</h3>
                                                 <h4 className="Resume-section-description">{item.summary}</h4>
                                                 <div className="Resume-section-location">
