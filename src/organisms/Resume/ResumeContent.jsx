@@ -4,6 +4,7 @@ import { marked } from "marked";
 import Loader from "@/atoms/Loader/Loader";
 import { loadMockup } from "@/services/fetchService";
 
+import { formatHighlights, parseHighlights } from "./utils";
 import "./Resume.scss";
 
 const ResumeContent = React.forwardRef((props, ref) => {
@@ -13,29 +14,6 @@ const ResumeContent = React.forwardRef((props, ref) => {
     });
     const [resume, setResume] = React.useState({});
     const [loading, setLoading] = React.useState(true);
-
-    const formatHighlights = (highlights) => {
-        if (Array.isArray(highlights)) {
-            return (
-                <ul>
-                    {highlights.map((ele, ind) => {
-                        if (Array.isArray(ele)) {
-                            return (
-                                <ul>
-                                    {ele.map((e, i) => (
-                                        <li key={i} dangerouslySetInnerHTML={{ __html: marked.parseInline(e) }}/>
-                                    ))}
-                                </ul>
-                            );
-                        }
-                        return <li key={ind} dangerouslySetInnerHTML={{ __html: marked.parseInline(ele) }} />;
-                    })}
-                </ul>
-            );
-        } else if (typeof highlights === "string") {
-            return <React.Fragment>{highlights}</React.Fragment>;
-        }
-    };
 
     React.useEffect(() => {
         setLoading(true);
@@ -130,7 +108,7 @@ const ResumeContent = React.forwardRef((props, ref) => {
                                     <h2 className="Resume-section-title">Links</h2>
                                     <div className="Resume-section-list">
                                         {resume.basics.profiles.map((item, index) => (
-                                            <p key={index}>
+                                            <p key={item}>
                                                 <h3 className="Resume-section-subtitle">{item.network}</h3>
                                                 <p className="Resume-section-description">
                                                     <a href={item.url} className={item.network.toLowerCase()}>
@@ -149,11 +127,11 @@ const ResumeContent = React.forwardRef((props, ref) => {
                                 <section className="Resume-section skills">
                                     <h2 className="Resume-section-title">Skills</h2>
                                     <ul className="Resume-section-list">
-                                        {resume.skills.map((item, index) => (
-                                            <React.Fragment key={index}>
+                                        {resume.skills.map((item) => (
+                                            <React.Fragment key={item.name}>
                                                 <h3 className="Resume-section-subtitle">{item.name}</h3>
-                                                {item.keywords.map((ele, index) => (
-                                                    <span className="Resume-section-skill" key={index}>
+                                                {item.keywords.map((ele) => (
+                                                    <span className="Resume-section-skill" key={ele}>
                                                         {ele}
                                                     </span>
                                                 ))}
@@ -169,8 +147,8 @@ const ResumeContent = React.forwardRef((props, ref) => {
                                 <section className="Resume-section languages">
                                     <h2 className="Resume-section-title">Languages</h2>
                                     <div className="Resume-section-list">
-                                        {resume.languages.map((language, index) => (
-                                            <p>
+                                        {resume.languages.map((language) => (
+                                            <p key={language.language}>
                                                 <span className="Resume-section-subtitle">{language.language}</span> -
                                                 <span className=""> {language.fluency}</span>
                                             </p>
@@ -189,8 +167,8 @@ const ResumeContent = React.forwardRef((props, ref) => {
                                 <section className="Resume-section experience">
                                     <h2 className="Resume-section-title">Experience</h2>
                                     <ul className="Resume-section-list">
-                                        {resume.work.map((item, index) => (
-                                            <li key={index}>
+                                        {resume.work.map((item) => (
+                                            <li key={item}>
                                                 <h3 className="Resume-section-subtitle">
                                                     <a href={item.url ?? "#"}>{item.company}</a>
                                                 </h3>
@@ -206,19 +184,15 @@ const ResumeContent = React.forwardRef((props, ref) => {
                                                 </div>
                                                 <p className="Resume-section-content">
                                                     {item.highlights ? (
-                                                        <>{formatHighlights(item.highlights)}</>
+                                                        <>
+                                                            {formatHighlights(
+                                                                parseHighlights(item.highlights, item.keywords)
+                                                            )}
+                                                        </>
                                                     ) : (
                                                         <>{item.summary}</>
                                                     )}
                                                 </p>
-                                                {item.keywords ? (
-                                                    <div className="Resume-section-keywords">
-                                                        <strong>Keywords: </strong>
-                                                        <span>{item.keywords.join(", ")}</span>
-                                                    </div>
-                                                ) : (
-                                                    <></>
-                                                )}
                                             </li>
                                         ))}
                                     </ul>
@@ -255,20 +229,16 @@ const ResumeContent = React.forwardRef((props, ref) => {
                                                     </a>
                                                     <p>
                                                         {item.highlights ? (
-                                                            <>{formatHighlights(item.highlights)}</>
+                                                            <>
+                                                                {formatHighlights(
+                                                                    parseHighlights(item.highlights, item.keywords)
+                                                                )}
+                                                            </>
                                                         ) : (
                                                             <>{item.summary}</>
                                                         )}
                                                     </p>
                                                 </p>
-                                                {item.keywords ? (
-                                                    <div className="Resume-section-keywords">
-                                                        <strong>Keywords: </strong>
-                                                        <span>{item.keywords.join(", ")}</span>
-                                                    </div>
-                                                ) : (
-                                                    <></>
-                                                )}
                                             </li>
                                         ))}
                                     </ul>
@@ -281,8 +251,8 @@ const ResumeContent = React.forwardRef((props, ref) => {
                                 <section className="Resume-section certificates">
                                     <h2 className="Resume-section-title">Certificates</h2>
                                     <ul className="Resume-section-list">
-                                        {resume.certificates.map((certificate, index) => (
-                                            <li key={index}>
+                                        {resume.certificates.map((certificate) => (
+                                            <li key={certificate.id}>
                                                 <h3 className="Resume-section-subtitle">
                                                     <a href={certificate.url ?? "#"}>{certificate.name}</a>
                                                 </h3>
@@ -303,9 +273,9 @@ const ResumeContent = React.forwardRef((props, ref) => {
                                 <></>
                             )}
                             {/* My Awards */}
-                            {resume.awards ? <></> : <></>}
+                            {/* {resume.awards ? <></> : <></>} */}
                             {/* My Publications */}
-                            {resume.publications ? <></> : <></>}
+                            {/* {resume.publications ? <></> : <></>} */}
                         </article>
                     </main>
                 </div>
