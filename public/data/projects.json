@@ -107,7 +107,7 @@
             "entity": "",
             "type": "",
             "displayName": "HTTP Server",
-            "cover": "images/projects/codecrafters-http-server-python.webp",
+            "cover": "images/projects/http-server.webp",
             "website": "",
             "summary": "HTTP Server from Scratch in Python (Codecrafters)",
             "primaryLanguage": "Python",
@@ -132,7 +132,8 @@
             "videos": []
         },
         {
-            "name": "codecrafters-kafka-python",
+            "name": "codecrafters-shell-python",
+            "cover": "images/projects/smash.webp",
             "description": "",
             "url": "",
             "featured": true,
@@ -143,18 +144,17 @@
             "endDate": "",
             "entity": "",
             "type": "",
-            "displayName": "Kafka Server",
-            "cover": "images/projects/codecrafters-kafka-python.webp",
+            "displayName": "Smash Shell",
             "website": "",
-            "summary": "Kafka Server from Scratch in Python (Codecrafters)",
+            "summary": "Command Shell from Scratch in Python (Codecrafters)",
             "primaryLanguage": "Python",
             "languages": [
                 "Python",
                 "Shell"
             ],
             "libraries": [],
-            "githubUrl": "https://github.com/shivishbrahma/codecrafters-kafka-python",
-            "repositoryUrl": "https://github.com/shivishbrahma/codecrafters-kafka-python",
+            "githubUrl": "https://github.com/shivishbrahma/codecrafters-shell-python",
+            "repositoryUrl": "https://github.com/shivishbrahma/codecrafters-shell-python",
             "start": {
                 "year": null,
                 "month": null,
@@ -205,9 +205,10 @@
             "videos": []
         },
         {
-            "name": "nuclear-reactor",
+            "name": "nuclear-react",
+            "cover": "images/projects/nuclear-react.webp",
             "description": "",
-            "url": "https://shivishbrahma.github.io/nuclear-reactor/",
+            "url": "https://shivishbrahma.github.io/nuclear-react/",
             "highlights": [],
             "featured": true,
             "keywords": [],
@@ -216,8 +217,8 @@
             "endDate": "",
             "entity": "",
             "type": "",
-            "displayName": "React Nuclear",
-            "website": "https://shivishbrahma.github.io/nuclear-reactor/",
+            "displayName": "Nuclear React",
+            "website": "https://shivishbrahma.github.io/nuclear-react/",
             "summary": "",
             "primaryLanguage": "JavaScript",
             "languages": [
@@ -226,8 +227,8 @@
                 "JavaScript"
             ],
             "libraries": [],
-            "githubUrl": "https://github.com/shivishbrahma/nuclear-reactor",
-            "repositoryUrl": "https://github.com/shivishbrahma/nuclear-reactor",
+            "githubUrl": "https://github.com/shivishbrahma/nuclear-react",
+            "repositoryUrl": "https://github.com/shivishbrahma/nuclear-react",
             "start": {
                 "year": null,
                 "month": null,
