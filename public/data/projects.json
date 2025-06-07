@@ -1,7 +1,7 @@
 {
     "projects": [
         {
-            "name": "Krishi Mitra",
+            "name": "krishi-mitra",
             "cover": "images/projects/krishi-mitra.webp",
             "description": "A Laravel Ecommerce Portal for Agro Goods",
             "url": "",
@@ -14,7 +14,7 @@
             "endDate": "",
             "entity": "",
             "type": "",
-            "displayName": "krishi-mitra",
+            "displayName": "Krishi Mitra",
             "website": "https://github.com/indic-amigo-akademi/krishi-mitra",
             "summary": "A Laravel Ecommerce Portal for Agro Goods",
             "primaryLanguage": "PHP",
@@ -33,10 +33,11 @@
             "videos": []
         },
         {
-            "name": "Swork",
+            "name": "swork",
             "cover": "images/projects/swork.webp",
-            "description": "A planning Kanban board built in Vue and PHP",
+            "description": "Agile Kanban Board built in Vue and PHP",
             "url": "",
+            "featured": true,
             "highlights": [],
             "keywords": [],
             "roles": [
@@ -46,7 +47,7 @@
             "endDate": "",
             "entity": "",
             "type": "",
-            "displayName": "swork",
+            "displayName": "Swork",
             "website": "https://github.com/indic-amigo-akademi/swork",
             "summary": "A planning Kanban board built in Vue and PHP",
             "primaryLanguage": "PHP",
@@ -64,7 +65,7 @@
             "videos": []
         },
         {
-            "name": "TravMave",
+            "name": "travel-map",
             "cover": "images/projects/travelmap.webp",
             "description": "",
             "url": "",
@@ -77,7 +78,7 @@
             "endDate": "",
             "entity": "",
             "type": "",
-            "displayName": "travel-map",
+            "displayName": "TravMap",
             "website": "",
             "summary": "A Travel Map to plan trips and save memories",
             "primaryLanguage": "PHP",
@@ -90,6 +91,153 @@
             ],
             "libraries": [],
             "repositoryUrl": "https://github.com/indic-amigo-akademi/travelmap",
+            "images": [],
+            "videos": []
+        },
+        {
+            "name": "codecrafters-http-server-python",
+            "description": "",
+            "url": "",
+            "featured": true,
+            "highlights": [],
+            "keywords": [],
+            "roles": [],
+            "startDate": "",
+            "endDate": "",
+            "entity": "",
+            "type": "",
+            "displayName": "HTTP Server",
+            "cover": "images/projects/codecrafters-http-server-python.webp",
+            "website": "",
+            "summary": "HTTP Server from Scratch in Python (Codecrafters)",
+            "primaryLanguage": "Python",
+            "languages": [
+                "Python",
+                "Shell"
+            ],
+            "libraries": [],
+            "githubUrl": "https://github.com/shivishbrahma/codecrafters-http-server-python",
+            "repositoryUrl": "https://github.com/shivishbrahma/codecrafters-http-server-python",
+            "start": {
+                "year": null,
+                "month": null,
+                "day": null
+            },
+            "end": {
+                "year": null,
+                "month": null,
+                "day": null
+            },
+            "images": [],
+            "videos": []
+        },
+        {
+            "name": "codecrafters-kafka-python",
+            "description": "",
+            "url": "",
+            "featured": true,
+            "highlights": [],
+            "keywords": [],
+            "roles": [],
+            "startDate": "",
+            "endDate": "",
+            "entity": "",
+            "type": "",
+            "displayName": "Kafka Server",
+            "cover": "images/projects/codecrafters-kafka-python.webp",
+            "website": "",
+            "summary": "Kafka Server from Scratch in Python (Codecrafters)",
+            "primaryLanguage": "Python",
+            "languages": [
+                "Python",
+                "Shell"
+            ],
+            "libraries": [],
+            "githubUrl": "https://github.com/shivishbrahma/codecrafters-kafka-python",
+            "repositoryUrl": "https://github.com/shivishbrahma/codecrafters-kafka-python",
+            "start": {
+                "year": null,
+                "month": null,
+                "day": null
+            },
+            "end": {
+                "year": null,
+                "month": null,
+                "day": null
+            },
+            "images": [],
+            "videos": []
+        },
+        {
+            "name": "tilottama",
+            "cover": "images/projects/tilottama.webp",
+            "featured": true,
+            "description": "",
+            "url": "",
+            "highlights": [],
+            "keywords": [],
+            "roles": [],
+            "startDate": "",
+            "endDate": "",
+            "entity": "",
+            "type": "",
+            "displayName": "Tilottama",
+            "website": "",
+            "summary": "A Java based multi-tasking command line interface bot.",
+            "primaryLanguage": "Java",
+            "languages": [
+                "Java"
+            ],
+            "libraries": [],
+            "githubUrl": "https://github.com/shivishbrahma/tilottama",
+            "repositoryUrl": "https://github.com/shivishbrahma/tilottama",
+            "start": {
+                "year": null,
+                "month": null,
+                "day": null
+            },
+            "end": {
+                "year": null,
+                "month": null,
+                "day": null
+            },
+            "images": [],
+            "videos": []
+        },
+        {
+            "name": "nuclear-reactor",
+            "description": "",
+            "url": "https://shivishbrahma.github.io/nuclear-reactor/",
+            "highlights": [],
+            "featured": true,
+            "keywords": [],
+            "roles": [],
+            "startDate": "",
+            "endDate": "",
+            "entity": "",
+            "type": "",
+            "displayName": "React Nuclear",
+            "website": "https://shivishbrahma.github.io/nuclear-reactor/",
+            "summary": "",
+            "primaryLanguage": "JavaScript",
+            "languages": [
+                "CSS",
+                "HTML",
+                "JavaScript"
+            ],
+            "libraries": [],
+            "githubUrl": "https://github.com/shivishbrahma/nuclear-reactor",
+            "repositoryUrl": "https://github.com/shivishbrahma/nuclear-reactor",
+            "start": {
+                "year": null,
+                "month": null,
+                "day": null
+            },
+            "end": {
+                "year": null,
+                "month": null,
+                "day": null
+            },
             "images": [],
             "videos": []
         }

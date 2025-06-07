@@ -5,18 +5,21 @@ import Card from "@/atoms/Card/Card";
 import Button from "@/atoms/Button/Button";
 import Loader from "@/atoms/Loader/Loader";
 import { loadMockup } from "@/services/fetchService";
+import { useSelector, useDispatch } from "react-redux";
+import { setProjects } from "@/store/appSlice";
 
 import "./ProjectSection.scss";
 
 function ProjectSection({ ...otherProps }) {
-    const [projects, setProjects] = React.useState([]);
+    const projects = useSelector((state) => state.app.projects);
+    const dispatch = useDispatch();
     const [loading, setLoading] = React.useState(false);
 
     React.useEffect(() => {
         setLoading(true);
         loadMockup("projects")
             .then(function (data) {
-                setProjects(data.projects);
+                dispatch(setProjects(data.projects));
                 setLoading(false);
             })
             .catch(function (error) {
@@ -24,16 +27,18 @@ function ProjectSection({ ...otherProps }) {
             });
     }, []);
 
+    const featuredProjects = projects.filter((project) => project.featured || false);
+
     if (loading || !projects) return <Loader loading />;
 
     return (
         <PageSection sectionTitle="Featured Projects" {...otherProps}>
             <div className="Card-list">
-                {projects
-                    ? projects.map((project, index) => {
+                {featuredProjects
+                    ? featuredProjects.map((project) => {
                           return (
                               <Card
-                                  key={index}
+                                  key={project.name}
                                   cardImg={<img src={project.cover} alt={project.name + " Cover"} />}
                                   cardHoverContent={
                                       <>
@@ -41,7 +46,7 @@ function ProjectSection({ ...otherProps }) {
                                               <h4 className="Project__title">{project.displayName}</h4>
                                               {project.languages && project.languages.length > 0 && (
                                                   <div className="Project__languages">
-                                                      {project.languages.map((language, index) => {
+                                                      {project.languages.map((language) => {
                                                           return (
                                                               <span
                                                                   className={
@@ -50,7 +55,7 @@ function ProjectSection({ ...otherProps }) {
                                                                           ? "Project__languages__tag__primary"
                                                                           : "")
                                                                   }
-                                                                  key={index}
+                                                                  key={language}
                                                               >
                                                                   {language}
                                                               </span>
@@ -80,7 +85,7 @@ function ProjectSection({ ...otherProps }) {
                                       </>
                                   }
                               >
-                                  <h4 className="Project__display_name">{project.name}</h4>
+                                  <h4 className="Project__display_name">{project.displayName}</h4>
                                   <p className="Project__summary">{project.summary}</p>
                               </Card>
                           );

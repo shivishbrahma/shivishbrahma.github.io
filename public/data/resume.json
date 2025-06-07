@@ -6,8 +6,13 @@
         "email": "pur.cho.99@gmail.com",
         "phone": "+91 9123801180",
         "url": "https://shivishbrahma.github.io",
-        "summary": "I'm a full stack developer who is passionate about open source development and building applications for better life. I have worked in two startups before joining TCS as a developer.",
+        "summary": "Experienced and detail-driven Data Engineer with over 4 years of experience in developing scalable ETL pipelines, managing real-time data workflows, and maintaining data integrity across platforms. Adept in Python, SQL, Apache Airflow, and Snowflake. Strong team player with a proven track record of delivering insights and optimizing processes through data-driven solutions.",
         "profiles": [
+            {
+                "network": "gitconnected",
+                "username": "shivishbrahma",
+                "url": "https://gitconnected.com/shivishbrahma"
+            },
             {
                 "network": "GitHub",
                 "username": "shivishbrahma",
@@ -17,15 +22,20 @@
                 "network": "LinkedIn",
                 "url": "https://www.linkedin.com/in/shivishbrahma",
                 "username": "shivishbrahma"
+            },
+            {
+                "network": "Medium",
+                "url": "https://medium.com/@shivishbrahma",
+                "username": "@shivishbrahma"
             }
         ],
-        "headline": " A web dev, coding geek, data analyst, number cruncher in his own habitat.",
+        "headline": "",
         "blog": "https://dev.to/shivishbrahma/",
-        "yearsOfExperience": 2,
+        "yearsOfExperience": 4,
         "username": "shivishbrahma",
-        "locationAsString": "Howrah, WB, India",
-        "region": "Howrah, WB, India",
-        "karma": 20,
+        "locationAsString": "Bhubaneswar, Odisha, India",
+        "region": "Bhubaneswar, Odisha, India",
+        "karma": 25,
         "id": "0e96e5ea-87d1-4d7c-922d-98af0c133993",
         "followers": 12,
         "following": 37,
@@ -121,12 +131,13 @@
             "description": "",
             "url": "",
             "highlights": [
-                "Build a **Laravel** **Ecommerce** Portal for *Agro Goods*",
-                "Started as a part of coursework with proper **Agile** SDLC"
+                "Build a Laravel Ecommerce Portal for *Agro Goods*",
+                "Started as a part of coursework with proper Agile SDLC"
             ],
             "keywords": [
                 "Laravel",
-                "Ecommerce"
+                "Ecommerce",
+                "Agile"
             ],
             "roles": [],
             "startDate": "",
@@ -165,13 +176,14 @@
             "description": "",
             "url": "",
             "highlights": [
-                "Build a **Kanban** board for *Agile Sprint Management*.",
-                "Implemented *draggable cards*, *template parser*, **XML** to **HTML** rendering."
+                "Build a Kanban board for *Agile Sprint Management* in PHP & Vue.",
+                "Implemented *draggable cards*, *template parser*, XML to HTML rendering."
             ],
             "keywords": [
                 "PHP",
                 "Vue",
                 "XML",
+                "HTML",
                 "Kanban"
             ],
             "roles": [],
@@ -219,20 +231,10 @@
             "endDate": "",
             "summary": "Developed and maintained code for data integration pipelines with database objects creations for viewing quotes of upcoming products releases",
             "highlights": [
-                "**Delivery Quote Management**",
-                [
-                    "Worked in a Teradata Database Procedures to Snowflake Airflow Python Procedure Migration for a BAU application",
-                    "Created ETL pipelines for calculating real-time metrics related to bookings",
-                    "Implemented an event based approach for Singlestore to Snowflake Batch replication"
-                ],
-                "**Data Freshness Alerting System**",
-                [
-                    "Storing SLA & database object details in Singlestore",
-                    "Every Loader or Semantic Refresh job triggered Airflow Python Job to store the event details mainly object details in Singlestore and call Java Spring API.",
-                    "Java Spring API processes the event from database(Singlestore/Snowflake), i.e., pulls the latest refresh timestamp and stores into a separate database object.",
-                    "Implemented an SLA Alerting via email and Help Central ticket and used Airflow Python for scheduled check with smtp library for email and HCL REST API for creating tickets."
-                ],
-                "Trained two assistant system engineers and won **Star of the Month Award**."
+                "Migrated business logic from Teradata to Snowflake using Python-based Airflow pipelines.",
+                "Developed data replication processes from SingleStore to Snowflake for *real-time* use cases.",
+                "Built and maintained ETL pipelines to derive *supply-demand metrics*.",
+                "Implemented a metadata-driven alerting system to monitor *data freshness* and *trigger automated notifications*, reducing *reporting delays* by 30%."
             ],
             "keywords": [
                 "Snowflake",
@@ -240,6 +242,7 @@
                 "SingleStore",
                 "Airflow",
                 "ETL",
+                "Teradata",
                 "Java"
             ],
             "isCurrentRole": true,
@@ -260,17 +263,19 @@
             "url": "http://diybaazar.com/",
             "startDate": "2020-07-01",
             "endDate": "2020-12-01",
-            "summary": "Built the front in Bootstrap, SCSS, Blade and Vue JS and backend in Laravel. ",
+            "summary": "Built the front in Bootstrap, SCSS, Blade and Vue JS and backend in Laravel.",
             "highlights": [
-                "Implemented OTP based Authentication using either Email or Phone using Laravel & 3rd party API services. Also Google OAuth is integrated.",
-                "Build cart & order management system along with Payment Interface Integration.",
-                "Designed ecommerce modern UI components in Vue Js like Skeletal Loading, Product box with Zoom In, OTP input."
+                "Created OTP-based authentication using Laravel and third-party APIs; integrated Google OAuth.",
+                "Developed core Ecommerce components such as *cart* and *order management* systems.",
+                "Designed responsive front-end features in Vue.js including *skeleton loading* and *zoom-enabled* product previews."
             ],
             "keywords": [
                 "Laravel",
                 "Vue",
                 "GraphQL",
-                "Ecommerce"
+                "Ecommerce",
+                "Google OAuth",
+                "OTP"
             ],
             "isCurrentRole": false,
             "start": {
