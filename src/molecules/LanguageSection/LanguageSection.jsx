@@ -1,11 +1,38 @@
 import React from "react";
 // import Globe3D from "@/atoms/Globe3D/Globe3D";
 import PageSection from "@/atoms/PageSection/PageSection";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import { TagCloud } from "@frank-mayer/react-tag-cloud";
 import { useSelector, useDispatch } from "react-redux";
+import Loader from "@/atoms/Loader/Loader";
 
 import "./LanguageSection.scss";
+import { setProgLang } from "@/store/appSlice";
+
+function CloudList({ items, ...otherProps }) {
+    const dispatch = useDispatch();
+
+    const progLang = useSelector((state) => state.app.progLang);
+
+    if (!items.length) {
+        return <Loader loading />;
+    }
+
+    return (
+        <TagCloud
+            options={(w) => ({
+                radius: Math.min(500, w.innerWidth, w.innerHeight) / 2,
+                maxSpeed: "normal",
+                itemClass: "TagCloud__item",
+                containerClass: "TagCloud__container"
+            })}
+            onClick={(tag, evt) => dispatch(setProgLang(tag))}
+            onClickOptions={{ passive: true }}
+        >
+            {items.map((item) => item.text)}
+        </TagCloud>
+    );
+}
 
 function LanguageSection({ ...otherProps }) {
     const projects = useSelector((state) => state.app.projects);
@@ -16,27 +43,19 @@ function LanguageSection({ ...otherProps }) {
         return { text: lang, weight: 1 };
     });
 
-    const [lang, setLang] = React.useState(elems[0].text);
-
     return (
         <PageSection sectionTitle="Programming Languages" {...otherProps}>
+            <CloudList items={elems} />
+
             {/* <Globe3D tags={elems} radius={150} /> */}
-            <TagCloud
-                options={(w) => ({
-                    radius: Math.min(500, w.innerWidth, w.innerHeight) / 2,
-                    maxSpeed: "normal",
-                    itemClass: "TagCloud__item",
-                    containerClass: "TagCloud__container"
-                })}
-                onClick={(tag, evt) => setLang(tag)}
-                onClickOptions={{ passive: true }}
-            >
-                {elems.map((elem) => elem.text)}
-            </TagCloud>
         </PageSection>
     );
 }
 
 LanguageSection.propTypes = {};
+
+CloudList.propTypes = {
+    items: PropTypes.array.isRequired
+};
 
 export default LanguageSection;

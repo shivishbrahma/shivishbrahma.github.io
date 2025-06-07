@@ -6,6 +6,7 @@ export const appSlice = createSlice({
         theme: window.localStorage.getItem("shivishbrahma-portfolio-theme") || "dark",
         blogs: [],
         projects: [],
+        progLang: window.localStorage.getItem("shivishbrahma-portfolio-theme") || "JavaScript"
     },
     reducers: {
         toggleTheme: (state) => {
@@ -18,6 +19,9 @@ export const appSlice = createSlice({
         },
         setProjects: (state, action) => {
             state.projects = action.payload;
+        },
+        setProgLang: (state, action) => {
+            state.progLang = action.payload;
         }
     }
 });
@@ -49,6 +53,6 @@ export function setCSSVariables (theme) {
     }
 }
 
-export const { toggleTheme, setBlogs, setProjects } = appSlice.actions;
+export const { toggleTheme, setBlogs, setProjects, setProgLang } = appSlice.actions;
 
 export default appSlice.reducer;

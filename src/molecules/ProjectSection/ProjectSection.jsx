@@ -76,7 +76,7 @@ function ProjectSection({ ...otherProps }) {
                                                       </Button>
                                                   )}
                                                   {project.website && (
-                                                      <Button type="link" href={project.githubUrl} target="_blank">
+                                                      <Button type="link" href={project.website} target="_blank">
                                                           View Website
                                                       </Button>
                                                   )}
