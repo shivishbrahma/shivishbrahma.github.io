@@ -27,14 +27,14 @@ export const appSlice = createSlice({
 });
 
 export const themes = {
-    light: {
-        base: "#302b27",
-        primary: "#00374d",
-        secondary: "#a50d12",
-        tertiary: "#02642c",
-        quaternary: "#fec601",
-        baseBg: "#ffffff",
-        primaryBg: "#e6f8ff"
+    "light": {
+        "base": "#00171f",
+        "primary": "#0086b3",
+        "secondary": "#c6393f",
+        "tertiary": "#03b55a",
+        "quaternary": "#d6b600",
+        "baseBg": "#f4f2f1",
+        "primaryBg": "#e0f7fa"
     },
     dark: {
         base: "#f4f2f1",

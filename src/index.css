@@ -41,6 +41,8 @@ body {
 	min-height: 100vh;
 	font-size: 1rem;
 	overflow-x: hidden;
+    --sparkle-color: #ffe066;
+    cursor: url("images/icons/wand25.png"), auto;
 }
 
 a:link,
@@ -51,6 +53,7 @@ a:visited {
 
 a:hover {
 	color: var(--tertiary);
+    cursor: url("images/icons/wand-sparkle25.png"), auto;
 }
 
 h1,

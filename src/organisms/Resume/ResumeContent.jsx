@@ -108,14 +108,14 @@ const ResumeContent = React.forwardRef((props, ref) => {
                                     <h2 className="Resume-section-title">Links</h2>
                                     <div className="Resume-section-list">
                                         {resume.basics.profiles.map((item, index) => (
-                                            <p key={item}>
+                                            <React.Fragment key={index}>
                                                 <h3 className="Resume-section-subtitle">{item.network}</h3>
                                                 <p className="Resume-section-description">
                                                     <a href={item.url} className={item.network.toLowerCase()}>
                                                         {item.username}
                                                     </a>
                                                 </p>
-                                            </p>
+                                            </React.Fragment>
                                         ))}
                                     </div>
                                 </section>
@@ -130,8 +130,8 @@ const ResumeContent = React.forwardRef((props, ref) => {
                                         {resume.skills.map((item) => (
                                             <React.Fragment key={item.name}>
                                                 <h3 className="Resume-section-subtitle">{item.name}</h3>
-                                                {item.keywords.map((ele) => (
-                                                    <span className="Resume-section-skill" key={ele}>
+                                                {item.keywords.map((ele, index) => (
+                                                    <span className="Resume-section-skill" key={index}>
                                                         {ele}
                                                     </span>
                                                 ))}
@@ -168,7 +168,7 @@ const ResumeContent = React.forwardRef((props, ref) => {
                                     <h2 className="Resume-section-title">Experience</h2>
                                     <ul className="Resume-section-list">
                                         {resume.work.map((item) => (
-                                            <li key={item}>
+                                            <li key={item.company}>
                                                 <h3 className="Resume-section-subtitle">
                                                     <a href={item.url ?? "#"}>{item.company}</a>
                                                 </h3>
@@ -182,7 +182,7 @@ const ResumeContent = React.forwardRef((props, ref) => {
                                                     </span>{" "}
                                                     | {item.location}
                                                 </div>
-                                                <p className="Resume-section-content">
+                                                <div className="Resume-section-content">
                                                     {item.highlights ? (
                                                         <>
                                                             {formatHighlights(
@@ -192,7 +192,7 @@ const ResumeContent = React.forwardRef((props, ref) => {
                                                     ) : (
                                                         <>{item.summary}</>
                                                     )}
-                                                </p>
+                                                </div>
                                             </li>
                                         ))}
                                     </ul>
@@ -223,11 +223,11 @@ const ResumeContent = React.forwardRef((props, ref) => {
                                                     )}
                                                     {item.primaryLanguage}
                                                 </div>
-                                                <p className="Resume-section-content">
+                                                <div className="Resume-section-content">
                                                     <a href={item.repositoryUrl ? item.repositoryUrl : "#"}>
                                                         {item.repositoryUrl}
                                                     </a>
-                                                    <p>
+                                                    <div>
                                                         {item.highlights ? (
                                                             <>
                                                                 {formatHighlights(
@@ -237,8 +237,8 @@ const ResumeContent = React.forwardRef((props, ref) => {
                                                         ) : (
                                                             <>{item.summary}</>
                                                         )}
-                                                    </p>
-                                                </p>
+                                                    </div>
+                                                </div>
                                             </li>
                                         ))}
                                     </ul>

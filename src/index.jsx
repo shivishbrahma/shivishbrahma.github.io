@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
 import "./index.css";
+import "animate.css";
 import App from "./organisms/App/App.jsx";
 import store from "@/store";
 import reportWebVitals from "./reportWebVitals";

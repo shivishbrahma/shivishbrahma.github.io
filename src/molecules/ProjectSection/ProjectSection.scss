@@ -2,12 +2,14 @@ h4.Project__display_name {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: var(--secondary);
 }
 
 h4.Project__title {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: var(--tertiary);
 }
 
 .Project__languages {
@@ -21,7 +23,6 @@ h4.Project__title {
         border-radius: 2.5rem;
         background-color: var(--base);
         color: var(--baseBg);
-
 
         &.Project__languages__tag__primary {
             background-color: var(--primary);
@@ -79,4 +80,14 @@ h4.Project__title {
         white-space: nowrap;
         text-overflow: ellipsis;
     }
+}
+
+.Project__summary {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-align: justify;
 }

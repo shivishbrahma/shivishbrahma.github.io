@@ -1,11 +1,12 @@
 .Blog__title {
-    color: var(--quaternary);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-
-    &:hover {
+    a {
         color: var(--tertiary);
+        &:hover {
+            color: var(--secondary);
+        }
     }
 }
 
@@ -14,6 +15,7 @@
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     text-align: justify;
 }
@@ -21,7 +23,6 @@
 .Blog_hover__content {
     flex: 1 auto;
 }
-
 
 .Blog__hover__footer {
     flex: 0 1;

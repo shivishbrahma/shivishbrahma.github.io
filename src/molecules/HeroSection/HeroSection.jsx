@@ -11,7 +11,7 @@ function HeroSection({ ...otherProps }) {
             <div className="HeroSection__image"></div>
             <div className="HeroSection__content">
                 <div className="HeroSection__title">
-                    Hi! <Animate type="headShake">✋</Animate> <h5>I am,</h5>{" "}
+                    Hi! <Animate type="wobble">✋</Animate> <h5>I am,</h5>{" "}
                     <Animate element={"h2"} type="pulse" iteration={5}>
                         Purbayan Chowdhury
                     </Animate>
