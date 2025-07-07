@@ -42,7 +42,9 @@ body {
 	font-size: 1rem;
 	overflow-x: hidden;
     --sparkle-color: #ffe066;
-    cursor: url("images/icons/wand25.png"), auto;
+    --cursor-pointer: url("images/icons/wand25.png"), pointer;
+    --cursor-default: url("images/icons/wand25.png"), auto;
+    cursor: var(--cursor-default);
 }
 
 a:link,
@@ -53,7 +55,7 @@ a:visited {
 
 a:hover {
 	color: var(--tertiary);
-    cursor: url("images/icons/wand-sparkle25.png"), auto;
+    cursor: var(--cursor-pointer);
 }
 
 h1,
