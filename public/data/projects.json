@@ -81,12 +81,13 @@
             "displayName": "TravMap",
             "website": "",
             "summary": "A Travel Map to plan trips and save memories",
-            "primaryLanguage": "PHP",
+            "primaryLanguage": "NodeJs",
             "languages": [
-                "PHP",
-                "Blade",
                 "Vue",
                 "HTML",
+                "CSS",
+                "NodeJs",
+                "JavaScript",
                 "Shell"
             ],
             "libraries": [],
@@ -219,12 +220,13 @@
             "type": "",
             "displayName": "Nuclear React",
             "website": "https://shivishbrahma.github.io/nuclear-react/",
-            "summary": "",
+            "summary": "Sample React Apps and Components without any library",
             "primaryLanguage": "JavaScript",
             "languages": [
                 "CSS",
                 "HTML",
-                "JavaScript"
+                "JavaScript",
+                "React"
             ],
             "libraries": [],
             "githubUrl": "https://github.com/shivishbrahma/nuclear-react",

@@ -14,7 +14,7 @@ def generate_description(body) -> str:
         """
         Convert html into simple text and return first 100 characters such that last word is complete
         """
-        soup = BeautifulSoup(body)
+        soup = BeautifulSoup(body, "lxml")
         html_text = soup.get_text().replace("\n", " ")
         if len(html_text) > 100:
             i = 100

@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "animate.css";
 import "./Animate.scss";
 
 const animationNames = [
@@ -103,6 +102,8 @@ const animationNames = [
     "slideOutUp"
 ];
 
+const elementTypes = ["div", "span", "p", "h1", "h2", "h3", "h4", "h5", "h6"];
+
 const animationIterations = ["infinite", ...Array.from({ length: 10 }).map((_, i) => i + 1)];
 function Animate({ children, element = "div", type = "bounce", iteration = "infinite", ...otherProps }) {
     // Added animation_names as css
@@ -132,6 +133,8 @@ function Animate({ children, element = "div", type = "bounce", iteration = "infi
 }
 
 Animate.propTypes = {
+    children: PropTypes.node,
+    element: PropTypes.oneOf(elementTypes),
     type: PropTypes.oneOf(animationNames).isRequired,
     iteration: PropTypes.oneOf(animationIterations)
 };

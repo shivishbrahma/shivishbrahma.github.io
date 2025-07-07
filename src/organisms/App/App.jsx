@@ -20,6 +20,21 @@ function App() {
 
     React.useEffect(() => {
         setCSSVariables(themes[theme]);
+
+        window.document.addEventListener("mousemove", (e) => {
+            const particle = document.createElement("div");
+            particle.classList.add("particle");
+            document.body.appendChild(particle);
+
+            // Set the position of the particle
+            particle.style.left = `${e.pageX}px`;
+            particle.style.top = `${e.pageY}px`;
+
+            // Remove the particle after the animation ends
+            particle.addEventListener("animationend", () => {
+                particle.remove();
+            });
+        });
     });
 
     return (

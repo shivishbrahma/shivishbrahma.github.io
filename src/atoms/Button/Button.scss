@@ -1,7 +1,9 @@
 .Button {
     padding: 0.75rem 1.5rem;
-    cursor: pointer;
-    border-radius: 0.25rem;
+    cursor: var(--cursor-pointer);
+    border-radius: 0.75rem;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     box-shadow: 0 0.125rem 0.25rem 0 rgba(var(--base), 0.1);
 
     &:link,
@@ -122,10 +124,11 @@
             bottom: 0.5rem;
             right: 0.5rem;
         }
-
     }
 
     &:hover {
         box-shadow: 0 0.125rem 0.25rem 0 rgba(var(--base), 0.1);
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
     }
 }
