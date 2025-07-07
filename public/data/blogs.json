@@ -39,7 +39,7 @@
             "img_url": "https://cdn-images-1.medium.com/max/1024/1*Rnmiq0-iXeAgZ3TeqOXlCw.jpeg",
             "title": "Fine hyperparameter tuning of my ML learning",
             "url": "https://shivishbrahma.medium.com/fine-hyperparameter-tuning-of-my-ml-learning-7b2c032bc586?source=rss-98a5c8518070------2",
-            "description": "\u201c Tell me and I forget. Teach me and I remember. Involve me and I\u00a0learn.\u201d- Benjamin\u00a0FranklinBeing an...",
+            "description": "\u201cTell me and I forget. Teach me and I remember. Involve me and I\u00a0learn.\u201d- Benjamin\u00a0FranklinBeing an ML...",
             "tags": [
                 "workshop",
                 "data-science",
@@ -158,7 +158,21 @@
         },
         {
             "blog_website": 2,
-            "img_url": "http://shivishbrahma.github.io/publog/public/images/0002_cover.webp",
+            "img_url": "http://shivishbrahma.github.io/publog/public/images/0003_cover_en.webp",
+            "title": "Nano Shortcuts - Beginner Friendly Editor",
+            "url": "http://shivishbrahma.github.io/publog/nano-shortcuts-beginner-friendly-editor-z0aLs1CC",
+            "description": "When it comes to text editing in the terminal, Nano stands out. It is user-friendly and simple. Nano\u2019s...",
+            "tags": [
+                "nano",
+                "shortcut",
+                "editor",
+                "text"
+            ],
+            "date": "2025-01-06T04:54:09+00:00"
+        },
+        {
+            "blog_website": 2,
+            "img_url": "http://shivishbrahma.github.io/publog/public/images/0002_cover_en.webp",
             "title": "Custom WAMMP Setup in Windows (mod_wsgi support)",
             "url": "http://shivishbrahma.github.io/publog/windows-wammp-setup",
             "description": "Are you tired of using pre-packaged WAMPP solutions that limit your control and flexibility? Do you need...",
