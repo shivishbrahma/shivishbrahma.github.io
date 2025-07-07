@@ -18,7 +18,7 @@ def generate_description(body) -> str:
         html_text = soup.get_text().replace("\n", " ")
         if len(html_text) > 100:
             i = 100
-            while i > len(html_text) or html_text[i] not in string.whitespace:
+            while i < len(html_text) and html_text[i] not in string.whitespace:
                 i += 1
             html_text = html_text[:i] + "..."
 

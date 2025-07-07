@@ -18,10 +18,12 @@ function App() {
     const theme = useSelector((state) => state.app.theme);
     const dispatch = useDispatch();
 
-    React.useEffect(() => {
+        React.useEffect(() => {
         setCSSVariables(themes[theme]);
+    }, [theme]);
 
-        window.document.addEventListener("mousemove", (e) => {
+    React.useEffect(() => {
+        const handleMouseMove = (e) => {
             const particle = document.createElement("div");
             particle.classList.add("particle");
             document.body.appendChild(particle);
@@ -34,8 +36,14 @@ function App() {
             particle.addEventListener("animationend", () => {
                 particle.remove();
             });
-        });
-    });
+        };
+
+        window.document.addEventListener("mousemove", handleMouseMove);
+
+        return () => {
+            window.document.removeEventListener("mousemove", handleMouseMove);
+        };
+    }, []);
 
     return (
         <Router basename={import.meta.env.BASE_URL}>
