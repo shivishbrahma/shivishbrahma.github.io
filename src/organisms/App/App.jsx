@@ -18,7 +18,7 @@ function App() {
     const theme = useSelector((state) => state.app.theme);
     const dispatch = useDispatch();
 
-        React.useEffect(() => {
+    React.useEffect(() => {
         setCSSVariables(themes[theme]);
     }, [theme]);
 
