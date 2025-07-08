@@ -29,7 +29,7 @@ jobs:
       shell: bash
     - name: Check for changes and commit
       run : |
-        git add -A
+        git add .
         git commit -m "Updating Assets by github-actions"
         git push origin HEAD:reactify --force
         if git diff --cached --quiet; then
