@@ -10,7 +10,7 @@ const CONTRIB_URL = "https://shivishbrahma-rest-api.netlify.app/github/contribut
 
 export async function loadMockup(file) {    
     try {
-        const response = await window.fetch(`${process.env.PUBLIC_URL}/data/${file}.json`, {
+        const response = await window.fetch(`${process.env.PUBLIC_URL}data/${file}.json`, {
             method: "GET",
             headers: headers
         });
