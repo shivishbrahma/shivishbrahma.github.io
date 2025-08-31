@@ -6,11 +6,15 @@ $color-primary: #2b2b2b;
 $color-headings: #6a6a6a;
 $color-subheadings: #333;
 
+:root {
+    --base-size: 1vw;
+}
+
 .Resume-content {
     background-color: #fff;
     font-family: "Lato", sans-serif;
     font-weight: 300;
-    font-size: 1vw;
+    font-size: var(--base-size);
     color: $color-primary;
 
     a:link,
@@ -28,17 +32,17 @@ $color-subheadings: #333;
     }
 
     .Resume-title-content {
-        font-size: 1.125vw;
+        font-size: calc(1.125 * var(--base-size));
     }
 
     // Name Command
     header {
         text-align: center;
-        padding-bottom: 0.75vw;
-        border-bottom: 0.04vw solid $color-primary;
+        padding-bottom: calc(0.75 * var(--base-size));
+        border-bottom: calc(.04 * var(--base-size)) solid $color-primary;
 
         .Resume-title {
-            font-size: 3.5vw;
+            font-size: calc(3.5 * var(--base-size));
             font-family: "Lato", sans-serif;
             color: $color-headings;
 
@@ -69,8 +73,8 @@ $color-subheadings: #333;
     main {
         display: grid;
         grid-template-columns: 8fr 17fr;
-        column-gap: 1.5vw;
-        padding: 1.25vw 2.5vw;
+        column-gap: calc(1.25 * var(--base-size));
+        padding: calc(1.25 * var(--base-size)) calc(2.5 * var(--base-size));
     }
 
     aside {
@@ -90,7 +94,7 @@ $color-subheadings: #333;
 
             &::after {
                 content: "|";
-                padding: 0.5vw 0.25vw 1vw 0.5vw;
+                padding: calc(0.5 * var(--base-size)) calc(0.25 * var(--base-size)) calc(0.5 * var(--base-size));
             }
         }
 
@@ -116,29 +120,34 @@ $color-subheadings: #333;
     }
 
     .Resume-section {
-        padding-bottom: 0.75vw;
+        padding-bottom: calc(0.75 * var(--base-size));
+
         // Headings command
         .Resume-section-title {
             font-family: "Lato", sans-serif;
             font-weight: 300;
-            font-size: 1.75vw;
+            font-size: calc(1.75 * var(--base-size));
             text-transform: uppercase;
             color: $color-headings;
-            padding-bottom: 0.25vw;
+            padding-bottom: calc(0.25 * var(--base-size));
         }
 
         .Resume-section-list {
             list-style: none;
 
             li {
-                padding-bottom: 1vw;
+                padding-bottom: var(--base-size);
+            }
+
+            .Resume-section-list-item {
+                padding-bottom: inherit;
             }
 
             // Subheadings command
             .Resume-section-subtitle {
                 font-family: "Lato", sans-serif;
                 font-weight: 700;
-                font-size: 1.1vw;
+                font-size: calc(1.1 * var(--base-size));
                 text-transform: uppercase;
                 color: $color-subheadings;
             }
@@ -147,7 +156,7 @@ $color-subheadings: #333;
             .Resume-section-description {
                 font-family: "Raleway", sans-serif;
                 font-weight: 500;
-                font-size: 1.125vw;
+                font-size: calc(1.125 * var(--base-size));
                 color: $color-subheadings;
             }
 
@@ -155,7 +164,7 @@ $color-subheadings: #333;
             .Resume-section-location {
                 font-family: "Raleway", sans-serif;
                 font-weight: 500;
-                font-size: 0.975vw;
+                font-size: calc(0.975 * var(--base-size));
                 color: $color-headings;
             }
 
@@ -163,6 +172,7 @@ $color-subheadings: #333;
                 ul {
                     list-style: disc;
                     padding-left: 1.5rem;
+
                     li {
                         padding: 0.05rem;
                     }
@@ -171,20 +181,23 @@ $color-subheadings: #333;
 
             // Keywords
             .Resume-section-keywords {
-                font-size: 0.975vw;
+                font-size: calc(0.975 * var(--base-size));
             }
         }
     }
 }
 
 @media print {
+    :root {
+        --base-size: 1rem;
+    }
+
     html {
-        // font-size: 82.5%;
-        font-size: 85%;
+        font-size: 82.5%;
     }
 
     .Resume-content {
-        font-size: 1rem;
+        font-size: var(--base-size);
 
         a:link,
         a:visited {
@@ -195,23 +208,6 @@ $color-subheadings: #333;
             font-size: 0.75rem;
         }
 
-        header {
-            padding-bottom: 0.75rem;
-            border-bottom: 0.04rem solid $color-primary;
-
-            .Resume-title {
-                font-size: 3.5rem;
-            }
-
-            .Resume-title-content {
-                font-size: 1.125rem;
-            }
-        }
-
-        main {
-            column-gap: 1rem;
-            padding: 1.25rem 2.5rem;
-        }
 
         .experience,
         .links {
@@ -220,41 +216,6 @@ $color-subheadings: #333;
 
                 &::after {
                     content: "|";
-                    padding: 0.5rem 0.25rem 0.5rem 0.5rem;
-                }
-            }
-        }
-
-        .Resume-section {
-            padding-bottom: 0.75rem;
-
-            // Section Heading
-            .Resume-section-title {
-                font-size: 1.75rem;
-                padding-bottom: 0.25rem;
-            }
-
-            .Resume-section-list {
-                li {
-                    padding-bottom: 1rem;
-                }
-
-                // Section Subheading
-                .Resume-section-subtitle {
-                    font-size: 1.1rem;
-                }
-
-                // Section Descripton
-                .Resume-section-description {
-                    font-size: 1.125rem;
-                }
-
-                .Resume-section-location {
-                    font-size: 0.975rem;
-                }
-
-                .Resume-section-keywords {
-                    font-size: 0.975rem;
                 }
             }
         }

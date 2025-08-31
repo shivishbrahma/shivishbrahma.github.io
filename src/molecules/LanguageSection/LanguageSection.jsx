@@ -8,6 +8,7 @@ import Loader from "@/atoms/Loader/Loader";
 
 import "./LanguageSection.scss";
 import { setProgLang } from "@/store/appSlice";
+import { LANGUAGES_SECTION_TITLE } from "@/services/constService";
 
 function CloudList({ items, ...otherProps }) {
     const dispatch = useDispatch();
@@ -44,7 +45,7 @@ function LanguageSection({ ...otherProps }) {
     });
 
     return (
-        <PageSection sectionTitle="Programming Languages" {...otherProps}>
+        <PageSection sectionTitle={LANGUAGES_SECTION_TITLE} {...otherProps}>
             <CloudList items={elems} />
 
             {/* <Globe3D tags={elems} radius={150} /> */}

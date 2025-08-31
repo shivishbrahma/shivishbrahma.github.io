@@ -108,14 +108,14 @@ const ResumeContent = React.forwardRef((props, ref) => {
                                     <h2 className="Resume-section-title">Links</h2>
                                     <div className="Resume-section-list">
                                         {resume.basics.profiles.map((item, index) => (
-                                            <React.Fragment key={index}>
+                                            <div className="Resume-section-list-item" key={index}>
                                                 <h3 className="Resume-section-subtitle">{item.network}</h3>
                                                 <p className="Resume-section-description">
                                                     <a href={item.url} className={item.network.toLowerCase()}>
                                                         {item.username}
                                                     </a>
                                                 </p>
-                                            </React.Fragment>
+                                            </div>
                                         ))}
                                     </div>
                                 </section>
@@ -128,14 +128,14 @@ const ResumeContent = React.forwardRef((props, ref) => {
                                     <h2 className="Resume-section-title">Skills</h2>
                                     <ul className="Resume-section-list">
                                         {resume.skills.map((item) => (
-                                            <React.Fragment key={item.name}>
+                                            <li className="Resume-section-list-item" key={item.name}>
                                                 <h3 className="Resume-section-subtitle">{item.name}</h3>
                                                 {item.keywords.map((ele, index) => (
                                                     <span className="Resume-section-skill" key={index}>
                                                         {ele}
                                                     </span>
                                                 ))}
-                                            </React.Fragment>
+                                            </li>
                                         ))}
                                     </ul>
                                 </section>
@@ -162,6 +162,21 @@ const ResumeContent = React.forwardRef((props, ref) => {
 
                         {/* Main */}
                         <article>
+                            {/* My Summary */}
+                            {resume.basics.summary ? (
+                                <section className="Resume-section summary">
+                                    <h2 className="Resume-section-title">Summary</h2>
+                                    <div className="Resume-section-content">
+                                        <div
+                                            dangerouslySetInnerHTML={{
+                                                __html: marked(resume.basics.summary)
+                                            }}
+                                        />
+                                    </div>
+                                </section>
+                            ) : (
+                                <></>
+                            )}
                             {/* My Experience */}
                             {resume.work ? (
                                 <section className="Resume-section experience">
@@ -260,9 +275,23 @@ const ResumeContent = React.forwardRef((props, ref) => {
                                                     {certificate.issuer} | Credential ID: {certificate.id}
                                                 </h4>
                                                 <div className="Resume-section-location">
-                                                    Issued: {dateFormatter.format(new Date(certificate.date))} |{" "}
+                                                    Issued:{" "}
+                                                    {dateFormatter.format(
+                                                        new Date(
+                                                            certificate.fullDate.year,
+                                                            certificate.fullDate.month - 1,
+                                                            certificate.fullDate.day
+                                                        )
+                                                    )}{" "}
+                                                    |{" "}
                                                     {certificate.expiryDate
-                                                        ? dateFormatter.format(new Date(certificate.expiryDate))
+                                                        ? dateFormatter.format(
+                                                              new Date(
+                                                                  certificate.expiryDate.year,
+                                                                  certificate.expiryDate.month - 1,
+                                                                  certificate.expiryDate.day
+                                                              )
+                                                          )
                                                         : "Never expires"}
                                                 </div>
                                             </li>

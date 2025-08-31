@@ -2,6 +2,7 @@ import React from "react";
 
 import Typewriter from "@/atoms/Typewriter/Typewriter";
 import Animate from "@/atoms/Animate/Animate";
+import { HERO_SECTION_TEXT } from "@/services/constService";
 
 import "./HeroSection.scss";
 
@@ -17,7 +18,7 @@ function HeroSection({ ...otherProps }) {
                     </Animate>
                 </div>
                 <Typewriter
-                    text={["A Web Developer", "A Data Science Enthusiast", "A Coding Geek", "A Number Cruncher"]}
+                    text={HERO_SECTION_TEXT}
                     displayTextRenderer={(text) => <h4>{text}</h4>}
                     cursorRenderer={(cursor) => <h4>|</h4>}
                 />

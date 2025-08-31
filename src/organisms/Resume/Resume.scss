@@ -3,9 +3,23 @@
 
 .Resume {
     height: 100%;
+
     .Resume-container {
         height: 100%;
         padding: 1rem;
         background: #ccc;
+    }
+
+    .Resume-content {
+        page-break-after: always;
+        box-sizing: border-box;
+        // width: 210mm;
+        // height: 297mm;
+        /* change as desired */
+        width: 80vw;
+        /* maintain A4 ratio */
+        height: calc(80vw / 0.707);
+        box-shadow: 0 8px 24px rgba(0,0,0,.15);          
+        margin: 0 auto;
     }
 }

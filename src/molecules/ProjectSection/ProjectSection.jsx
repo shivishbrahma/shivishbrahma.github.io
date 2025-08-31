@@ -9,6 +9,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setProjects } from "@/store/appSlice";
 
 import "./ProjectSection.scss";
+import { PROJECTS_SECTION_TITLE } from "@/services/constService";
 
 function ProjectSection({ ...otherProps }) {
     const projects = useSelector((state) => state.app.projects);
@@ -32,7 +33,7 @@ function ProjectSection({ ...otherProps }) {
     if (loading || !projects) return <Loader loading />;
 
     return (
-        <PageSection sectionTitle="Featured Projects" {...otherProps}>
+        <PageSection sectionTitle={PROJECTS_SECTION_TITLE} {...otherProps}>
             <div className="Card-list">
                 {featuredProjects
                     ? featuredProjects.map((project) => {

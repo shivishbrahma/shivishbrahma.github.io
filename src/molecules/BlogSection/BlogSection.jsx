@@ -9,6 +9,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setBlogs } from "@/store/appSlice";
 
 import "./BlogSection.scss";
+import { BLOGS_SECTION_TITLE } from "@/services/constService";
 
 export default function BlogSection({ ...otherProps }) {
     const [loading, setLoading] = React.useState(false);
@@ -38,7 +39,7 @@ export default function BlogSection({ ...otherProps }) {
     if (loading || !blogs) return <Loader loading />;
 
     return (
-        <PageSection sectionTitle="Featured Blogs" {...otherProps}>
+        <PageSection sectionTitle={BLOGS_SECTION_TITLE} {...otherProps}>
             <div className="Card-list">
                 {blogs
                     ? blogs.map((blog) => {
