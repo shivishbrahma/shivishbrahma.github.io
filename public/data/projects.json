@@ -1,6 +1,43 @@
 {
     "projects": [
         {
+            "name": "data-science-case-studies",
+            "cover": "images/projects/data-science-case-studies.webp",
+            "description": "",
+            "url": "https://shivishbrahma.github.io/data-science-case-studies/",
+            "highlights": [],
+            "featured": true,
+            "keywords": [],
+            "roles": [],
+            "startDate": "",
+            "endDate": "",
+            "entity": "",
+            "type": "",
+            "displayName": "Data Science Case Studies",
+            "website": "https://shivishbrahma.github.io/data-science-case-studies/",
+            "summary": "Collections of Jupyter Notebooks for Data Science Case Studies",
+            "primaryLanguage": "Jupyter Notebook",
+            "languages": [
+                "Jupyter Notebook",
+                "Python"
+            ],
+            "libraries": [],
+            "githubUrl": "https://github.com/shivishbrahma/data-science-case-studies",
+            "repositoryUrl": "https://github.com/shivishbrahma/data-science-case-studies",
+            "start": {
+                "year": null,
+                "month": null,
+                "day": null
+            },
+            "end": {
+                "year": null,
+                "month": null,
+                "day": null
+            },
+            "images": [],
+            "videos": []
+        },
+        {
             "name": "krishi-mitra",
             "cover": "images/projects/krishi-mitra.webp",
             "description": "A Laravel Ecommerce Portal for Agro Goods",
