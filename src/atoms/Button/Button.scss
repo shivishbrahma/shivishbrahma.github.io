@@ -2,9 +2,31 @@
     padding: 0.75rem 1.5rem;
     cursor: var(--cursor-pointer);
     border-radius: 0.75rem;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0.125rem 0.25rem 0 rgba(var(--base), 0.1);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    /* glass base: semi-transparent background, subtle frosted border */
+    background-color: rgba(var(--base), 0.06); /* base tint with low opacity */
+    border: 1px solid rgba(var(--base), 0.12);
+    color: var(--base);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255,255,255,0.03);
+    position: relative;
+    overflow: hidden; /* keep highlight inside rounded corners */
+    transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, transform 120ms ease, box-shadow 180ms ease;
+
+    /* subtle glossy streak */
+    &::before {
+        content: "";
+        position: absolute;
+        left: -40%;
+        top: -60%;
+        width: 160%;
+        height: 120%;
+        background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0) 30%);
+        transform: rotate(-12deg);
+        pointer-events: none;
+        transition: opacity 220ms ease, transform 220ms ease;
+        opacity: 1;
+    }
 
     &:link,
     &:visited {
@@ -13,122 +35,116 @@
     }
 
     &.Button__default {
-        border: 1px solid var(--base);
-        background-color: var(--primaryBg);
+        /* preserve original intent but keep translucency */
+        background-color: rgba(var(--primaryBg-rgb, 255,255,255), 0.06);
+        border: 1px solid rgba(var(--base), 0.14);
         color: var(--base);
 
         &:hover {
-            background-color: var(--baseBg);
-            border-color: var(--primaryBg);
+            background-color: rgba(var(--baseBg-rgb, 255,255,255), 0.14);
+            border-color: rgba(var(--primaryBg-rgb, 255,255,255), 0.18);
             color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 34px rgba(0,0,0,0.14), inset 0 1px 0 rgba(255,255,255,0.04);
         }
     }
 
     &.Button__primary {
-        background-color: var(--primary);
-        border-color: var(--primary);
+        background-color: rgba(var(--primary-rgb, 0,122,255), 0.12);
+        border: 1px solid rgba(var(--primary-rgb, 0,122,255), 0.18);
         color: var(--baseBg);
 
         &:hover {
-            background-color: var(--baseBg);
-            border-color: var(--baseBg);
+            background-color: rgba(var(--baseBg-rgb, 255,255,255), 0.16);
+            border-color: rgba(var(--baseBg-rgb, 255,255,255), 0.2);
             color: var(--primary);
+            transform: translateY(-2px);
+            &::before { opacity: 0.9; transform: rotate(-10deg) translateX(6%); }
         }
     }
 
     &.Button__secondary,
     &.Button__error {
-        background-color: var(--secondary);
-        border-color: var(--secondary);
+        background-color: rgba(var(--secondary-rgb, 100,100,255), 0.12);
+        border: 1px solid rgba(var(--secondary-rgb, 100,100,255), 0.18);
         color: var(--baseBg);
 
         &:hover {
-            background-color: var(--baseBg);
-            border-color: var(--baseBg);
+            background-color: rgba(var(--baseBg-rgb, 255,255,255), 0.16);
+            border-color: rgba(var(--baseBg-rgb, 255,255,255), 0.2);
             color: var(--secondary);
+            transform: translateY(-2px);
         }
     }
 
     &.Button__tertiary,
     &.Button__success {
-        background-color: var(--tertiary);
-        border-color: var(--tertiary);
+        background-color: rgba(var(--tertiary-rgb, 120,200,150), 0.12);
+        border: 1px solid rgba(var(--tertiary-rgb, 120,200,150), 0.18);
         color: var(--baseBg);
 
         &:hover {
-            background-color: var(--baseBg);
-            border-color: var(--baseBg);
+            background-color: rgba(var(--baseBg-rgb, 255,255,255), 0.16);
+            border-color: rgba(var(--baseBg-rgb, 255,255,255), 0.2);
             color: var(--tertiary);
+            transform: translateY(-2px);
         }
     }
 
     &.Button__light {
-        background-color: var(--baseBg);
-        border-color: var(--baseBg);
+        background-color: rgba(var(--baseBg-rgb, 255,255,255), 0.7); /* lighter for contrast */
+        border: 1px solid rgba(var(--base), 0.08);
         color: var(--base);
 
         &:hover {
-            background-color: var(--base);
-            border-color: var(--base);
+            background-color: rgba(var(--base), 0.14);
+            border-color: rgba(var(--base), 0.18);
             color: var(--baseBg);
+            transform: translateY(-2px);
         }
     }
 
     &.Button__dark {
-        background-color: var(--base);
-        border-color: var(--base);
+        background-color: rgba(var(--base-rgb, 18,18,18), 0.6);
+        border: 1px solid rgba(var(--base-rgb, 18,18,18), 0.24);
         color: var(--baseBg);
 
         &:hover {
-            background-color: var(--baseBg);
-            border-color: var(--baseBg);
+            background-color: rgba(var(--baseBg-rgb, 255,255,255), 0.12);
+            border-color: rgba(var(--baseBg-rgb, 255,255,255), 0.18);
             color: var(--base);
+            transform: translateY(-2px);
         }
     }
 
     &.Button__floating {
         position: fixed;
 
-        &.Button__floating__top {
-            top: 0.5rem;
-        }
-
-        &.Button__floating__left {
-            left: 0.5rem;
-        }
-
-        &.Button__floating__right {
-            right: 0.5rem;
-        }
-
-        &.Button__floating__bottom {
-            bottom: 0.5rem;
-        }
-
-        &.Button__floating__top_left {
-            top: 0.5rem;
-            left: 0.5rem;
-        }
-
-        &.Button__floating__top_right {
-            top: 0.5rem;
-            right: 0.5rem;
-        }
-
-        &.Button__floating__bottom_left {
-            bottom: 0.5rem;
-            left: 0.5rem;
-        }
-
-        &.Button__floating__bottom_right {
-            bottom: 0.5rem;
-            right: 0.5rem;
-        }
+        &.Button__floating__top { top: 0.5rem; }
+        &.Button__floating__left { left: 0.5rem; }
+        &.Button__floating__right { right: 0.5rem; }
+        &.Button__floating__bottom { bottom: 0.5rem; }
+        &.Button__floating__top_left { top: 0.5rem; left: 0.5rem; }
+        &.Button__floating__top_right { top: 0.5rem; right: 0.5rem; }
+        &.Button__floating__bottom_left { bottom: 0.5rem; left: 0.5rem; }
+        &.Button__floating__bottom_right { bottom: 0.5rem; right: 0.5rem; }
     }
 
     &:hover {
-        box-shadow: 0 0.125rem 0.25rem 0 rgba(var(--base), 0.1);
-        border-top-left-radius: 0;
-        border-bottom-right-radius: 0;
+        box-shadow: 0 12px 34px rgba(0, 0, 0, 0.14);
+        // border-top-left-radius: 0;
+        // border-bottom-right-radius: 0;
+    }
+
+    &:active {
+        transform: translateY(0);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+        &::before { opacity: 0.6; transform: rotate(-10deg) translateX(2%); }
+    }
+
+    /* accessibility: focus ring */
+    &:focus-visible {
+        outline: 2px solid rgba(var(--primary-rgb, 0,122,255), 0.28);
+        outline-offset: 2px;
     }
 }
