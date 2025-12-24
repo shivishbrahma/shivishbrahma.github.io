@@ -4,7 +4,7 @@ import Loader from "@/atoms/Loader/Loader";
 import { loadMockup } from "@/services/fetchService";
 
 import "./Resume.scss";
-import DeddyResume from "./DeddyResume";
+import ResumeDeddy from "./ResumeDeddy";
 
 const ResumeContent = React.forwardRef((props, ref) => {
     const [resume, setResume] = React.useState({});
@@ -24,7 +24,7 @@ const ResumeContent = React.forwardRef((props, ref) => {
         <React.Fragment>
             {!loading ? (
                 <div className="Resume-content" data-theme={props.theme} ref={ref}>
-                    <DeddyResume resume={resume} />
+                    {"deddy" === props.theme && <ResumeDeddy resume={resume} />}
                 </div>
             ) : (
                 "Loading the resume..."

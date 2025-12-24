@@ -2,9 +2,9 @@ import React from "react";
 import { marked } from "marked";
 import { formatHighlights, parseHighlights } from "./utils";
 
-import "./DeddyResume.scss";
+import "./ResumeDeddy.scss";
 
-const DeddyResume = ({ resume }) => {
+const ResumeDeddy = ({ resume }) => {
     const dateFormatter = new Intl.DateTimeFormat("en-US", {
         year: "numeric",
         month: "short"
@@ -290,4 +290,4 @@ const DeddyResume = ({ resume }) => {
     );
 };
 
-export default DeddyResume;
+export default ResumeDeddy;
