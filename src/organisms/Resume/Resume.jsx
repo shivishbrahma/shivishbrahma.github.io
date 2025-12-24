@@ -5,9 +5,9 @@ import { FaPrint } from "react-icons/fa";
 import Button from "@/atoms/Button/Button";
 import ResumeContent from "./ResumeContent";
 
-
 function Resume(props) {
     const printableComponentRef = React.useRef(null);
+    const [currentResumeTheme, setCurrentResumeTheme] = React.useState("deddy");
     const handlePrint = useReactToPrint({
         content: () => printableComponentRef.current
     });
@@ -15,7 +15,7 @@ function Resume(props) {
     return (
         <section className="Resume" {...props}>
             <div className="Resume-container">
-                <ResumeContent ref={printableComponentRef} />
+                <ResumeContent theme={currentResumeTheme} ref={printableComponentRef} />
             </div>
 
             <Button floating={true} theme="primary" onClick={handlePrint}>

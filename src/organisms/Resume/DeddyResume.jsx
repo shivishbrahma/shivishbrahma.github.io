@@ -1,0 +1,293 @@
+import React from "react";
+import { marked } from "marked";
+import { formatHighlights, parseHighlights } from "./utils";
+
+import "./DeddyResume.scss";
+
+const DeddyResume = ({ resume }) => {
+    const dateFormatter = new Intl.DateTimeFormat("en-US", {
+        year: "numeric",
+        month: "short"
+    });
+
+    return (
+        <React.Fragment>
+            <header>
+                <h1 className="Resume-title">
+                    {resume.basics.name.split(" ").map((e, i) => {
+                        return (
+                            <span className={"shade-" + ((i % 2) + 1)} key={i}>
+                                {e}
+                            </span>
+                        );
+                    })}
+                </h1>
+                <div className="Resume-title-content">
+                    <div>
+                        <span>
+                            <a href={resume.basics.website}>{resume.basics.website}</a>
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            <a href={"tel:" + resume.basics.phone}>{resume.basics.phone}</a>
+                        </span>
+                        <span>
+                            <a href={"mailto:" + resume.basics.email}>{resume.basics.email}</a>
+                        </span>
+                    </div>
+                </div>
+            </header>
+            <main>
+                {/* Sidebar */}
+                <aside>
+                    {/* My Education */}
+                    {resume.education ? (
+                        <section className="Resume-section">
+                            <h2 className="Resume-section-title">Education</h2>
+                            <ul className="Resume-section-list">
+                                {resume.education.map((item, index) => (
+                                    <li key={index}>
+                                        <h3 className="Resume-section-subtitle">
+                                            <a href={item.url ? item.url : "#"}>{item.institution}</a>
+                                        </h3>
+                                        {item.studyType || item.area ? (
+                                            <h4 className="Resume-section-description">
+                                                {item.studyType} in {item.area}
+                                            </h4>
+                                        ) : (
+                                            <></>
+                                        )}
+                                        <div className="Resume-section-location">
+                                            <span>
+                                                {dateFormatter.format(new Date(item.startDate))} -{" "}
+                                                {item.isCurrentRole
+                                                    ? "PRESENT"
+                                                    : dateFormatter.format(new Date(item.endDate))}
+                                            </span>{" "}
+                                            | {item.location}
+                                        </div>
+                                        <div className="Resume-section-content">
+                                            {item.score ? (
+                                                <p>
+                                                    {item.score < 10
+                                                        ? "GPA: " + item.score + "/10"
+                                                        : "Percentage: " + item.score + "%"}
+                                                </p>
+                                            ) : (
+                                                <></>
+                                            )}
+                                        </div>
+                                    </li>
+                                ))}
+                            </ul>
+                        </section>
+                    ) : (
+                        <></>
+                    )}
+                    {/* My Links */}
+                    {resume.basics.profiles ? (
+                        <section className="Resume-section links">
+                            <h2 className="Resume-section-title">Links</h2>
+                            <div className="Resume-section-list">
+                                {resume.basics.profiles.map((item, index) => (
+                                    <div className="Resume-section-list-item" key={index}>
+                                        <h3 className="Resume-section-subtitle">{item.network}</h3>
+                                        <p className="Resume-section-description">
+                                            <a href={item.url} className={item.network.toLowerCase()}>
+                                                {item.username}
+                                            </a>
+                                        </p>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+                    ) : (
+                        <></>
+                    )}
+                    {/* My Skills  */}
+                    {resume.skills ? (
+                        <section className="Resume-section skills">
+                            <h2 className="Resume-section-title">Skills</h2>
+                            <ul className="Resume-section-list">
+                                {resume.skills.map((item) => (
+                                    <li className="Resume-section-list-item" key={item.name}>
+                                        <h3 className="Resume-section-subtitle">{item.name}</h3>
+                                        {item.keywords.map((ele, index) => (
+                                            <span className="Resume-section-skill" key={index}>
+                                                {ele}
+                                            </span>
+                                        ))}
+                                    </li>
+                                ))}
+                            </ul>
+                        </section>
+                    ) : (
+                        <></>
+                    )}
+                    {/* My Languages */}
+                    {resume.languages ? (
+                        <section className="Resume-section languages">
+                            <h2 className="Resume-section-title">Languages</h2>
+                            <div className="Resume-section-list">
+                                {resume.languages.map((language) => (
+                                    <p key={language.language}>
+                                        <span className="Resume-section-subtitle">{language.language}</span> -
+                                        <span className=""> {language.fluency}</span>
+                                    </p>
+                                ))}
+                            </div>
+                        </section>
+                    ) : (
+                        <></>
+                    )}
+                </aside>
+
+                {/* Main */}
+                <article>
+                    {/* My Summary */}
+                    {resume.basics.summary ? (
+                        <section className="Resume-section summary">
+                            <h2 className="Resume-section-title">Summary</h2>
+                            <div className="Resume-section-content">
+                                <div
+                                    dangerouslySetInnerHTML={{
+                                        __html: marked(resume.basics.summary)
+                                    }}
+                                />
+                            </div>
+                        </section>
+                    ) : (
+                        <></>
+                    )}
+                    {/* My Experience */}
+                    {resume.work ? (
+                        <section className="Resume-section experience">
+                            <h2 className="Resume-section-title">Experience</h2>
+                            <ul className="Resume-section-list">
+                                {resume.work.map((item) => (
+                                    <li key={item.company}>
+                                        <h3 className="Resume-section-subtitle">
+                                            <a href={item.url ?? "#"}>{item.company}</a>
+                                        </h3>
+                                        <h4 className="Resume-section-description">{item.position}</h4>
+                                        <div className="Resume-section-location">
+                                            <span>
+                                                {dateFormatter.format(new Date(item.startDate))} -{" "}
+                                                {item.isCurrentRole
+                                                    ? "PRESENT"
+                                                    : dateFormatter.format(new Date(item.endDate))}
+                                            </span>{" "}
+                                            | {item.location}
+                                        </div>
+                                        <div className="Resume-section-content">
+                                            {item.highlights ? (
+                                                <>{formatHighlights(parseHighlights(item.highlights, item.keywords))}</>
+                                            ) : (
+                                                <>{item.summary}</>
+                                            )}
+                                        </div>
+                                    </li>
+                                ))}
+                            </ul>
+                        </section>
+                    ) : (
+                        <></>
+                    )}
+                    {/* My Projects */}
+                    {resume.projects ? (
+                        <section className="Resume-section projects">
+                            <h2 className="Resume-section-title">Projects</h2>
+                            <ul className="Resume-section-list">
+                                {resume.projects.map((item) => (
+                                    <li key={item.name}>
+                                        <h3 className="Resume-section-subtitle">{item.name}</h3>
+                                        <h4 className="Resume-section-description">{item.summary}</h4>
+                                        <div className="Resume-section-location">
+                                            {item.startDate && item.endDate ? (
+                                                <>
+                                                    <span>
+                                                        {dateFormatter.format(new Date(item.startDate))} -{" "}
+                                                        {dateFormatter.format(new Date(item.endDate))}
+                                                    </span>{" "}
+                                                    |
+                                                </>
+                                            ) : (
+                                                " "
+                                            )}
+                                            {item.primaryLanguage}
+                                        </div>
+                                        <div className="Resume-section-content">
+                                            <a href={item.repositoryUrl ? item.repositoryUrl : "#"}>
+                                                {item.repositoryUrl}
+                                            </a>
+                                            <div>
+                                                {item.highlights ? (
+                                                    <>
+                                                        {formatHighlights(
+                                                            parseHighlights(item.highlights, item.keywords)
+                                                        )}
+                                                    </>
+                                                ) : (
+                                                    <>{item.summary}</>
+                                                )}
+                                            </div>
+                                        </div>
+                                    </li>
+                                ))}
+                            </ul>
+                        </section>
+                    ) : (
+                        <></>
+                    )}
+                    {/* My Certificates */}
+                    {resume.certificates ? (
+                        <section className="Resume-section certificates">
+                            <h2 className="Resume-section-title">Certificates</h2>
+                            <ul className="Resume-section-list">
+                                {resume.certificates.map((certificate) => (
+                                    <li key={certificate.id}>
+                                        <h3 className="Resume-section-subtitle">
+                                            <a href={certificate.url ?? "#"}>{certificate.name}</a>
+                                        </h3>
+                                        <h4 className="Resume-section-description">
+                                            {certificate.issuer} | Credential ID: {certificate.id}
+                                        </h4>
+                                        <div className="Resume-section-location">
+                                            Issued:{" "}
+                                            {dateFormatter.format(
+                                                new Date(
+                                                    certificate.fullDate.year,
+                                                    certificate.fullDate.month - 1,
+                                                    certificate.fullDate.day
+                                                )
+                                            )}{" "}
+                                            |{" "}
+                                            {certificate.expiryDate
+                                                ? dateFormatter.format(
+                                                      new Date(
+                                                          certificate.expiryDate.year,
+                                                          certificate.expiryDate.month - 1,
+                                                          certificate.expiryDate.day
+                                                      )
+                                                  )
+                                                : "Never expires"}
+                                        </div>
+                                    </li>
+                                ))}
+                            </ul>
+                        </section>
+                    ) : (
+                        <></>
+                    )}
+                    {/* My Awards */}
+                    {/* {resume.awards ? <></> : <></>} */}
+                    {/* My Publications */}
+                    {/* {resume.publications ? <></> : <></>} */}
+                </article>
+            </main>
+        </React.Fragment>
+    );
+};
+
+export default DeddyResume;
