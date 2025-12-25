@@ -7,10 +7,18 @@ import ResumeContent from "./ResumeContent";
 
 function Resume(props) {
     const printableComponentRef = React.useRef(null);
+    const resumeThemes = ["deddy", "jake"];
     const [currentResumeTheme, setCurrentResumeTheme] = React.useState("deddy");
+    
     const handlePrint = useReactToPrint({
         content: () => printableComponentRef.current
     });
+
+    const getThemeFromHash = () => {
+        const themeFromHash = window.location.hash.split('/')[2] || 'deddy';
+        // Ensure the theme from the URL is a valid one.
+        return resumeThemes.includes(themeFromHash) ? themeFromHash : 'deddy';
+    };
 
     const handleThemeChange = (theme) => {
         setCurrentResumeTheme(theme);
@@ -18,11 +26,22 @@ function Resume(props) {
     };
 
     React.useEffect(() => {
-        const theme = window.location.hash.replace("#/resume", "").replace("/", "") || "deddy";
-        handleThemeChange(theme);
+        setCurrentResumeTheme(getThemeFromHash());
     }, []);
 
-    const resumeThemes = ["deddy", "jake"];
+
+    React.useEffect(() => {
+        const handleHashChange = () => {
+            setCurrentResumeTheme(getThemeFromHash());
+        };
+
+        window.addEventListener("hashchange", handleHashChange);
+
+        return () => {
+            window.removeEventListener("hashchange", handleHashChange);
+        };
+    }, [resumeThemes]);
+
 
     return (
         <section className="Resume" {...props}>
