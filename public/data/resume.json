@@ -232,10 +232,9 @@
             "endDate": "",
             "summary": "Developed and maintained code for data integration pipelines with database objects creations for viewing quotes of upcoming products releases",
             "highlights": [
-                "Built and maintained Airflow-orchestrated Python pipelines for ETL and real-time replication between SingleStore and Snowflake.",
-                "Designed and implemented an API data-ingestion pipeline using Pandas to transform business logic and write processed data to an AWS S3 bucket.",
-                "Implemented a metadata-driven alerting system to monitor *data freshness* and *trigger automated notifications*, reducing *reporting delays* by 30%.",
-                "Presented *analytical insights* and *data flow architectures* to cross-functional teams and stakeholders, and collaborated via Git/Jenkins CI/CD workflows"
+                "**Delivery Quote Management** — Migrated Teradata stored procedures to Snowflake and rewrote orchestration in Airflow (Python); built ETL pipelines to compute real-time booking metrics; implemented event-driven batch replication from SingleStore to Snowflake.",
+                "**Data Freshness Alerting System** — Persisted SLA and object metadata in SingleStore; each loader/refresh job invokes an Airflow Python task to log events to SingleStore and call a Java Spring API; the API reads latest refresh timestamps from SingleStore/Snowflake and updates tracking objects; added scheduled SLA checks in Airflow that send email alerts (SMTP) and create Help Central tickets via HCL REST API.",
+                "**Price Tracker & Forecast Management** - Designed and implemented an API data-ingestion pipeline using Pandas and AWS S3. Maintained a Fast API and Airflow ETL pipeline backend for forecast uploads and dashboard reviews. Also worked on an LLM to predict product attributes from titles sourced from partners."
             ],
             "keywords": [
                 "Snowflake",
