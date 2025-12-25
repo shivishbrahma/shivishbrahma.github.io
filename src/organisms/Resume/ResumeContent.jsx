@@ -25,8 +25,7 @@ const ResumeContent = React.forwardRef((props, ref) => {
         <React.Fragment>
             {!loading ? (
                 <div className="Resume-content" data-theme={props.theme} ref={ref}>
-                    {"deddy" === props.theme && <ResumeDeddy resume={resume} />}
-                    {"jake" === props.theme && <ResumeJake resume={resume} />}
+                    { { deddy: <ResumeDeddy resume={resume} />, jake: <ResumeJake resume={resume} /> }[props.theme] }
                 </div>
             ) : (
                 "Loading the resume..."
