@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Charter:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
 // Color Definitions
 $color-date: #666;
 $color-primary: #2b2b2b;
@@ -10,9 +12,9 @@ $color-subheadings: #333;
 
 .Resume-content[data-theme="jake"] {
     color: $color-primary !important;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Noto Sans", sans-serif;
     font-size: var(--base-size);
-    padding: calc(2.5 * var(--base-size));
+    padding: calc(1.5 * var(--base-size)) calc(2 * var(--base-size));
 
     a,
     a:link,
@@ -21,6 +23,14 @@ $color-subheadings: #333;
         color: inherit;
     }
 
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Charter', 'Times New Roman', Times, serif;
+    }
 
 
     header {
@@ -52,6 +62,7 @@ $color-subheadings: #333;
 
     .Resume-section {
         margin-bottom: calc(var(--base-size));
+
         .Resume-section-title {
             font-size: calc(1.25 * var(--base-size));
             text-transform: uppercase;
@@ -60,6 +71,9 @@ $color-subheadings: #333;
             border-bottom: 1px solid $color-headings;
             padding-bottom: calc(0.25 * var(--base-size));
             margin-bottom: calc(0.5 * var(--base-size));
+            &::first-letter {
+                font-size: calc(1.5 * var(--base-size));
+            }
         }
 
         .Resume-subheading-list {
@@ -82,6 +96,7 @@ $color-subheadings: #333;
                     margin-left: calc(var(--base-size) * 2.25);
                 }
             }
+
             &.nopadding {
                 padding-bottom: 0;
             }

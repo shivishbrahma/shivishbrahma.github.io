@@ -54,7 +54,7 @@ function App() {
                 <main className="App-main">
                     <Routes>
                         <Route path="/" exact element={<Home />} />
-                        <Route path="/resume" exact element={<Resume />} />
+                        <Route path="/resume/*" exact element={<Resume />} />
                         <Route path="/blogs" exact element={<Blogs />} />
                         <Route path="/tools/*" element={<Tools />} />
                         <Route path="*" element={<Error />} />

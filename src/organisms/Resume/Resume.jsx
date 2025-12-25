@@ -12,6 +12,16 @@ function Resume(props) {
         content: () => printableComponentRef.current
     });
 
+    const handleThemeChange = (theme) => {
+        setCurrentResumeTheme(theme);
+        window.location.hash = `#/resume/${theme}`;
+    };
+
+    React.useEffect(() => {
+        const theme = window.location.hash.replace("#/resume", "").replace("/", "") || "deddy";
+        handleThemeChange(theme);
+    }, []);
+
     const resumeThemes = ["deddy", "jake"];
 
     return (
@@ -21,7 +31,7 @@ function Resume(props) {
             </div>
 
             <div className="Resume-floating-container">
-                <select className="Select" value={currentResumeTheme} onChange={(e) => setCurrentResumeTheme(e.target.value)}>
+                <select className="Select" value={currentResumeTheme} onChange={(e) => handleThemeChange(e.target.value)}>
                     {resumeThemes.map((theme) => (
                         <option key={theme} value={theme}>
                             {theme.at(0).toUpperCase() + theme.slice(1)} Resume

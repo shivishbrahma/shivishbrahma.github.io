@@ -10,6 +10,14 @@ const ResumeJake = ({ resume }) => {
         month: "short"
     });
 
+    const getHostFromURL = (url) => {
+        try {
+            return new URL(url).host;
+        } catch (e) {
+            return url;
+        }
+    }
+
     return (
         <>
             <header>
@@ -17,7 +25,7 @@ const ResumeJake = ({ resume }) => {
                 <div className="Resume-title-content">
                     <div>
                         <span>
-                            <a href={resume.basics.website}>{resume.basics.website}</a>
+                            <a href={resume.basics.website}>{getHostFromURL(resume.basics.website)}</a>
                         </span>
                         <span>
                             <a href={"tel:" + resume.basics.phone}>{resume.basics.phone}</a>
