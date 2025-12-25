@@ -10,8 +10,7 @@ $color-subheadings: #333;
     --base-size: 1vw;
 }
 
-.Resume-content {
-    background-color: #fff;
+.Resume-content[data-theme="deddy"] {
     font-family: "Lato", sans-serif;
     font-weight: 300;
     font-size: var(--base-size);

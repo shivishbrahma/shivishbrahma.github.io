@@ -1,0 +1,91 @@
+// Color Definitions
+$color-date: #666;
+$color-primary: #2b2b2b;
+$color-headings: #6a6a6a;
+$color-subheadings: #333;
+
+:root {
+    --base-size: 14px;
+}
+
+.Resume-content[data-theme="jake"] {
+    color: $color-primary !important;
+    font-family: "Open Sans", sans-serif;
+    font-size: var(--base-size);
+    padding: calc(2.5 * var(--base-size));
+
+    a,
+    a:link,
+    a:visited {
+        text-decoration: none;
+        color: inherit;
+    }
+
+
+
+    header {
+        text-align: center;
+        padding-bottom: calc(0.25 * var(--base-size));
+
+        .Resume-title {
+            font-size: calc(2.125 * var(--base-size));
+        }
+    }
+
+    .Resume-title-content {
+        span:after {
+            content: " | ";
+        }
+
+        span:last-child:after {
+            content: "";
+        }
+
+        a {
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .Resume-section {
+        margin-bottom: calc(var(--base-size));
+        .Resume-section-title {
+            font-size: calc(1.25 * var(--base-size));
+            text-transform: uppercase;
+            font-variant: small-caps;
+            font-weight: normal;
+            border-bottom: 1px solid $color-headings;
+            padding-bottom: calc(0.25 * var(--base-size));
+            margin-bottom: calc(0.5 * var(--base-size));
+        }
+
+        .Resume-subheading-list {
+            list-style: none;
+
+            li {
+                padding-bottom: var(--base-size);
+                margin-left: calc(var(--base-size) * 0.95);
+            }
+        }
+
+        .Resume-subheading {
+            .Resume-subheading-item {
+                display: flex;
+                justify-content: space-between;
+
+                li {
+                    padding: 0;
+                    line-height: 1.2;
+                    margin-left: calc(var(--base-size) * 2.25);
+                }
+            }
+            &.nopadding {
+                padding-bottom: 0;
+            }
+        }
+    }
+
+}

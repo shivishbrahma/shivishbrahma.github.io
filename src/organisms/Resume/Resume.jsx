@@ -12,15 +12,26 @@ function Resume(props) {
         content: () => printableComponentRef.current
     });
 
+    const resumeThemes = ["deddy", "jake"];
+
     return (
         <section className="Resume" {...props}>
             <div className="Resume-container">
                 <ResumeContent theme={currentResumeTheme} ref={printableComponentRef} />
             </div>
 
-            <Button floating={true} theme="primary" onClick={handlePrint}>
-                <FaPrint /> Print Resume
-            </Button>
+            <div className="Resume-floating-container">
+                <select className="Select" value={currentResumeTheme} onChange={(e) => setCurrentResumeTheme(e.target.value)}>
+                    {resumeThemes.map((theme) => (
+                        <option key={theme} value={theme}>
+                            {theme.at(0).toUpperCase() + theme.slice(1)} Resume
+                        </option>
+                    ))}
+                </select>
+                <Button theme="primary" onClick={handlePrint}>
+                    <FaPrint /> Print Resume
+                </Button>
+            </div>
         </section>
     );
 }

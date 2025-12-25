@@ -5,6 +5,7 @@ import { loadMockup } from "@/services/fetchService";
 
 import "./Resume.scss";
 import ResumeDeddy from "./ResumeDeddy";
+import ResumeJake from "./ResumeJake";
 
 const ResumeContent = React.forwardRef((props, ref) => {
     const [resume, setResume] = React.useState({});
@@ -25,6 +26,7 @@ const ResumeContent = React.forwardRef((props, ref) => {
             {!loading ? (
                 <div className="Resume-content" data-theme={props.theme} ref={ref}>
                     {"deddy" === props.theme && <ResumeDeddy resume={resume} />}
+                    {"jake" === props.theme && <ResumeJake resume={resume} />}
                 </div>
             ) : (
                 "Loading the resume..."

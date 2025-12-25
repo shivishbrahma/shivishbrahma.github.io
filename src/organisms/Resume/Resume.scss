@@ -8,6 +8,7 @@
     }
 
     .Resume-content {
+        background-color: #fff;
         page-break-after: always;
         box-sizing: border-box;
         // width: 210mm;
@@ -16,7 +17,22 @@
         width: 80vw;
         /* maintain A4 ratio */
         height: calc(80vw / 0.707);
-        box-shadow: 0 8px 24px rgba(0,0,0,.15);          
+        box-shadow: 0 8px 24px rgba(0, 0, 0, .15);
         margin: 0 auto;
     }
+
+    .Resume-floating-container {
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        z-index: 1000;
+        display: flex;
+        gap: 0.5rem;
+        flex-direction: column;
+    }
+}
+
+.Select {
+    padding: 0.5rem;
+    font-size: 1rem;
 }
