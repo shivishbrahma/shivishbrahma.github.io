@@ -1,0 +1,63 @@
+/* Add this to your SCSS/CSS */
+.MousePointer svg {
+    transition: transform 0.2s ease-out;
+}
+
+/* Pulse animation for the central dot */
+.MousePointer circle {
+    animation: MousePointerPulse 1.5s infinite ease-in-out;
+}
+
+@keyframes MousePointerPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        r: 2;
+    }
+
+    50% {
+        opacity: 0.5;
+        r: 3;
+    }
+}
+
+/* Expansion effect when hovering over links/buttons */
+.MousePointer.active {
+    transform: scale(1.5);
+    filter: drop-shadow(0 0 8px --var(--primary));
+    /* Neon Glow [2] */
+}
+
+/* Chromatic Aberration Glitch (Spider-Verse style) */
+.MousePointer.glitch path {
+    animation: bracketJitter 0.1s infinite;
+}
+
+@keyframes bracketJitter {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-1px, 1px);
+        color: var(--secondary);
+    }
+
+    /* Shift to Magenta [3] */
+    100% {
+        transform: translate(1px, -1px);
+    }
+}
+
+
+/* Particle Component */
+.MousePointer__Particle {
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: radial-gradient(circle, var(--sparkle-color), rgba(255, 204, 0, 0));
+    border-radius: 50%;
+    pointer-events: none;
+    animation: fadeOut 1s forwards;
+}

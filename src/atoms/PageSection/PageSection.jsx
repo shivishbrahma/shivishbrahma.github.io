@@ -12,7 +12,7 @@ function PageSection({
 }) {
     return (
         <section className={"PageSection PageSection__" + sectionTheme} {...otherProps}>
-            <h2 className="PageSection__heading">{sectionTitle}</h2>
+            <h2 className="PageSection__heading glitch-text">{sectionTitle}</h2>
             <div className="PageSection__container">{children}</div>
             {sectionFooter}
         </section>

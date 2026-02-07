@@ -3,15 +3,16 @@ import React from "react";
 import { FaBars, FaHome, FaTimes, FaTools, FaBlog } from "react-icons/fa";
 import { IoIosDocument } from "react-icons/io";
 import logo from "@/molecules/Navbar/logo.png";
-import logo_text from "@/molecules/Navbar/logo_text.svg";
 import Navlink from "@/atoms/Navlink/Navlink";
 
 import "./Navbar.scss";
+import { useAudio } from "@/organisms/App/AudioProvider";
 
 function Navbar(props) {
     const [isNavbarOpen, setIsNavbarOpen] = React.useState(false);
 
     const [isFixed, setIsFixed] = React.useState(false);
+    const { playSound } = useAudio();
 
     const handleScroll = () => {
         const scrollTop = window.scrollY;
@@ -45,6 +46,7 @@ function Navbar(props) {
                 className="Navbar-toggler"
                 onClick={() => {
                     setIsNavbarOpen(!isNavbarOpen);
+                    playSound("click");
                 }}
             >
                 {isNavbarOpen ? <FaTimes /> : <FaBars />}
@@ -53,6 +55,7 @@ function Navbar(props) {
                 className="Navbar-list"
                 onClick={() => {
                     setIsNavbarOpen(false);
+                    playSound("click");
                 }}
             >
                 <li className="Navbar-item">
@@ -86,8 +89,8 @@ function Navbar(props) {
             </ul>
             <div className="Navbar-brand">
                 <img src={logo} alt="Brand Icon" className="Navbar-brand-logo" />
-                {/* <span className="Navbar-brand-text">Shivishbrahma</span> */}
-                <img src={logo_text} alt="Brand Text" className="Navbar-brand-text" />
+                <span className="Navbar-brand-text">Purbayan Chowdhury</span>
+                {/* <img src={logo_text} alt="Brand Text" className="Navbar-brand-text" /> */}
             </div>
         </nav>
     );

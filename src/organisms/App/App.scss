@@ -39,14 +39,3 @@
 .App-footer {
     flex: 0 1 auto;
 }
-
-/* Particle Component */
-.particle {
-    position: absolute;
-    width: 0.5rem;
-    height: 0.5rem;
-    background: radial-gradient(circle, var(--sparkle-color), rgba(255, 204, 0, 0));
-    border-radius: 50%;
-    pointer-events: none;
-    animation: fadeOut 1s forwards;
-}
