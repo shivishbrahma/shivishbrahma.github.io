@@ -3,18 +3,21 @@ import React, { useState, useEffect } from "react";
 import "./MousePointer.scss";
 import { animate } from "animejs";
 import { getProperty } from "@/services/animateService";
+import { useBreakpoint } from "@/hooks/useBreakpoint";
+import { getBoundedClientVisibleRect } from "@/services/animateService";
 
 export function MousePointer({ sizeX = 32, sizeY = 32, borderWidth = 2, showDefaultCursor = false, ...otherProps }) {
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [isHovering, setIsHovering] = useState(false);
     const mousePointerRef = React.useRef(null);
     const mousePtrCornersRef = React.useRef(null);
+    const { isMobile } = useBreakpoint();
 
     const mousePointerSizeX = () => (isHovering ? sizeX : sizeX * 1.5);
     const mousePointerSizeY = () => (isHovering ? sizeY : sizeY * 1.5);
 
     // function createParticle({ x, y, size = 8 }) {
-    //     const particle = document.createElement("div");
+    //     const particle = document.createElement("span");
     //     particle.classList.add("MousePointer__Particle");
     //     particle.style.width = `${size}px`;
     //     particle.style.height = `${size}px`;
@@ -26,6 +29,7 @@ export function MousePointer({ sizeX = 32, sizeY = 32, borderWidth = 2, showDefa
     // }
 
     useEffect(() => {
+        if (isMobile || !mousePointerRef.current) return;
         const mousePointer = mousePointerRef.current;
         mousePtrCornersRef.current = mousePointerRef.current.querySelectorAll(".MousePointer__corner");
 
@@ -45,7 +49,7 @@ export function MousePointer({ sizeX = 32, sizeY = 32, borderWidth = 2, showDefa
             const hoverables = Array.from(document.querySelectorAll("a, button"));
             let currentHoverableItem = null;
             hoverables.some((hoverable) => {
-                const rect = hoverable.getBoundingClientRect();
+                const rect = getBoundedClientVisibleRect(hoverable);
                 if (
                     rect.left <= e.clientX &&
                     rect.right >= e.clientX &&
@@ -69,7 +73,7 @@ export function MousePointer({ sizeX = 32, sizeY = 32, borderWidth = 2, showDefa
                 return;
             }
 
-            const rect = currentHoverableItem.getBoundingClientRect();
+            const rect = getBoundedClientVisibleRect(currentHoverableItem);
             let targetCornerPos = [
                 { x: rect.left, y: rect.top },
                 { x: rect.right, y: rect.top },
@@ -116,15 +120,6 @@ export function MousePointer({ sizeX = 32, sizeY = 32, borderWidth = 2, showDefa
             <svg width={sizeX} height={sizeY} viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle className="inner" cx="20" cy="20" r="3" fill="currentColor" />
                 <circle cx="20" cy="20" r="6" fill="none" strokeWidth={borderWidth} stroke="currentColor" />
-
-                {/* {isHovering && (
-                    <>
-                        <path d="M4 12V4H12" stroke="currentColor" strokeWidth="3" strokeLinecap="square" />
-                        <path d="M28 4H36V12" stroke="currentColor" strokeWidth="3" strokeLinecap="square" />
-                        <path d="M4 28V36H12" stroke="currentColor" strokeWidth="3" strokeLinecap="square" />
-                        <path d="M28 36H36V28" stroke="currentColor" strokeWidth="3" strokeLinecap="square" />
-                    </>
-                )} */}
 
                 <line x1="20" y1="6" x2="20" y2="14" stroke="currentColor" strokeWidth={borderWidth} />
                 <line x1="20" y1="26" x2="20" y2="34" stroke="currentColor" strokeWidth={borderWidth} />
