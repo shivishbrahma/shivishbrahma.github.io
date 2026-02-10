@@ -41,7 +41,8 @@ body {
     font-size: 1rem;
     overflow-x: hidden;
     --sparkle-color: var(--tertiary);
-    cursor: none;
+    --cursor-color: rgba(var(--secondary-rgb));
+    /* cursor: none; */
 }
 
 a:link,
@@ -52,8 +53,7 @@ a:visited {
 
 a:hover {
     color: var(--tertiary);
-    cursor: none;
-    /* cursor: var(--cursor-pointer); */
+    /* cursor: none; */
 }
 
 h1,
@@ -100,11 +100,12 @@ code {
 }
 
 /* Glitch Animation for Titles */
-.glitch-text {
+.Glitch__text {
     position: relative;
     &::before,
     &::after {
         content: attr(data-text);
+        color: var(--secondary);
         position: absolute;
         top: 0;
         left: 0;

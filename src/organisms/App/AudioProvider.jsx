@@ -2,8 +2,8 @@ import React, { createContext, useState, useEffect, useRef, useContext } from "r
 
 const SOUND_ASSETS = {
     click: "/audio/click.aac",
-    intro: "/audio/intro.aac",
-    ambient: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+    boot: "/audio/intro.aac",
+    ambient: "/audio/ambient.aac"
 };
 
 const AudioContext = createContext();
@@ -20,7 +20,7 @@ export const AudioProvider = ({ children }) => {
             if (name === "ambient") audio.loop = true;
             soundsRef.current[name] = audio;
         });
-    });
+    }, []);
 
     // Global play function with Autoplay handling
     const playSound = (name, volume = 0.5) => {
@@ -50,9 +50,9 @@ export const AudioProvider = ({ children }) => {
     // "Unlock" system for the browser policy
     const unlockAudio = () => {
         if (isUnlocked) return;
-        setIsUnlocked(true);
         // Play background music once unlocked
-        playSound("ambient", 0.2);
+        // playSound("ambient", 0.25);
+        setIsUnlocked(true);
     };
 
     return (
