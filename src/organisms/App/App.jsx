@@ -9,45 +9,48 @@ import Resume from "@/organisms/Resume/Resume";
 import Error from "@/organisms/Error/Error";
 import Tools from "@/organisms/Tools/Tools";
 import Blogs from "@/organisms/Blogs/Blogs";
+import Loader from "@/atoms/Loader/Loader";
+import { MousePointer } from "@/atoms/MousePointer/MousePointer";
+import StartPage from "@/molecules/StartPage/StartPage";
+
 import { useSelector, useDispatch } from "react-redux";
 import { themes, setCSSVariables, toggleTheme } from "@/store/appSlice";
 
 import "./App.scss";
+import { AudioProvider, useAudio } from "./AudioProvider";
 
-function App() {
+function AppContent() {
     const theme = useSelector((state) => state.app.theme);
     const dispatch = useDispatch();
+    const [showStartPage, setShowStartPage] = React.useState(true);
+    const [loading, setLoading] = React.useState(true);
+    const { unlockAudio, playSound } = useAudio();
 
     React.useEffect(() => {
         setCSSVariables(themes[theme]);
     }, [theme]);
 
-    React.useEffect(() => {
-        const handleMouseMove = (e) => {
-            const particle = document.createElement("div");
-            particle.classList.add("particle");
-            document.body.appendChild(particle);
+    const handleBoot = () => {
+        unlockAudio(); // Unlocks browser audio context
+        playSound("boot"); // Immediate feedback
+        setShowStartPage(false);
+        setTimeout(() => {
+            setLoading(false);
+            // Play background music once unlocked
+        }, 2000);
+    };
 
-            // Set the position of the particle
-            particle.style.left = `${e.pageX}px`;
-            particle.style.top = `${e.pageY}px`;
+    const mainElement = () => {
+        if (showStartPage) {
+            return <StartPage onClose={handleBoot} />;
+        }
 
-            // Remove the particle after the animation ends
-            particle.addEventListener("animationend", () => {
-                particle.remove();
-            });
-        };
+        if (loading) {
+            return <Loader loading />;
+        }
 
-        window.document.addEventListener("mousemove", handleMouseMove);
-
-        return () => {
-            window.document.removeEventListener("mousemove", handleMouseMove);
-        };
-    }, []);
-
-    return (
-        <Router basename={import.meta.env.BASE_URL}>
-            <div className="App">
+        return (
+            <>
                 <header className="App-header">
                     <Navbar />
                 </header>
@@ -63,7 +66,24 @@ function App() {
                 <footer className="App-footer">
                     <Footer darkModeToggler={() => dispatch(toggleTheme())} isDark={theme === "dark"} />
                 </footer>
-            </div>
+            </>
+        );
+    };
+
+    return (
+        <div className="App">
+            {mainElement()}
+            <MousePointer />
+        </div>
+    );
+}
+
+function App() {
+    return (
+        <Router basename={import.meta.env.BASE_URL}>
+            <AudioProvider>
+                <AppContent />
+            </AudioProvider>
         </Router>
     );
 }

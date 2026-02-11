@@ -15,11 +15,14 @@
             display: inline-block;
             width: 3rem;
             height: 3rem;
+            border-radius: 50%;
+            border: 0.25rem solid var(--primary);
         }
 
         .Navbar-brand-text {
             display: inline-block;
-            font-size: 1.25rem;
+            font-family: "Monoton", sans-serif;
+            font-size: 2.5vw;
             color: var(--primary);
         }
     }
@@ -66,9 +69,11 @@
             justify-content: center;
             gap: 0;
             order: 2;
+
             .Navbar-item {
                 min-width: 3rem;
                 min-height: 3rem;
+
                 .Navlink {
                     width: 100%;
                     height: 100%;
@@ -76,15 +81,18 @@
                     justify-content: center;
                     align-items: center;
                 }
+
                 .Navbar-item-name {
                     display: none;
                 }
             }
         }
+
         .Navbar-brand {
             order: 1;
             margin: 0;
             justify-content: center;
+
             .Navbar-brand-text {
                 display: none;
             }
@@ -127,6 +135,7 @@
 
     .Navbar.active {
         height: 100vh;
+
         .Navbar-list {
             gap: 1rem;
             transform: translate(0, 0);

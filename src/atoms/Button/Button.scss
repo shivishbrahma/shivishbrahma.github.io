@@ -1,6 +1,5 @@
 .Button {
     padding: 0.75rem 1.5rem;
-    cursor: var(--cursor-pointer);
     border-radius: 0.75rem;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
@@ -31,7 +30,7 @@
 
         &:hover {
             background-color: var(--baseBg);
-            border-color: var(--baseBg);
+            // border-color: var(--baseBg);
             color: var(--primary);
         }
     }
@@ -44,7 +43,7 @@
 
         &:hover {
             background-color: var(--baseBg);
-            border-color: var(--baseBg);
+            // border-color: var(--baseBg);
             color: var(--secondary);
         }
     }
@@ -57,7 +56,7 @@
 
         &:hover {
             background-color: var(--baseBg);
-            border-color: var(--baseBg);
+            // border-color: var(--baseBg);
             color: var(--tertiary);
         }
     }
@@ -69,7 +68,7 @@
 
         &:hover {
             background-color: var(--base);
-            border-color: var(--base);
+            // border-color: var(--base);
             color: var(--baseBg);
         }
     }
@@ -81,7 +80,7 @@
 
         &:hover {
             background-color: var(--baseBg);
-            border-color: var(--baseBg);
+            // border-color: var(--baseBg);
             color: var(--base);
         }
     }

@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import "./Button.scss";
+import { useAudio } from "@/organisms/App/AudioProvider";
 
 function Button({
     className,
@@ -10,10 +11,14 @@ function Button({
     floatingLocation = "bottom_right",
     theme = "default",
     type = "button",
+    onClick,
+    clickSound = "click",
     ...otherProps
 }) {
     const buttonThemeClass = " Button__" + (theme ? theme : "primary"),
         floatingLocationClass = " Button__floating__" + (floatingLocation ? floatingLocation : "left");
+
+    const { playSound } = useAudio();
     if (type === "link") {
         return (
             <a
@@ -37,6 +42,12 @@ function Button({
             {...otherProps}
             className={
                 className + " Button" + buttonThemeClass + floatingLocationClass + (floating ? " Button__floating" : "")
+            }
+            onClick={
+                (evt)=>{
+                    onClick(evt);
+                    playSound(clickSound);
+                }
             }
         >
             {children}

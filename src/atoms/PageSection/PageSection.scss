@@ -6,14 +6,15 @@
         margin-left: 0.5rem;
         padding-left: 0.5rem;
         text-transform: uppercase;
+        letter-spacing: 2px;
     }
 
     &.PageSection__primary {
         .PageSection__heading {
             border-left: 0.5rem solid var(--primary);
-            text-shadow: 1px 1px 5px var(--primary), 1px 1px 5px var(--primary);
+            text-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary);
             color: var(--primary);
-            box-shadow: -10px 0 10px -9px var(--primary);
+            // box-shadow: -10px 0 10px -9px var(--primary);
         }
     }
 
