@@ -12,7 +12,7 @@ export function MousePointer({ sizeX = 32, sizeY = 32, borderWidth = 2, showDefa
     const mousePointerRef = React.useRef(null);
     const mousePtrCornersRef = React.useRef(null);
     const { isMobile } = useBreakpoint();
-    const [showPointer, setShowPointer] = useState(true);
+    const [showPointer, setShowPointer] = useState(false);
 
     const mousePointerSizeX = () => (isHovering ? sizeX : sizeX * 1.5);
     const mousePointerSizeY = () => (isHovering ? sizeY : sizeY * 1.5);
@@ -30,7 +30,6 @@ export function MousePointer({ sizeX = 32, sizeY = 32, borderWidth = 2, showDefa
     // }
 
     useEffect(() => {
-        if(isMobile) setShowPointer(false);
         if (isMobile || !mousePointerRef.current) return;
 
         const mousePointer = mousePointerRef.current;
@@ -42,6 +41,12 @@ export function MousePointer({ sizeX = 32, sizeY = 32, borderWidth = 2, showDefa
         }
 
         const moveMouse = (e) => {
+            if (e.pointerType == "mouse") {
+                setShowPointer(true);
+            } else {
+                setShowPointer(false);
+            }
+
             // Create a new particle
             // createParticle({ x: e.pageX, y: e.pageY, size: 2});
 
@@ -102,8 +107,8 @@ export function MousePointer({ sizeX = 32, sizeY = 32, borderWidth = 2, showDefa
                 corner.style.visibility = "visible";
             });
         };
-        window.addEventListener("mousemove", moveMouse);
-        return () => window.removeEventListener("mousemove", moveMouse);
+        window.addEventListener("pointermove", moveMouse);
+        return () => window.removeEventListener("pointermove", moveMouse);
     }, [mousePointerRef]);
 
     return (
