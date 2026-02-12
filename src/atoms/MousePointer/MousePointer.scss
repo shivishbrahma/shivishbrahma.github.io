@@ -1,6 +1,9 @@
 /* Add this to your SCSS/CSS */
 .MousePointer {
     // position: relative;
+    &.hidden {
+        display: none;
+    }
 }
 .MousePointer svg {
     transition: transform 0.2s ease-out;
