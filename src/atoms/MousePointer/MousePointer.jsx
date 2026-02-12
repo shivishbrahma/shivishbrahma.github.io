@@ -41,11 +41,7 @@ export function MousePointer({ sizeX = 32, sizeY = 32, borderWidth = 2, showDefa
         }
 
         const moveMouse = (e) => {
-            if (e.pointerType == "mouse") {
-                setShowPointer(true);
-            } else {
-                setShowPointer(false);
-            }
+            setShowPointer(e.pointerType === "mouse");
 
             // Create a new particle
             // createParticle({ x: e.pageX, y: e.pageY, size: 2});
