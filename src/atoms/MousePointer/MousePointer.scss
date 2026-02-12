@@ -1,7 +1,7 @@
 /* Add this to your SCSS/CSS */
 .MousePointer {
     // position: relative;
-    .hidden {
+    &.hidden {
         display: none;
     }
 }
