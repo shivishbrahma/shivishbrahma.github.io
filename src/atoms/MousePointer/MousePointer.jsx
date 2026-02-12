@@ -109,7 +109,7 @@ export function MousePointer({ sizeX = 32, sizeY = 32, borderWidth = 2, showDefa
 
     return (
         <div
-            className={`MousePointer ${isHovering ? "active" : ""} ${showPointer ? "" : "hidden"}`}
+            className={["MousePointer", isHovering && "active", !showPointer && "hidden"].filter(Boolean).join(" ")}
             style={{
                 transform: `translate3d(${position.x}px, ${position.y}px, 0)`,
                 position: "fixed",
