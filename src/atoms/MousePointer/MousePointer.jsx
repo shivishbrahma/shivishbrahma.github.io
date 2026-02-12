@@ -30,10 +30,9 @@ export function MousePointer({ sizeX = 32, sizeY = 32, borderWidth = 2, showDefa
     // }
 
     useEffect(() => {
-        if (isMobile || !mousePointerRef.current) {
-            setShowPointer(false);
-            return;
-        }
+        if(isMobile) setShowPointer(false);
+        if (isMobile || !mousePointerRef.current) return;
+
         const mousePointer = mousePointerRef.current;
         mousePtrCornersRef.current = mousePointerRef.current.querySelectorAll(".MousePointer__corner");
 
