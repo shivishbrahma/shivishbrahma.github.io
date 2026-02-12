@@ -104,7 +104,11 @@ export function MousePointer({ sizeX = 32, sizeY = 32, borderWidth = 2, showDefa
             });
         };
         window.addEventListener("pointermove", moveMouse);
-        return () => window.removeEventListener("pointermove", moveMouse);
+        
+        return () => {
+            window.removeEventListener("pointermove", moveMouse);
+            document.body.style.cursor = "auto";
+        };
     }, [mousePointerRef]);
 
     return (
