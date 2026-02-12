@@ -12,6 +12,7 @@ export function MousePointer({ sizeX = 32, sizeY = 32, borderWidth = 2, showDefa
     const mousePointerRef = React.useRef(null);
     const mousePtrCornersRef = React.useRef(null);
     const { isMobile } = useBreakpoint();
+    const [showPointer, setShowPointer] = useState(true);
 
     const mousePointerSizeX = () => (isHovering ? sizeX : sizeX * 1.5);
     const mousePointerSizeY = () => (isHovering ? sizeY : sizeY * 1.5);
@@ -29,7 +30,10 @@ export function MousePointer({ sizeX = 32, sizeY = 32, borderWidth = 2, showDefa
     // }
 
     useEffect(() => {
-        if (isMobile || !mousePointerRef.current) return;
+        if (isMobile || !mousePointerRef.current) {
+            setShowPointer(false);
+            return;
+        }
         const mousePointer = mousePointerRef.current;
         mousePtrCornersRef.current = mousePointerRef.current.querySelectorAll(".MousePointer__corner");
 
@@ -105,7 +109,7 @@ export function MousePointer({ sizeX = 32, sizeY = 32, borderWidth = 2, showDefa
 
     return (
         <div
-            className={`MousePointer ${isHovering ? "active" : ""}`}
+            className={`MousePointer ${isHovering ? "active" : ""} ${showPointer ? "" : "hidden"}`}
             style={{
                 transform: `translate3d(${position.x}px, ${position.y}px, 0)`,
                 position: "fixed",
