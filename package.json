@@ -31,7 +31,8 @@
     },
     "scripts": {
         "dev": "vite",
-        "build": "vite build",
+        "build": "vite build --mode dev",
+        "build-dev": "vite build --mode it",
         "preview": "vite preview"
     },
     "eslintConfig": {
