@@ -1,12 +1,12 @@
 {
     "basics": {
         "name": "Purbayan Chowdhury",
-        "label": "Data Engineer",
+        "label": "Senior Consultant | Data Engineer",
         "image": "https://avatars.githubusercontent.com/u/20686433?v=4",
         "email": "pur.cho.99@gmail.com",
         "phone": "+91 9123801180",
         "url": "https://shivishbrahma.github.io",
-        "summary": "Organized and analytical Data Engineer with 4+ years of experience in building reliable, maintainable **ETL pipelines**, structured **SQL** databases, and cloud-first architectures. Proficient in **Python** (including **Pandas**, **SQLAlchemy**), **web scraping**, **Airflow**, and both **GCP**/**AWS** environments. Skilled at data governance, metadata management, version control, **CI/CD**-driven deployments, and communicating findings across technical and non-technical stakeholders. Demonstrated history of delivering production-grade data solutions on time and at scale.",
+        "summary": "Data Engineer and Senior Consultant with 5+ years of experience building and supporting production data solutions across ETL/ELT, Business Intelligence, data platforms, and data governance. Strong in Python, SQL, Snowflake, and Apache Airflow, with hands-on experience in data modeling, pipeline orchestration, Data Quality and SLA monitoring, production troubleshooting, API-driven ingestion, and CI/CD. Experienced in translating business requirements into technical solutions and taking data-platform components through deployment, production support, and handover.",
         "profiles": [
             {
                 "network": "gitconnected",
@@ -29,12 +29,12 @@
                 "username": "@shivishbrahma"
             }
         ],
-        "headline": "",
+        "headline": "Senior Consultant | Data Engineer | Snowflake | Python | SQL | Airflow | Data Platforms",
         "blog": "https://dev.to/shivishbrahma/",
-        "yearsOfExperience": 4,
+        "yearsOfExperience": 5,
         "username": "shivishbrahma",
-        "locationAsString": "Bhubaneswar, Odisha, India",
-        "region": "Bhubaneswar, Odisha, India",
+        "locationAsString": "Kolkata, West Bengal, India",
+        "region": "Kolkata, West Bengal, India",
         "karma": 25,
         "id": "0e96e5ea-87d1-4d7c-922d-98af0c133993",
         "followers": 12,
@@ -44,86 +44,79 @@
     },
     "skills": [
         {
-            "name": "Programming Languages",
+            "name": "Data Engineering",
+            "level": "Advanced",
+            "keywords": [
+                "ETL/ELT",
+                "Apache Airflow",
+                "Data Pipelines",
+                "Data Modeling",
+                "Data Quality",
+                "SLA Monitoring"
+            ],
+            "rating": 4,
+            "yearsOfExperience": 5
+        },
+        {
+            "name": "Programming & APIs",
             "level": "Advanced",
             "keywords": [
                 "Python",
-                "C/C++",
-                "Java"
+                "SQL",
+                "Pandas",
+                "FastAPI",
+                "REST APIs"
             ],
             "rating": 4,
-            "yearsOfExperience": 6
+            "yearsOfExperience": 5
         },
         {
-            "name": "Frameworks",
-            "level": "Intermediate",
+            "name": "Data Platforms & Databases",
+            "level": "Advanced",
             "keywords": [
-                "Flask",
-                "Laravel",
-                "FastAPI"
-            ],
-            "rating": 3,
-            "yearsOfExperience": 4
-        },
-        {
-            "name": "SQL Database",
-            "level": "Intermediate",
-            "keywords": [
-                "MySQL",
-                "SingleStore",
                 "Snowflake",
+                "SingleStore",
+                "MySQL",
                 "PostgreSQL"
             ],
+            "rating": 4,
+            "yearsOfExperience": 5
+        },
+        {
+            "name": "Cloud",
+            "level": "Intermediate",
+            "keywords": [
+                "AWS S3",
+                "GCP"
+            ],
             "rating": 3,
-            "yearsOfExperience": 5
+            "yearsOfExperience": 3
         },
         {
-            "name": "Javascript",
-            "level": "Advanced",
-            "keywords": [
-                "Vanilla",
-                "Node.js",
-                "VueJs",
-                "React"
-            ],
-            "rating": 4,
-            "yearsOfExperience": 5
-        },
-        {
-            "name": "Web Development",
-            "level": "Advanced",
-            "keywords": [
-                "HTML/CSS",
-                "SCSS",
-                "REST",
-                "GraphQL",
-                "PHP"
-            ],
-            "rating": 4,
-            "yearsOfExperience": 6
-        },
-        {
-            "name": "Developer Tools",
-            "level": "Advanced",
+            "name": "DevOps & Engineering",
+            "level": "Intermediate",
             "keywords": [
                 "Git",
                 "GitHub",
-                "VS Code"
+                "Jenkins",
+                "CI/CD"
             ],
-            "rating": 4,
+            "rating": 3,
             "yearsOfExperience": 5
         },
         {
-            "name": "Soft Skills",
-            "level": "Advanced",
+            "name": "Web & Application Development",
+            "level": "Intermediate",
             "keywords": [
-                "Agile Scrum",
-                "Soft Communication",
-                "Team Player",
-                "Problem Solving"
+                "FastAPI",
+                "Flask",
+                "Vue.js",
+                "JavaScript",
+                "Laravel",
+                "PHP"
             ],
-            "rating": 4,
-            "yearsOfExperience": 5
+            "rating": 3,
+            "yearsOfExperience": 4
         }
     ],
     "projects": [
@@ -142,7 +135,7 @@
             ],
             "roles": [],
             "startDate": "",
-            "endDate": "",
+            "endDate": "2022-04-01",
             "entity": "",
             "type": "",
             "displayName": "krishi-mitra",
@@ -189,7 +182,7 @@
             ],
             "roles": [],
             "startDate": "",
-            "endDate": "",
+            "endDate": "2021-08-01",
             "entity": "",
             "type": "",
             "displayName": "swork",
@@ -213,7 +206,7 @@
                 "day": null
             },
             "end": {
-                "year": 2002,
+                "year": 2021,
                 "month": 8,
                 "day": null
             },
@@ -223,32 +216,73 @@
     ],
     "work": [
         {
-            "name": "Tata Consultancy Services Pvt Ltd",
+            "name": "EY Global Delivery Services",
+            "location": "Kolkata, West Bengal",
+            "description": "",
+            "position": "Senior Consultant (Data & AI)",
+            "url": "https://www.ey.com/",
+            "startDate": "2026-03-01",
+            "endDate": "",
+            "summary": "Building and supporting Snowflake-based data solutions for Insurance UDL and Reporting, with responsibility for framework operations, transformation logic, reporting KPIs, and data design.",
+            "highlights": [
+                "Developing Snowflake JavaScript stored procedures to process data based on batch identifiers and populate downstream reporting structures.",
+                "Designing SQL reporting logic to derive performance KPIs across complex business datasets and supporting data-dictionary interpretation.",
+                "Owning day-to-day framework execution and troubleshooting while contributing to data design and solution proposals with Senior Manager review.",
+                "Working with senior developers and stakeholders to understand business rules, resolve data issues, and progressively take on greater technical design autonomy."
+            ],
+            "keywords": [
+                "Snowflake",
+                "SQL",
+                "JavaScript",
+                "Data Engineering",
+                "Reporting",
+                "KPI",
+                "Insurance",
+                "Data Platforms"
+            ],
+            "isCurrentRole": true,
+            "start": {
+                "year": 2026,
+                "month": 3,
+                "day": 1
+            },
+            "end": {},
+            "company": "EY Global Delivery Services",
+            "website": "https://www.ey.com/"
+        },
+        {
+            "name": "Tata Consultancy Services",
             "location": "Bhubaneswar, Odisha",
             "description": "",
-            "position": "System Engineer",
+            "position": "Data Engineer",
             "url": "https://www.tcs.com/",
             "startDate": "2021-08-01",
-            "endDate": "",
-            "summary": "Developed and maintained code for data integration pipelines with database objects creations for viewing quotes of upcoming products releases",
+            "endDate": "2026-02-28",
+            "summary": "Progressed from Junior to Mid-level Data Engineer, building and supporting production data pipelines, Snowflake data solutions, Business Intelligence workflows, and data-quality/SLA capabilities.",
             "highlights": [
-                "**Delivery Quote Management** — Migrated Teradata stored procedures to Snowflake and rewrote orchestration in Airflow (Python); built ETL pipelines to compute real-time booking metrics; implemented event-driven batch replication from SingleStore to Snowflake.",
-                "**Data Freshness Alerting System** — Persisted SLA and object metadata in SingleStore; each loader/refresh job invokes an Airflow Python task to log events to SingleStore and call a Java Spring API; the API reads latest refresh timestamps from SingleStore/Snowflake and updates tracking objects; added scheduled SLA checks in Airflow that send email alerts (SMTP) and create Help Central tickets via HCL REST API.",
-                "**Price Tracker & Forecast Management** - Designed and implemented an API data-ingestion pipeline using Pandas and AWS S3. Maintained a Fast API and Airflow ETL pipeline backend for forecast uploads and dashboard reviews. Also worked on an LLM to predict product attributes from titles sourced from partners."
+                "**Delivery Quote Management** — Contributed to a 3-member team migrating Teradata stored-procedure logic to Snowflake using an internal Python conversion framework; debugged converted Python/SQL logic, supported CI/CD deployment and maintenance, and implemented event-driven batch replication into Snowflake.",
+                "**Data Freshness & SLA Monitoring** — Designed and implemented the Airflow/Python side of an SLA monitoring solution, including metadata-driven tracking, refresh-status queries, traffic-light signaling, scheduled checks, alerts, and production support. Designed the architecture to support both scheduled and frequent data-refresh patterns.",
+                "**BI & Data Engineering** — Developed and orchestrated Airflow-based ETL pipelines in Snowflake for Business Intelligence and governance, including Data Quality integration, data modeling, troubleshooting, and UAT/production issue resolution.",
+                "**Price Tracker & Forecast Management** — Built API-driven ingestion using Python/Pandas and AWS S3, maintained FastAPI and Airflow components, and contributed to an LLM-based product-attribute prediction workflow.",
+                "**Technical Ownership & Stakeholder Collaboration** — Worked directly with client developers and project owners on solution design, translated requirements into implementation tasks, coordinated integration across developers, and owned selected solutions through deployment, support, and handover."
             ],
             "keywords": [
                 "Snowflake",
                 "Python",
-                "SingleStore",
-                "Airflow",
-                "ETL",
+                "SQL",
+                "Apache Airflow",
+                "ETL/ELT",
                 "AWS S3",
+                "SingleStore",
                 "Pandas",
+                "FastAPI",
+                "Data Quality",
+                "SLA Monitoring",
                 "Git",
                 "Jenkins",
                 "CI/CD"
             ],
-            "isCurrentRole": true,
+            "isCurrentRole": false,
             "start": {
                 "year": 2021,
                 "month": 8,

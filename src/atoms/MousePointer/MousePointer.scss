@@ -1,31 +1,31 @@
 /* Add this to your SCSS/CSS */
 .MousePointer {
-    // position: relative;
+    display: flex;
+
     &.hidden {
         display: none;
     }
 }
+
 .MousePointer svg {
     transition: transform 0.2s ease-out;
 }
 
 /* Pulse animation for the central dot */
-.MousePointer circle.inner {
+.MousePointer__innerCircle {
     animation: MousePointerPulse 1.5s infinite ease-in-out;
 }
 
-@keyframes MousePointerPulse {
-
-    0%,
-    100% {
-        opacity: 1;
-        r: 2;
-    }
-
-    50% {
-        opacity: 0.5;
-        r: 3;
-    }
+.MousePointer__outerCircle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    will-change: transform;
+    border: 2px solid var(--cursor-color);
 }
 
 /* Expansion effect when hovering over links/buttons */
@@ -36,9 +36,53 @@
 }
 
 /* Chromatic Aberration Glitch (Spider-Verse style) */
-.MousePointer.glitch path {
+.MousePointer.glitch line {
     animation: bracketJitter 0.1s infinite;
 }
+
+.MousePointer__corner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 12px;
+    height: 12px;
+    border: 3px solid var(--cursor-color);
+    will-change: transform;
+}
+
+.corner__tl {
+    transform: translate(-150%, -150%);
+    border-right: none;
+    border-bottom: none;
+}
+
+.corner__tr {
+    transform: translate(50%, -150%);
+    border-left: none;
+    border-bottom: none;
+}
+
+.corner__br {
+    transform: translate(50%, 50%);
+    border-left: none;
+    border-top: none;
+}
+
+.corner__bl {
+    transform: translate(-150%, 50%);
+    border-right: none;
+    border-top: none;
+}
+
+/* Particle Component */
+.MousePointer__Particle {
+    position: absolute;
+    background: radial-gradient(circle, var(--sparkle-color), rgba(255, 204, 0, 0));
+    border-radius: 50%;
+    pointer-events: none;
+    animation: fadeOut 1s forwards;
+}
+
 
 @keyframes bracketJitter {
     0% {
@@ -56,45 +100,17 @@
     }
 }
 
-.MousePointer__corner {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 12px;
-    height: 12px;
-    border: 3px solid var(--cursor-color);
-    will-change: transform;
-}
 
-.corner__tl {
-  transform: translate(-150%, -150%);
-  border-right: none;
-  border-bottom: none;
-}
+@keyframes MousePointerPulse {
 
-.corner__tr {
-  transform: translate(50%, -150%);
-  border-left: none;
-  border-bottom: none;
-}
+    0%,
+    100% {
+        opacity: 1;
+        r: 2;
+    }
 
-.corner__br {
-  transform: translate(50%, 50%);
-  border-left: none;
-  border-top: none;
-}
-
-.corner__bl {
-  transform: translate(-150%, 50%);
-  border-right: none;
-  border-top: none;
-}
-
-/* Particle Component */
-.MousePointer__Particle {
-    position: absolute;
-    background: radial-gradient(circle, var(--sparkle-color), rgba(255, 204, 0, 0));
-    border-radius: 50%;
-    pointer-events: none;
-    animation: fadeOut 1s forwards;
+    50% {
+        opacity: 0.5;
+        r: 3;
+    }
 }
